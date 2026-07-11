@@ -13,8 +13,13 @@ Open source. Free to use, modify, and build on.
   evidence synthesis for food & nutrition (FSTA, PubMed, Web of Science, Scopus,
   AGRICOLA, preprints, semantic search; EFSA/FDA/USDA/Codex for safety and
   regulatory evidence). Four-layer search, two-phase screening, and synthesis via
-  subagents; grades evidence and maps gaps. Includes a **PRISMA 2020 systematic
-  review** mode (`systematic_reviewer` + `data_extractor` subagents).
+  subagents; grades evidence and maps gaps. Four streams — **quick brief, full
+  review, deep research, systematic**. The first three **prioritize sources by
+  journal ranking** (`journal_ranker`: Q1/Q2 food-science & nutrition, plus
+  Nature/Science/Cell families and Q1/Q2 in any other discipline = highest
+  priority; Q3 second; Q4 avoided). Includes a **PRISMA 2020 systematic review**
+  mode (`systematic_reviewer` + `data_extractor`), which uses eligibility-based
+  inclusion rather than journal ranking.
 - **`deep-research`** — general iterative deep-research engine (scope → plan →
   investigate → verify → synthesize → critique → report) with a 6-subagent team.
   Runs standalone on any question, or as the deep-dive engine called by

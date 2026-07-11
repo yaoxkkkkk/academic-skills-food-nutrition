@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.3.0 — 2026-07
+
+- `food-research`: new **`journal_ranker`** subagent that prioritizes sources by
+  journal ranking (Q1/Q2 food-science & nutrition, Nature/Science/Cell families,
+  and Q1/Q2 in any other discipline = highest; Q3 second; Q4 avoided), backed by
+  `references/journal-priority.csv` (JCR quartiles for Food Science & Technology
+  and Nutrition & Dietetics). Applied to the quick brief, full review, and deep
+  research streams — **not** to systematic review (eligibility-based inclusion).
+- Clarified `food-research` into four named streams (quick brief / full review /
+  deep research / systematic) with when-to-use guidance and a workflow flowchart.
+- Added workflow flowcharts to `food-research` and the `systematic_reviewer`
+  subagent.
+
 ## 1.2.0 — 2026-07
 
 - New **`deep-research`** skill: general iterative deep-research engine (scope →

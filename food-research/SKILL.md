@@ -2,10 +2,10 @@
 name: food-research
 description: "Run a comprehensive, multi-source literature and evidence-synthesis workflow for food & nutrition science. Use when the user wants to research a food/nutrition topic in depth, do a literature review, build an evidence brief, screen and synthesize many sources, verify citations, or scope a systematic review. Coordinates food-science databases, preprints, semantic search, and food-safety/regulatory sources; runs a four-layer search, two-phase screening, and cross-source synthesis via subagents; grades evidence and maps gaps. Triggers: research this topic, deep literature review, comprehensive review, evidence synthesis, systematic review, scope a review, find all the literature, what does the evidence say, food science research, nutrition evidence, survey the field."
 metadata:
-  version: "2.0.0"
+  version: "3.0.0"
   verified: "2026-07"
   related_skills: [deep-research, food-paper, food-review, food-pipeline]
-  subagents: [search_strategist, source_scout, screener_appraiser, synthesis, systematic_reviewer, data_extractor]
+  subagents: [search_strategist, source_scout, screener_appraiser, journal_ranker, synthesis, systematic_reviewer, data_extractor]
 ---
 
 # Food-Research — Comprehensive Evidence Synthesis for Food & Nutrition Science
@@ -15,10 +15,36 @@ screening them consistently, and synthesizing across them. Original work; no
 third-party research text is reused. Architecture informed by open community
 literature-search skills (see Acknowledgements in the repo README).
 
-## When to go deep vs light
-- **quick brief** — fast orientation: run one search pass, top sources, open questions.
-- **full review** — the default: full four-layer search + two-phase screening + synthesis.
-- **systematic** — full PRISMA 2020 systematic review, run by the **`systematic_reviewer`** subagent (fixed protocol, reproducible search, PRISMA flow counts, structured extraction via `data_extractor`, risk-of-bias assessment, synthesis ± meta-analysis, certainty of evidence). Use this whenever the user asks for a systematic review, PRISMA review, or meta-analysis.
+## Streams — pick one and when to use it
+
+Four streams share the same search/screening machinery but differ in depth. Three
+of them (**quick brief, full review, deep research**) prioritize sources by
+**journal ranking** via `journal_ranker`; the **systematic** stream does not
+(inclusion is by pre-specified eligibility, not prestige).
+
+| Stream | Use it when… | Depth | Journal-ranking filter |
+|---|---|---|---|
+| **quick brief** | You need fast orientation on a topic — "what's known about X", a starting point, a scoping glance. | One search pass; top sources; key open questions. May run inline without subagents. | Yes — Tier 1 only, usually |
+| **full review** | You want a thorough narrative review or evidence brief to write from (the default). | Full four-layer search + two-phase screening + synthesis via subagents. | Yes — Tier 1 preferred, Tier 2 to fill gaps |
+| **deep research** | The question extends beyond the literature — regulatory landscape, market/technology state, an open-ended "investigate this" — or you want an iterative, verified deep dive on a subtopic. | Calls the **`deep-research`** skill (scope → plan → investigate → verify → synthesize → critique loop); its literature portion still passes through journal ranking. | Yes — for the literature portion |
+| **systematic** | You need a reproducible, auditable review or meta-analysis (PRISMA 2020). | Full **`systematic_reviewer`** pipeline: fixed protocol → PRISMA flow → extraction (`data_extractor`) → risk of bias → synthesis ± meta-analysis → certainty. | **No** — eligibility-based inclusion |
+
+### Overall flow
+
+```mermaid
+flowchart TD
+    Q[Research question] --> M{Which stream?}
+    M -- quick / full --> S1[search_strategist]
+    M -- deep research --> DR[deep-research skill<br/>scope, plan, investigate,<br/>verify, critique loop]
+    M -- systematic --> SR[systematic_reviewer<br/>PRISMA pipeline]
+    S1 --> S2[source_scout<br/>four-layer search + dedup]
+    S2 --> S3[screener_appraiser<br/>two-phase screening + quality tags]
+    S3 --> JR[journal_ranker<br/>Tier 1 preferred; Tier 2 to fill gaps;<br/>avoid Tier 4]
+    DR --> JR
+    JR --> SY[synthesis<br/>evidence matrix, grading, gaps, coverage advisory]
+    SY --> OUT[Evidence brief + annotated bibliography]
+    SR --> SROUT[PRISMA systematic-review report]
+```
 
 ## Subagents (dispatch, don't inline)
 Run these as subagents (via the Agent tool). Layers that are independent — e.g.
@@ -26,7 +52,9 @@ per-source retrieval — run in **parallel**.
 1. **`search_strategist`** — turns the question into a search plan: concepts, synonyms/controlled vocabulary (MeSH, FSTA/CAB thesaurus terms), Boolean strings per database, filters, and the source list.
 2. **`source_scout`** — executes the four-layer retrieval across sources, records hit counts, and deduplicates into one candidate set.
 3. **`screener_appraiser`** — two-phase screening + the food-science quality rubric; outputs the included set with quality tags.
-4. **`synthesis`** — evidence matrix, contradiction resolution, evidence grading, gap analysis, and the coverage advisory.
+4. **`journal_ranker`** — prioritizes the screened sources by journal ranking (Q1/Q2 food-science & nutrition, plus Nature/Science/Cell families and Q1/Q2 in any other discipline = highest; Q3 second; Q4 avoided). Used by **quick brief, full review, and deep research only** — never inside a systematic review.
+5. **`synthesis`** — evidence matrix, contradiction resolution, evidence grading, gap analysis, and the coverage advisory.
+6. **`systematic_reviewer`** / **`data_extractor`** — the PRISMA systematic-review pipeline (systematic stream only).
 
 For a quick brief you may run the workflow inline without subagents.
 
@@ -62,6 +90,12 @@ produced each result so the search is reproducible.
 - **Phase B — full text:** read the semantically strong and borderline items; land ~15–30 (more for systematic).
 - **Quality rubric (score each source):** study design & rigor; replication and whether n is biological (not pseudo-replicated); method validation (LOD/LOQ, recovery, controls, appropriate standards); journal quality and predatory/fabrication check; relevance to the question; recency/currency. Tag each source **High / Medium / Low**.
 - Universal gates (relevance, methodological soundness, predatory/fabrication) are never waived; only publication-type/recency expectations flex by subfield.
+
+## Step 4.5 — Prioritize by journal ranking (`journal_ranker`) — quick / full / deep only
+- Tier every screened source: **Tier 1** = Q1/Q2 in Food Science & Technology or Nutrition & Dietetics, any Nature/Science/Cell-family journal, or Q1/Q2 in any other WoS discipline/multidisciplinary category; **Tier 2** = Q3; **Tier 3** = Q4 (avoid).
+- Prefer the highest tier that covers each point — if Tier 1 sources suffice, don't include Tier 2/3 for it; drop to Tier 2 only when Tier 1 is insufficient; use Tier 3 only when nothing better exists, and flag it.
+- Uses `references/journal-priority.csv` for food/nutrition quartiles; JCR knowledge for other fields.
+- **Skip this step entirely in the systematic stream** — inclusion there is by eligibility, not journal ranking.
 
 ## Step 5 — Synthesis (`synthesis`)
 - **Evidence matrix:** source × theme grid showing coverage density and method spread.

@@ -1,0 +1,301 @@
+category,quartile,journal,abbrev
+# category: FST = Food Science & Technology (2024 JCR); ND = Nutrition & Dietetics (2025 JCR).
+# Priority tiers are derived from quartile by journal_ranker.md, not stored here.
+# Journals absent from this list (other WoS disciplines, multidisciplinary, Nature/Science/Cell
+# families) are tiered by rule in journal_ranker.md.
+FST,Q1,Nature Food,NAT FOOD
+FST,Q1,Trends in Food Science & Technology,TRENDS FOOD SCI TECH
+FST,Q1,Comprehensive Reviews in Food Science and Food Safety,COMPR REV FOOD SCI F
+FST,Q1,Food Hydrocolloids,FOOD HYDROCOLLOID
+FST,Q1,Annual Review of Food Science and Technology,ANNU REV FOOD SCI T
+FST,Q1,Food Packaging and Shelf Life,FOOD PACKAGING SHELF
+FST,Q1,Food Chemistry,FOOD CHEM
+FST,Q1,Global Food Security,GLOB FOOD SECUR-AGR
+FST,Q1,Current Opinion in Food Science,CURR OPIN FOOD SCI
+FST,Q1,Critical Reviews in Food Science and Nutrition,CRIT REV FOOD SCI
+FST,Q1,Food Chemistry-X,FOOD CHEM X
+FST,Q1,Future Foods,FUTURE FOODS
+FST,Q1,Food Research International,FOOD RES INT
+FST,Q1,npj Science of Food,NPJ SCI FOOD
+FST,Q1,Food Engineering Reviews,FOOD ENG REV
+FST,Q1,Food Science and Human Wellness,FOOD SCI HUM WELL
+FST,Q1,Journal of Future Foods,J FUTURE FOODS
+FST,Q1,Current Research in Food Science,CURR RES FOOD SCI
+FST,Q1,Food Frontiers,FOOD FRONTIERS
+FST,Q1,Postharvest Biology and Technology,POSTHARVEST BIOL TEC
+FST,Q1,Innovative Food Science & Emerging Technologies,INNOV FOOD SCI EMERG
+FST,Q1,LWT - Food Science and Technology,LWT-FOOD SCI TECHNOL
+FST,Q1,Antioxidants,ANTIOXIDANTS-BASEL
+FST,Q1,Food Control,FOOD CONTROL
+FST,Q1,Journal of Agriculture and Food Research,J AGR FOOD RES
+FST,Q1,Journal of Agricultural and Food Chemistry,J AGR FOOD CHEM
+FST,Q1,Applied Food Research,APPL FOOD RES
+FST,Q1,Food Security,FOOD SECUR
+FST,Q1,Meat Science,MEAT SCI
+FST,Q1,Food Policy,FOOD POLICY
+FST,Q1,Food Reviews International,FOOD REV INT
+FST,Q1,Food Bioscience,FOOD BIOSCI
+FST,Q1,Food Structure-Netherlands,FOOD STRUCT-NETH
+FST,Q1,Food and Bioprocess Technology,FOOD BIOPROCESS TECH
+FST,Q1,Journal of Food Engineering,J FOOD ENG
+FST,Q1,Food Production Processing and Nutrition,FOOD PROD PROCESS NU
+FST,Q1,eFood,EFOOD
+FST,Q1,Food & Function,FOOD FUNCT
+FST,Q1,Agriculture & Food Security,AGR FOOD SECUR
+FST,Q1,Quality Assurance and Safety of Crops & Foods,QUAL ASSUR SAF CROP
+FST,Q1,Sustainable Food Technology,SUSTAIN FOOD TECHNOL
+FST,Q1,International Journal of Food Microbiology,INT J FOOD MICROBIOL
+FST,Q1,Foods,FOODS
+FST,Q1,Food Hydrocolloids for Health,FOOD HYDROCOLL HLTH
+FST,Q1,Legume Science,LEGUME SCI
+FST,Q2,Food Quality and Preference,FOOD QUAL PREFER
+FST,Q2,Food Chemistry: Molecular Sciences,FOOD CHEM-MOL SCI
+FST,Q2,Food Microbiology,FOOD MICROBIOL
+FST,Q2,Journal of Food Composition and Analysis,J FOOD COMPOS ANAL
+FST,Q2,Food and Energy Security,FOOD ENERGY SECUR
+FST,Q2,Journal of Dairy Science,J DAIRY SCI
+FST,Q2,Food Quality and Safety,FOOD QUAL SAF-OXFORD
+FST,Q2,British Food Journal,BRIT FOOD J
+FST,Q2,Molecular Nutrition & Food Research,MOL NUTR FOOD RES
+FST,Q2,Journal of Food Biochemistry,J FOOD BIOCHEM
+FST,Q2,Microbial Risk Analysis,MICROB RISK ANAL
+FST,Q2,Journal of Functional Foods,J FUNCT FOODS
+FST,Q2,Toxins,TOXINS
+FST,Q2,International Journal of Food Properties,INT J FOOD PROP
+FST,Q2,Food Science & Nutrition,FOOD SCI NUTR
+FST,Q2,Journal of Cereal Science,J CEREAL SCI
+FST,Q2,Food Science of Animal Resources,FOOD SCI ANIM RESOUR
+FST,Q2,Packaging Technology and Science,PACKAG TECHNOL SCI
+FST,Q2,Discover Food,DISCOV FOOD
+FST,Q2,Measurement: Food,MEASUREMENT-FOOD
+FST,Q2,Bioactive Carbohydrates and Dietary Fibre,BIOACT CARB DIET FIB
+FST,Q2,International Journal of Gastronomy and Food Science,INT J GASTRON FOOD S
+FST,Q2,Plant Foods for Human Nutrition,PLANT FOOD HUM NUTR
+FST,Q2,Journal of Insects as Food and Feed,J INSECTS FOOD FEED
+FST,Q2,Food and Chemical Toxicology,FOOD CHEM TOXICOL
+FST,Q2,Meat and Muscle Biology,MEAT MUSCLE BIOL
+FST,Q2,Journal of the Science of Food and Agriculture,J SCI FOOD AGR
+FST,Q2,Food and Bioproducts Processing,FOOD BIOPROD PROCESS
+FST,Q2,Journal of Food Science,J FOOD SCI
+FST,Q2,International Dairy Journal,INT DAIRY J
+FST,Q2,Food & Nutrition Research,FOOD NUTR RES
+FST,Q2,NFS Journal,NFS J
+FST,Q2,Italian Journal of Food Science,ITAL J FOOD SCI
+FST,Q2,Journal of Food Measurement and Characterization,J FOOD MEAS CHARACT
+FST,Q2,EFSA Journal,EFSA J
+FST,Q2,International Journal of Food Sciences and Nutrition,INT J FOOD SCI NUTR
+FST,Q2,Journal of Food Science and Technology-Mysore,J FOOD SCI TECH MYS
+FST,Q2,European Food Research and Technology,EUR FOOD RES TECHNOL
+FST,Q2,Food Biophysics,FOOD BIOPHYS
+FST,Q2,Frontiers in Sustainable Food Systems,FRONT SUSTAIN FOOD S
+FST,Q2,International Journal of Food Science and Technology,INT J FOOD SCI TECH
+FST,Q2,International Journal of Food Science,INT J FOOD SCI
+FST,Q2,Food Science and Biotechnology,FOOD SCI BIOTECHNOL
+FST,Q2,Journal of Food and Drug Analysis,J FOOD DRUG ANAL
+FST,Q2,Food Analytical Methods,FOOD ANAL METHOD
+FST,Q2,Journal of Bioscience and Bioengineering,J BIOSCI BIOENG
+FST,Q2,Journal of Food Quality,J FOOD QUALITY
+FST,Q2,Journal of Food Process Engineering,J FOOD PROCESS ENG
+FST,Q3,ACS Food Science & Technology,ACS FOOD SCI TECHNOL
+FST,Q3,Journal of Food Protection,J FOOD PROTECT
+FST,Q3,International Journal of Dairy Technology,INT J DAIRY TECHNOL
+FST,Q3,Analytical Methods,ANAL METHODS-UK
+FST,Q3,Food and Environmental Virology,FOOD ENVIRON VIROL
+FST,Q3,Applied Biological Chemistry,APPL BIOL CHEM
+FST,Q3,Beverages,BEVERAGES
+FST,Q3,Starch-Starke,STARCH-STARKE
+FST,Q3,Food Additives & Contaminants Part B,FOOD ADDIT CONTAM B
+FST,Q3,Biotechnology Progress,BIOTECHNOL PROGR
+FST,Q3,Food Technology and Biotechnology,FOOD TECHNOL BIOTECH
+FST,Q3,Journal of Texture Studies,J TEXTURE STUD
+FST,Q3,Journal of Food Processing and Preservation,J FOOD PROCESS PRES
+FST,Q3,Preventive Nutrition and Food Science,PREV NUTR FOOD SCI
+FST,Q3,Cereal Chemistry,CEREAL CHEM
+FST,Q3,Journal of the American Oil Chemists Society,J AM OIL CHEM SOC
+FST,Q3,Polish Journal of Food and Nutrition Sciences,POL J FOOD NUTR SCI
+FST,Q3,Food Bioengineering,FOOD BIOENG
+FST,Q3,Australian Journal of Grape and Wine Research,AUST J GRAPE WINE R
+FST,Q3,OENO One,OENO ONE
+FST,Q3,Food Additives and Contaminants Part A,FOOD ADDIT CONTAM A
+FST,Q3,World Mycotoxin Journal,WORLD MYCOTOXIN J
+FST,Q3,Food and Agricultural Immunology,FOOD AGR IMMUNOL
+FST,Q3,Journal of Essential Oil Research,J ESSENT OIL RES
+FST,Q3,Agribusiness,AGRIBUSINESS
+FST,Q3,Journal of Medicinal Food,J MED FOOD
+FST,Q3,Flavour and Fragrance Journal,FLAVOUR FRAG J
+FST,Q3,Journal of the Institute of Brewing,J I BREWING
+FST,Q3,Chemical Senses,CHEM SENSES
+FST,Q3,Foodborne Pathogens and Disease,FOODBORNE PATHOG DIS
+FST,Q3,American Journal of Enology and Viticulture,AM J ENOL VITICULT
+FST,Q3,Journal of Food Safety,J FOOD SAFETY
+FST,Q3,European Journal of Lipid Science and Technology,EUR J LIPID SCI TECH
+FST,Q3,Journal of the American Society of Brewing Chemists,J AM SOC BREW CHEM
+FST,Q3,Journal of Oleo Science,J OLEO SCI
+FST,Q3,CyTA-Journal of Food,CYTA-J FOOD
+FST,Q3,Journal of AOAC International,J AOAC INT
+FST,Q3,Italian Journal of Food Safety,ITAL J FOOD SAF
+FST,Q3,Journal of Consumer Protection and Food Safety,J CONSUM PROT FOOD S
+FST,Q3,Journal of Sensory Studies,J SENS STUD
+FST,Q3,Food and Nutrition Bulletin,FOOD NUTR BULL
+FST,Q3,Food Biotechnology,FOOD BIOTECHNOL
+FST,Q3,Food Science and Technology International,FOOD SCI TECHNOL INT
+FST,Q3,Nutrition & Food Science,NUTR FOOD SCI
+FST,Q4,Journal of Wine Economics,J WINE ECON
+FST,Q4,International Journal of Food Engineering,INT J FOOD ENG
+FST,Q4,Natural Product Communications,NAT PROD COMMUN
+FST,Q4,Irish Journal of Agricultural and Food Research,IRISH J AGR FOOD RES
+FST,Q4,AIMS Agriculture and Food,AIMS AGRIC FOOD
+FST,Q4,Applied Food Biotechnology,APPL FOOD BIOTECHNOL
+FST,Q4,Bioscience Biotechnology and Biochemistry,BIOSCI BIOTECH BIOCH
+FST,Q4,Journal of Aquatic Food Product Technology,J AQUAT FOOD PROD T
+FST,Q4,Foods and Raw Materials,FOOD RAW MATER
+FST,Q4,Journal of Dairy Research,J DAIRY RES
+FST,Q4,Journal of Oil Palm Research,J OIL PALM RES
+FST,Q4,Agricultural and Food Science,AGR FOOD SCI
+FST,Q4,Grasas y Aceites,GRASAS ACEITES
+FST,Q4,JSFA Reports,JSFA REP
+FST,Q4,Current Research in Nutrition and Food Science,CURR RES NUTR FOOD S
+FST,Q4,South African Journal of Enology and Viticulture,S AFR J ENOL VITIC
+FST,Q4,Functional Foods in Health and Disease,FUNCT FOODS HEALTH D
+FST,Q4,Czech Journal of Food Sciences,CZECH J FOOD SCI
+FST,Q4,Acta Alimentaria,ACTA ALIMENT HUNG
+FST,Q4,Journal of Culinary Science & Technology,J CULIN SCI TECHNOL
+FST,Q4,Nutrire,NUTRIRE
+FST,Q4,International Food Research Journal,INT FOOD RES J
+FST,Q4,Rivista Italiana delle Sostanze Grasse,RIV ITAL SOSTANZE GR
+FST,Q4,Ciencia e Tecnica Vitivinicola,CIENC TEC VITIVINIC
+FST,Q4,Food Science and Technology Research,FOOD SCI TECHNOL RES
+FST,Q4,Acta Scientiarum Polonorum-Technologia Alimentaria,ACTA SCI POLON-TECHN
+FST,Q4,Economia Agro-alimentare,ECON AGRO-ALIMENT
+FST,Q4,Journal of Microbiology Biotechnology and Food Sciences,J MICROB BIOTEC FOOD
+FST,Q4,Kvasny Prumysl,KVASNY PRUMYSL
+FST,Q4,Emirates Journal of Food and Agriculture,EMIR J FOOD AGR
+FST,Q4,Ukrainian Food Journal,UKR FOOD J
+FST,Q4,Annals of the University Dunarea de Jos-Food Technology,ANN U DUNAREA-FOOD
+FST,Q4,Brewing Science,BREW SCI
+FST,Q4,Carpathian Journal of Food Science and Technology,CARPATHIAN J FOOD SC
+FST,Q4,Journal of Food and Nutrition Research (Slovak),J FOOD NUTR RES-SLOV
+FST,Q4,Mitteilungen Klosterneuburg,MITT KLOSTERNEUBURG
+FST,Q4,Food and Drug Law Journal,FOOD DRUG LAW J
+FST,Q4,Fleischwirtschaft,FLEISCHWIRTSCHAFT
+FST,Q4,Bulletin UASVM Food Science and Technology,B UASVM-FOOD SCI TE
+FST,Q4,Journal of Food Science and Technology-Ukraine,J FOOD SCI TECHNOL-U
+FST,Q4,Listy Cukrovarnicke a Reparske,LISTY CUKROV REPAR
+FST,Q4,Sugar Industry-Zuckerindustrie,SUGAR IND
+FST,Q4,Journal of Food Safety and Food Quality,J FOOD SAF FOOD QUAL
+FST,Q4,Sugar Industry International,SUGAR IND INT
+FST,Q4,Journal of the Japanese Society for Food Science and Technology,J JPN SOC FOOD SCI
+ND,Q1,Progress in Lipid Research,PROG LIPID RES
+ND,Q1,Current Obesity Reports,CURR OBES REP
+ND,Q1,Annual Review of Nutrition,ANNU REV NUTR
+ND,Q1,Advances in Nutrition,ADV NUTR
+ND,Q1,Critical Reviews in Food Science and Nutrition,CRIT REV FOOD SCI
+ND,Q1,Food Chemistry,FOOD CHEM
+ND,Q1,Hepatobiliary Surgery and Nutrition,HEPATOBIL SURG NUTR
+ND,Q1,Current Nutrition Reports,CURR NUTR REP
+ND,Q1,Clinical Nutrition,CLIN NUTR
+ND,Q1,Nutrition Research Reviews,NUTR RES REV
+ND,Q1,Food Science and Human Wellness,FOOD SCI HUM WELL
+ND,Q1,American Journal of Clinical Nutrition,AM J CLIN NUTR
+ND,Q1,International Journal of Behavioral Nutrition and Physical Activity,INT J BEHAV NUTR PHY
+ND,Q1,Proceedings of the Nutrition Society,P NUTR SOC
+ND,Q1,Lipids in Health and Disease,LIPIDS HEALTH DIS
+ND,Q1,Food Policy,FOOD POLICY
+ND,Q1,Food Reviews International,FOOD REV INT
+ND,Q1,Nutrition Reviews,NUTR REV
+ND,Q1,Nutrients,NUTRIENTS
+ND,Q1,Nutrition & Diabetes,NUTR DIABETES
+ND,Q1,Journal of Eating Disorders,J EAT DISORD
+ND,Q1,Nutrition Journal,NUTR J
+ND,Q1,Frontiers in Nutrition,FRONT NUTR
+ND,Q1,International Journal of Obesity,INT J OBESITY
+ND,Q1,Journal of Nutritional Biochemistry,J NUTR BIOCHEM
+ND,Q1,Journal of the Academy of Nutrition and Dietetics,J ACAD NUTR DIET
+ND,Q1,Journal of Nutrition Health & Aging,J NUTR HEALTH AGING
+ND,Q1,Journal of the International Society of Sports Nutrition,J INT SOC SPORT NUTR
+ND,Q1,Obesity,OBESITY
+ND,Q2,International Journal of Eating Disorders,INT J EAT DISORDER
+ND,Q2,European Journal of Nutrition,EUR J NUTR
+ND,Q2,Food & Nutrition Research,FOOD NUTR RES
+ND,Q2,Appetite,APPETITE
+ND,Q2,Journal of Nutrition,J NUTR
+ND,Q2,Current Developments in Nutrition,CURR DEV NUTR
+ND,Q2,Obesity Facts,OBESITY FACTS
+ND,Q2,Journal of Renal Nutrition,J RENAL NUTR
+ND,Q2,Journal of Nutrition and Metabolism,J NUTR METAB
+ND,Q2,Nutrition Metabolism and Cardiovascular Diseases,NUTR METAB CARDIOVAS
+ND,Q2,Journal of Functional Foods,J FUNCT FOODS
+ND,Q2,Nutrition & Metabolism,NUTR METAB
+ND,Q2,Current Opinion in Clinical Nutrition and Metabolic Care,CURR OPIN CLIN NUTR
+ND,Q2,NFS Journal,NFS J
+ND,Q2,International Journal of Food Sciences and Nutrition,INT J FOOD SCI NUTR
+ND,Q2,Plant Foods for Human Nutrition,PLANT FOOD HUM NUTR
+ND,Q2,Nutrition,NUTRITION
+ND,Q2,Nutrition Research,NUTR RES
+ND,Q2,Nutrition Bulletin,NUTR BULL
+ND,Q2,Beneficial Microbes,BENEF MICROBES
+ND,Q2,Nutrition & Dietetics,NUTR DIET
+ND,Q2,Clinical Nutrition ESPEN,CLIN NUTR ESPEN
+ND,Q2,Journal of Parenteral and Enteral Nutrition,JPEN-PARENTER ENTER
+ND,Q2,Journal of the American Nutrition Association,J AM NUTR ASSOC
+ND,Q2,International Journal of Food Science,INT J FOOD SCI
+ND,Q2,European Journal of Clinical Nutrition,EUR J CLIN NUTR
+ND,Q2,Journal of Pediatric Gastroenterology and Nutrition,J PEDIATR GASTR NUTR
+ND,Q2,Nutritional Neuroscience,NUTR NEUROSCI
+ND,Q2,British Journal of Nutrition,BRIT J NUTR
+ND,Q2,Journal of Dietary Supplements,J DIET SUPPL
+ND,Q3,Public Health Nutrition,PUBLIC HEALTH NUTR
+ND,Q3,International Journal for Vitamin and Nutrition Research,INT J VITAM NUTR RES
+ND,Q3,Journal of Nutrition Education and Behavior,J NUTR EDUC BEHAV
+ND,Q3,PharmaNutrition,PHARMANUTRITION
+ND,Q3,Genes and Nutrition,GENES NUTR
+ND,Q3,Preventive Nutrition and Food Science,PREV NUTR FOOD SCI
+ND,Q3,Human Nutrition & Metabolism,HUM NUTR METAB
+ND,Q3,BMC Nutrition,BMC NUTR
+ND,Q3,Nutrition and Cancer,NUTR CANCER
+ND,Q3,Nutrition in Clinical Practice,NUTR CLIN PRACT
+ND,Q3,BMJ Nutrition Prevention & Health,BMJ NUTR PREV HLTH
+ND,Q3,Maternal and Child Nutrition,MATERN CHILD NUTR
+ND,Q3,International Journal of Sport Nutrition and Exercise Metabolism,INT J SPORT NUTR EXE
+ND,Q3,Applied Physiology Nutrition and Metabolism,APPL PHYSIOL NUTR ME
+ND,Q3,Obesity Research & Clinical Practice,OBES RES CLIN PRACT
+ND,Q3,European Journal of Lipid Science and Technology,EUR J LIPID SCI TECH
+ND,Q3,Journal of Human Nutrition and Dietetics,J HUM NUTR DIET
+ND,Q3,Lifestyle Genomics,LIFESTYLE GENOM
+ND,Q3,Journal of Nutritional Science,J NUTR SCI
+ND,Q3,Nutrition and Metabolic Insights,NUTR METAB INSIGHTS
+ND,Q3,Food and Nutrition Bulletin,FOOD NUTR BULL
+ND,Q3,Bioscience of Microbiota Food and Health,BIOSCI MICROB FOOD H
+ND,Q3,Annals of Nutrition and Metabolism,ANN NUTR METAB
+ND,Q3,Nutrition Research and Practice,NUTR RES PRACT
+ND,Q3,Journal of Clinical Biochemistry and Nutrition,J CLIN BIOCHEM NUTR
+ND,Q3,Endocrinologia Diabetes y Nutricion,ENDOCRINOL DIAB NUTR
+ND,Q4,Journal of Medicinal Food,J MED FOOD
+ND,Q4,Dietetics,DIETETICS-BASEL
+ND,Q4,Acta Alimentaria,ACTA ALIMENT HUNG
+ND,Q4,Mediterranean Journal of Nutrition and Metabolism,MEDITERR J NUTR META
+ND,Q4,Nutrition and Dietary Supplements,NUTR DIET SUPPL
+ND,Q4,Lipids,LIPIDS
+ND,Q4,Asia Pacific Journal of Clinical Nutrition,ASIA PAC J CLIN NUTR
+ND,Q4,Obesities,OBESITIES-BASEL
+ND,Q4,Ecology of Food and Nutrition,ECOL FOOD NUTR
+ND,Q4,Nutrire,NUTRIRE
+ND,Q4,Nutrition and Health,NUTR HEALTH-UK
+ND,Q4,Current Nutrition & Food Science,CURR NUTR FOOD SCI
+ND,Q4,South African Journal of Clinical Nutrition,S AFR J CLIN NUTR
+ND,Q4,Nutricion Hospitalaria,NUTR HOSP
+ND,Q4,Journal of Nutritional Science and Vitaminology,J NUTR SCI VITAMINOL
+ND,Q4,Canadian Journal of Dietetic Practice and Research,CAN J DIET PRACT RES
+ND,Q4,Ernahrungs Umschau,ERNAHRUNGS UMSCHAU
+ND,Q4,Revista de Nutricao,REV NUTR
+ND,Q4,Nutricion Clinica y Dietetica Hospitalaria,NUTR CLIN DIET HOSP
+ND,Q4,Aktuelle Ernahrungsmedizin,AKTUEL ERNAHRUNGSMED
+ND,Q4,Revista Chilena de Nutricion,REV CHIL NUTR
+ND,Q4,Nutrition Clinique et Metabolisme,NUTR CLIN METAB
+ND,Q4,Topics in Clinical Nutrition,TOP CLIN NUTR
+ND,Q4,Jurnal Gizi dan Pangan,J GIZI PANGAN
+ND,Q4,Revista Espanola de Nutricion Humana y Dietetica,REV ESP NUTR HUM DIE
+ND,Q4,Cahiers de Nutrition et de Dietetique,CAH NUTR DIET
+ND,Q4,Archivos Latinoamericanos de Nutricion,ARCH LATINOAM NUTR
+ND,Q4,RBONE-Revista Brasileira de Obesidade,RBONE-REV BRAS OBES
+ND,Q4,Correspondances en Metabolismes Hormones Diabetes et Nutrition,CORRESP MHDN
