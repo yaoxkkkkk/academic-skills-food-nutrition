@@ -46,6 +46,34 @@ flowchart TD
     SR --> SROUT[PRISMA systematic-review report]
 ```
 
+## Stream detail — invocation & subagent call sequence
+
+### Quick brief
+- **When it wakes:** the user wants fast orientation, not an exhaustive review. Phrases like *"give me a quick brief on…", "what's known about…", "quick overview of…", "brief me on…", "orient me on…", "TL;DR of the research on…"*. Also the default when the user asks a scoped factual research question and signals speed ("quickly", "just the highlights").
+- **How it runs (lightweight — may be inline, no subagents required):**
+  1. Frame the question in one line (concepts + scope).
+  2. One search pass over 2–3 high-yield sources (PubMed/Consensus/CrossRef via MCP, else web search) — no four-layer expansion.
+  3. Apply `journal_ranker` **Tier 1 only** — keep Q1/Q2 food-science & nutrition, Nature/Science/Cell, and Q1/Q2 other-discipline hits; ignore the rest unless nothing Tier 1 exists.
+  4. Skim-appraise (relevance + obvious rigor red flags) — no full rubric.
+  5. Write a short brief: 3–6 key findings with citations, the consensus vs open questions, and 2–3 sources to read next.
+- **Subagents:** optional. Run inline for speed; only spin up `source_scout` if the topic is broad. `journal_ranker` is applied as a filter step, not necessarily a separate dispatch.
+
+### Full review (default)
+- **When it wakes:** the user wants a thorough, citable review/evidence brief — *"do a literature review on…", "comprehensive review of…", "survey the field of…", "build an evidence brief on…", "review the evidence for…"* — or asks to research a topic without signalling that speed matters.
+- **How it runs (full subagent pipeline):** dispatch subagents in this order (independent retrieval runs in parallel):
+  1. `search_strategist` → search plan (concepts, controlled vocabulary, Boolean strings, source list).
+  2. `source_scout` → four-layer search + dedup → candidate set (parallel per source).
+  3. `screener_appraiser` → two-phase screening + quality rubric → included set with High/Medium/Low tags.
+  4. `journal_ranker` → prioritize by tier (Tier 1 preferred; Tier 2 only to fill gaps; avoid Tier 4).
+  5. `synthesis` → evidence matrix, grading, contradiction resolution, coverage advisory, gaps.
+  - Output: full evidence brief + annotated bibliography + `.bib/.ris`. Hands to `food-paper` when writing follows.
+
+### Deep research
+- **When it wakes:** *"deep research on…", "investigate … thoroughly", "I need a deep dive / full briefing on…"*, or a question extending beyond the literature (regulatory, market, technology landscape). Calls the **`deep-research`** skill; its literature portion still passes through `journal_ranker`.
+
+### Systematic
+- **When it wakes:** *"systematic review", "PRISMA review", "meta-analysis", "systematic literature review"*. Runs the `systematic_reviewer` pipeline; **journal ranking is not applied** (eligibility-based inclusion).
+
 ## Subagents (dispatch, don't inline)
 Run these as subagents (via the Agent tool). Layers that are independent — e.g.
 per-source retrieval — run in **parallel**.

@@ -1,53 +1,83 @@
 ---
 name: deep-research
-description: "General-purpose deep research on any question: decompose it, investigate iteratively across many sources, verify the key claims, synthesize, stress-test, and deliver a sourced report. Use standalone for any complex or open-ended question, or as the deep-dive engine called by food-research for a subtopic. Runs a subagent team (scoper, planner, investigator, verifier, synthesizer, critic) with an iterate-until-saturated loop. Triggers: deep research, research this in depth, investigate, look into this thoroughly, comprehensive answer, what's the state of, give me a briefing on, dig into, deep dive."
+description: "General-purpose deep research that produces a fully written, source-validated literature review on any question: scope it, design the method, discover and screen sources by journal ranking, validate every source, extract and verify evidence, synthesize, stress-test, then write and format the review (APA 7.0 by default, or a target journal's style) and polish it through an editorial + integrity review loop. Use standalone for a deep dive or literature review, or as the deep-dive engine called by food-research. Runs a 12-subagent team with iterate-to-saturation and compile↔review loops. Triggers: deep research, research this in depth, write a literature review, investigate thoroughly, comprehensive review, state of the evidence, briefing on, dig into, deep dive."
 metadata:
-  version: "1.0.0"
+  version: "2.0.0"
   verified: "2026-07"
-  related_skills: [food-research, food-paper, food-pipeline]
-  subagents: [question_scoper, research_planner, investigator, verifier, synthesizer, critic]
+  related_skills: [food-research, journal-selector, food-paper, food-pipeline]
+  subagents: [research_scope, research_architect, investigator, source_screener, source_verifier, bibliography, claim_verifier, synthesizer, critic, compiler, editor, ethics_reviewer]
 ---
 
-# Deep-Research — General Iterative Research Engine
+# Deep-Research — Source-Validated Literature Review Engine
 
-Answer hard, open-ended questions properly: break the question down, investigate
-across sources, check the load-bearing claims, and write a report that shows its
-work. Original work; architecture informed by open community deep-research skills
-(see the repo README Acknowledgements). Usable standalone on any topic, and
-callable by `food-research` for a deep dive on a subtopic.
+Answer a hard question properly and hand back a **written, formatted, integrity-
+checked literature review** — not just notes. Scope → design → discover → screen
+by journal ranking → validate sources → extract & verify evidence → synthesize →
+stress-test → write → review-loop → final report. Original work; architecture
+informed by open community deep-research skills (see the repo README
+Acknowledgements). Usable standalone, or as the deep-dive engine called by
+`food-research`.
 
 ## Modes
-- **quick brief** — one investigate→synthesize pass; best sources, direct answer, key uncertainties.
-- **full** — the default: full subagent team with the iterate-until-saturated loop.
+- **quick brief** — scope → discover → screen (Tier 1) → light synthesis → short sourced answer. Skips the full validation/compile/review loop.
+- **full** — the default: the complete 12-subagent pipeline below with the iterate-to-saturation and compile↔review loops, ending in a finished review.
 
 ## Subagent team (dispatch via the Agent tool)
-1. **`question_scoper`** — clarify intent, define scope and success criteria, decompose the question into sub-questions.
-2. **`research_planner`** — turn sub-questions into an investigation plan: which source types answer each, in what order, and what "enough" looks like.
-3. **`investigator`** — gather evidence per sub-question across sources; run in **parallel** across independent sub-questions.
-4. **`verifier`** — independently check the load-bearing claims against primary sources; flag unsupported or shaky ones.
-5. **`synthesizer`** — integrate findings into a coherent, sourced answer; resolve conflicts; state confidence.
-6. **`critic`** — devil's advocate: attack the conclusions, surface bias, missing angles, and overreach; send gaps back for another loop.
+| # | Subagent | Job |
+|---|---|---|
+| 1 | `research_scope` | Comprehensive scope brief: background, problem, significance, central + sub-questions, concepts, boundaries, success criteria. |
+| 2 | `research_architect` | Methodology blueprint: review type, search strategy, inclusion criteria, analytical framework, reporting standard, stopping criteria. |
+| 3 | `investigator` | Pass 1 discover candidate sources; Pass 2 extract evidence **from validated sources only** (parallel per sub-question). |
+| 4 | `source_screener` | Prioritize candidates by **journal ranking** (Tier 1 Q1/Q2 + Nature/Science/Cell + other-discipline Q1/Q2; Tier 2 Q3; avoid Tier 4). |
+| 5 | `source_verifier` | Validate each prioritized source (existence/DOI, venue legitimacy, retraction, predatory, methodology, COI) → Source Quality Matrix. |
+| 6 | `bibliography` | Deduplicate + format references (APA 7.0 default, or target-journal style via `journal-selector`); build the citation map + `.bib/.ris`. |
+| 7 | `claim_verifier` | Verify each load-bearing claim against its validated source; classify fact/hypothesis/contested/speculation. |
+| 8 | `synthesizer` | Evidence matrix, thematic synthesis, conflict reconciliation, evidence grading, coverage advisory, gap agenda, narrative arc. |
+| 9 | `critic` | Devil's advocate on the **synthesis**; loop back to investigate if gaps. |
+| 10 | `compiler` | Write & format the **literature-review draft** (APA 7.0 / target journal); cite by key only; no fabrication. |
+| 11 | `editor` | Editorial review of the draft (5 weighted dimensions, verdict + prioritized feedback). |
+| 12 | `ethics_reviewer` | Integrity/ethics review of the draft (citation integrity, faithful representation, bias, COI, disclosure). |
 
-## Workflow (iterate)
-1. **Scope** (`question_scoper`) → confirm the question, scope, and sub-questions with the user (one consolidated clarifying question if anything is ambiguous).
-2. **Plan** (`research_planner`) → map sub-questions to source types and set stopping criteria.
-3. **Investigate** (`investigator`, parallel) → collect evidence with provenance for every claim. Sources span the open web, literature, official data/statistics, and primary documents — pick what fits the question. Use connected MCP tools (literature, data) when available; web search otherwise.
-4. **Verify** (`verifier`) → check the claims the answer depends on; downgrade or drop the unsupported.
-5. **Synthesize** (`synthesizer`) → draft the answer with inline citations and explicit confidence.
-6. **Critique** (`critic`) → challenge it. If it finds real gaps or weak spots, **loop back** to step 3 for those sub-questions (cap ~2–3 loops).
-7. **Report** → deliver: direct answer up front, then reasoning by sub-question, evidence with sources, open questions, and a confidence statement.
+## Workflow
 
-## Stopping rule
-Stop looping when new investigation stops changing the conclusions and the
-critic raises no new material gap — or the loop cap is reached (state residual
-uncertainty rather than padding).
+```mermaid
+flowchart TD
+    A[research_scope<br/>scope brief] --> B[research_architect<br/>methodology blueprint]
+    B --> C[investigator Pass 1<br/>discover candidate sources]
+    C --> D[source_screener<br/>journal-ranking tiers]
+    D --> E[source_verifier<br/>validate → Source Quality Matrix]
+    E --> F[bibliography<br/>dedupe + format + citation map]
+    E --> G[investigator Pass 2<br/>extract evidence from validated sources]
+    G --> H[claim_verifier<br/>verify claims vs validated sources]
+    H --> I[synthesizer<br/>matrix, themes, conflicts, grading, gaps]
+    I --> J[critic<br/>stress-test synthesis]
+    J -- gaps --> C
+    J -- sound --> K[compiler<br/>write + format review<br/>APA 7.0 / target journal]
+    F --> K
+    K --> L[editor + ethics_reviewer<br/>editorial + integrity review]
+    L -- minor/major revision --> K
+    L -- accept --> M[Final literature review]
+```
+
+**Two loops:** (1) *evidence loop* — `critic` sends gaps back to `investigator`
+(cap ~2–3); (2) *writing loop* — `editor`/`ethics_reviewer` send revisions back
+to `compiler` until Accept (cap ~2–3), then deliver.
+
+## Source discipline (non-negotiable)
+- **Investigation and claim-checking operate only on validated sources** — those that passed `source_screener` (ranking) **and** `source_verifier` (validity). Retracted/unresolvable sources are excluded and logged.
+- **Journal ranking** favors Tier 1 (Q1/Q2 food-science & nutrition, Nature/Science/Cell families, Q1/Q2 in any other discipline); Tier 2 (Q3) only to fill gaps; Tier 4 avoided.
+- Every claim carries a source and locator; inference is labelled as inference.
+
+## Formatting
+Default **APA 7.0**. If the user names a **target journal**, `bibliography` and
+`compiler` call the **`journal-selector`** skill to format the review to that
+journal's structure, limits, and reference style.
 
 ## Principles
-- **Every claim carries a source.** No source, no claim — or mark it explicitly as inference.
-- **Separate fact from interpretation.** Say which is which.
-- **Show disagreement.** Where sources conflict, present the conflict and weigh it; don't average it into false consensus.
-- **Surface uncertainty.** A calibrated "we don't know, because…" beats false confidence.
+Every claim sourced; fact separated from interpretation; disagreement shown, not
+averaged; uncertainty surfaced. Upstream evidence beats parametric knowledge —
+mark missing evidence `[EVIDENCE GAP]`, never fabricate.
 
 ## Handoff
-When invoked by `food-research`, return the sourced synthesis for a subtopic so
-it can fold into the evidence brief. Standalone, deliver the report directly.
+Standalone → deliver the final review. Called by `food-research` → return the
+validated synthesis (or the finished review) to fold into the evidence brief.

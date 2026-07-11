@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.4.0 — 2026-07
+
+- `deep-research` rebuilt into a source-validated **literature-review** engine
+  (12 subagents): `research_scope` (comprehensive scoping), `research_architect`
+  (methodology blueprint), `investigator` (two-pass discovery + evidence),
+  `source_screener` (journal-ranking tiers, reusing the food-research priority
+  data), `source_verifier` (existence/venue/retraction/predatory/COI → Source
+  Quality Matrix), `bibliography` (dedupe + APA 7.0 / target-journal formatting
+  via `journal-selector`), `claim_verifier`, an expanded `synthesizer`, `critic`,
+  `compiler` (writes & formats the review), and `editor` + `ethics_reviewer` with
+  a compile↔review polish loop. Evidence is drawn only from validated sources.
+- `food-research`: clarified the quick brief and full review streams with
+  explicit invocation phrases and the exact subagent call sequence for each.
+
 ## 1.3.0 — 2026-07
 
 - `food-research`: new **`journal_ranker`** subagent that prioritizes sources by

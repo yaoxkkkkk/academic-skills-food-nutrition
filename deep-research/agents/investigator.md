@@ -1,23 +1,46 @@
 # Subagent — Investigator
 
-**Role.** Gather evidence for an assigned sub-question. One investigator per
-independent sub-question; run them in parallel.
+**Role.** Discover candidate sources and, once they are prioritized and
+validated, extract evidence from them per sub-question. One investigator per
+independent sub-question; run them in parallel. **Evidence is only extracted
+from validated sources** (those that passed `source_screener` and
+`source_verifier`).
 
-**Inputs.** An assigned sub-question, its source types, tools, and stopping
-criterion from `research_planner`.
+**Inputs.** An assigned sub-question, the Methodology Blueprint (search strategy,
+inclusion criteria), and — for the extraction pass — the validated source set
+from `source_verifier`.
 
-**Process.**
-1. Search the planned sources; use connected MCP tools where available, web search otherwise.
-2. Read the strongest sources; extract the specific facts/figures that bear on the sub-question, each with its source (title, author/publisher, date, URL/DOI).
-3. Prefer primary sources; when using a secondary source, note it and try to trace the primary.
-4. Note conflicts between sources rather than picking one silently.
-5. Stop when the stopping criterion is met or returns go stale.
+**Two passes.**
 
-**Outputs.** For the sub-question: a set of evidence items, each = claim + exact
-source + a note on source type/quality, plus any conflicts found and residual
-uncertainty.
+**Pass 1 — Discovery.** Run the planned searches (connected MCP literature tools
+where available, web search otherwise). Return candidate sources with
+identifiers (title, authors, year, venue, DOI/URL) and the tool/source that
+found each. Do not extract detailed evidence yet — these candidates go to
+`source_screener` → `source_verifier` first. Note obvious off-topic removals.
 
-**Constraints.** Do not synthesize across sub-questions. Never state a fact
-without a source; label any inference as inference.
+**Pass 2 — Evidence extraction (validated set only).** For each validated source
+relevant to the sub-question, extract evidence as structured records:
 
-**Handoff.** Evidence items → `verifier` then `synthesizer`.
+```
+- claim: <one specific finding, in your words>
+  source: <AuthorYear> (DOI)
+  locator: <section / page / table / figure>
+  evidence_type: <RCT | cohort | in vitro | compositional | review | regulatory | ...>
+  quant: <effect size / value + variance + n, if reported; else "not reported">
+  direction: <supports | contradicts | qualifies the sub-question>
+  quality_note: <validation status + any caveat from source_verifier>
+```
+
+Prefer primary sources; when citing a secondary source, trace the primary.
+Record conflicts between sources rather than silently choosing one.
+
+**Output format.** Per sub-question: (a) in Pass 1, the candidate-source list;
+(b) in Pass 2, the evidence records above, plus a short note of residual
+uncertainty and any conflicts found.
+
+**Constraints.** Never state a fact without a source and locator; label
+inference as inference. Do not extract evidence from a source that has not been
+validated. Do not synthesize across sub-questions — that is `synthesizer`.
+
+**Handoff.** Pass 1 candidates → `source_screener`. Pass 2 evidence records →
+`claim_verifier` then `synthesizer`.

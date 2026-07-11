@@ -20,10 +20,12 @@ Open source. Free to use, modify, and build on.
   priority; Q3 second; Q4 avoided). Includes a **PRISMA 2020 systematic review**
   mode (`systematic_reviewer` + `data_extractor`), which uses eligibility-based
   inclusion rather than journal ranking.
-- **`deep-research`** — general iterative deep-research engine (scope → plan →
-  investigate → verify → synthesize → critique → report) with a 6-subagent team.
-  Runs standalone on any question, or as the deep-dive engine called by
-  `food-research`.
+- **`deep-research`** — source-validated literature-review engine (scope → design
+  → discover → **screen by journal ranking** → **validate every source** →
+  extract & verify evidence → synthesize → stress-test → **write & format** →
+  editorial + integrity review loop) with a 12-subagent team. Outputs a finished,
+  formatted review (**APA 7.0** by default, or a target journal's style via
+  `journal-selector`). Runs standalone or as `food-research`'s deep-dive engine.
 - **`food-paper`** — journal-aware manuscript writing. Resolves the target
   journal first, drafts to its structure and limits, applies its reference
   style, and routes figures through `food-figure`.
