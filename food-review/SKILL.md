@@ -1,42 +1,69 @@
 ---
 name: food-review
-description: "Simulate peer review of a food & nutrition manuscript from the referee's perspective. Use when the user wants a pre-submission review, reviewer report, mock peer review, or a critique of methodology, novelty, statistics, or food-safety/ethics before submitting. Returns independent reviewer lenses plus an editor summary and a decision recommendation. Triggers: review my paper, peer review, referee report, critique my manuscript, pre-submission review, is my paper ready, assess novelty and rigor, mock review."
+description: "Multi-reviewer peer-review system for food & nutrition manuscripts. Simulates an editorial panel — a coordinating editor, three domain reviewers (methodology/statistics, domain/novelty, integrity/ethics), and a devil's advocate — plus a formatting-compliance check against the target journal (APA 7.0 by default, or a specific journal via journal-selector). Use for pre-submission review, reviewer reports, mock peer review, or a critique before submitting. Triggers: review my paper, peer review, referee report, reviewer reports, critique my manuscript, pre-submission review, is my paper ready, mock review, editorial review, assess novelty and rigor."
 metadata:
-  version: "1.0.0"
+  version: "2.0.0"
   verified: "2026-07"
-  related_skills: [food-paper, food-pipeline]
+  related_skills: [journal-selector, food-paper, food-research]
+  subagents: [review_coordinator, reviewer_methodology, reviewer_domain, reviewer_integrity, devils_advocate, format_checker]
 ---
 
-# Food-Review — Referee-Perspective Review for Food & Nutrition Manuscripts
+# Food-Review — Multi-Reviewer Peer Review for Food & Nutrition Manuscripts
 
-Give an author the review they would get from a good food-science journal, so
-they can fix problems before submitting. Original work; no third-party review
-text is reused.
+Give the author the review a good food-science journal would return, from a
+**panel** rather than a single voice. Original work; architecture informed by open
+community peer-review skills (see the repo README Acknowledgements).
 
-## What it produces
-Three independent reviewer reports (distinct lenses), one editor synthesis, and
-a decision recommendation (Accept / Minor / Major / Reject) with the reasons.
-Each report lists strengths, then numbered concerns split into **major** and
-**minor**, each concern actionable.
+## Modes
+- **full** (default) — the whole panel: three domain reviewers + devil's advocate + format check, synthesized by the coordinator into an editorial decision.
+- **quick** — coordinator + one blended reviewer pass; a fast readiness verdict.
+- **methodology** — deep dive by `reviewer_methodology` only.
+- **re-review** — re-assess a revised manuscript against the prior reports and the author's response, verifying each point was addressed.
 
-## Reviewer lenses
-1. **Methodology & reproducibility** — is the design sound; is n adequate and biological (not pseudo-replicated); are methods validated (LOD/LOQ, recovery, controls, blanks); can the work be reproduced from the Methods?
-2. **Statistics & data** — right test for the design; assumptions checked; multiple-comparison handling; error type and n disclosed; figures/tables consistent with the stats; no truncated/misleading axes.
-3. **Novelty, scope & significance** — is the advance real and in scope for the target journal; is identification/quantification defensible (standards or MS/MS, not library hits); are claims proportionate to the evidence.
+## Panel (dispatch via the Agent tool; reviewers run in parallel)
+1. **`review_coordinator`** (editor-in-chief) — sets the target journal + scope, dispatches the reviewers, synthesizes their reports, resolves disagreement, and issues the decision.
+2. **`reviewer_methodology`** — design, statistics, reproducibility, validation.
+3. **`reviewer_domain`** — novelty, significance, scope fit, domain correctness (food/nutrition science).
+4. **`reviewer_integrity`** — data & citation integrity, food-safety/ethics, reporting completeness.
+5. **`devils_advocate`** — adversarial challenge to the paper's central claim.
+6. **`format_checker`** — formatting & reference-style compliance vs the target journal.
 
-Also always check: **food-safety/ethics** (sensory-panel consent and size, animal-tissue and pathogen handling, allergen disclosure) and **reporting completeness** (units, cultivar/batch, storage, panel details).
+## Workflow
 
-## Process
-1. Read the manuscript against the target journal's scope and constraints (via `journal-selector` if a journal is named).
-2. Run each lens independently; do not let one lens soften another.
-3. Write per-reviewer reports (strengths → major → minor), each concern with a concrete fix or the evidence needed.
-4. Editor synthesis: the decisive issues, points of agreement/disagreement, and the recommendation with justification.
-5. Optionally emit a revision checklist that `food-paper` (revise mode) can act on.
+```mermaid
+flowchart TD
+    A[Manuscript in] --> B[review_coordinator<br/>resolve target journal + scope]
+    B --> J{Target journal?}
+    J -- named --> JS[journal-selector<br/>load journal requirements]
+    J -- none --> AP[default: APA 7.0]
+    B --> R1[reviewer_methodology]
+    B --> R2[reviewer_domain]
+    B --> R3[reviewer_integrity]
+    B --> R4[devils_advocate]
+    JS --> FC[format_checker]
+    AP --> FC
+    R1 --> C[review_coordinator<br/>synthesize + decision]
+    R2 --> C
+    R3 --> C
+    R4 --> C
+    FC --> C
+    C --> O[Panel report:<br/>per-reviewer reports + format check +<br/>editorial decision + revision checklist +<br/>response-letter skeleton]
+```
 
-## Tone
-Firm, specific, and fair — critique the work, not the author. Every major
-concern must name what would resolve it.
+## Formatting / target journal
+The `review_coordinator` first establishes the target journal. If the user names
+one, it calls the **`journal-selector`** skill to load that journal's structure,
+limits, and reference/citation style; `format_checker` then audits the manuscript
+against those requirements. If no journal is named, **APA 7.0** is the default
+standard for the formatting check.
+
+## Output
+A consolidated **panel report**: each reviewer's report (strengths → major →
+minor, each concern actionable), the devil's advocate challenge, the formatting
+compliance report, and the coordinator's **editorial decision** (Accept / Minor /
+Major / Reject) with a prioritized revision checklist and a response-letter
+skeleton the author can fill in. Critique the work, not the author.
 
 ## Handoff
-Feeds `food-paper` (revise) and is orchestrated by `food-pipeline` in the
-review → revise loop.
+Feeds `food-paper` (revise mode) for the author to act on; part of the
+`food-pipeline` review→revise loop.
