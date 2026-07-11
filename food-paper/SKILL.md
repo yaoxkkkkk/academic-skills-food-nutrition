@@ -1,60 +1,82 @@
 ---
 name: food-paper
-description: "Write, structure, or revise a food & nutrition science manuscript, journal-aware. Use when the user wants to draft, outline, revise, or format a food-science paper, an abstract, a section (introduction/methods/results/discussion), or convert a draft to a target journal's style. Always resolves the target journal first (via journal-selector) and routes figures through food-figure. Triggers: write my paper, draft a manuscript, food science paper, outline my paper, revise my manuscript, format for a journal, publish on <journal>, prepare my paper for <journal>, edit the manuscript based on <journal> style, write the abstract, write the introduction/methods/results/discussion."
+description: "Multi-subagent manuscript system for food & nutrition science covering the whole research process: understand the field (literature), frame research questions, curate and analyze data, run statistics, build figures and tables, construct arguments and discussion, draft and polish the manuscript, and self-review — journal-aware throughout. Resolves the target journal first and formats to it (APA 7.0 default or a specific journal via journal-selector); routes figures through food-figure and deep literature through food-research. Use to write, outline, revise, or format a food-science paper or any section. Triggers: write my paper, draft a manuscript, food science paper, outline my paper, revise my manuscript, analyze my data and write it up, statistics for my paper, build figures for my paper, polish my manuscript, format for a journal, publish on <journal>."
 metadata:
-  version: "1.0.0"
+  version: "2.0.0"
   verified: "2026-07"
-  related_skills: [journal-selector, food-figure, food-research, food-review]
+  related_skills: [journal-selector, food-figure, food-research, food-review, food-pipeline]
+  subagents: [intake, literature_lead, question_framer, data_curator, statistician, viz_designer, structure_architect, argument_builder, draft_writer, polisher, citation_manager, internal_reviewer]
 ---
 
-# Food-Paper — Journal-Aware Manuscript Writing for Food & Nutrition Science
+# Food-Paper — Whole-Process Manuscript System for Food & Nutrition Science
 
-Draft and shape food & nutrition manuscripts so they read like the target
-journal expects. This skill is original work; it uses no third-party manuscript
-text.
+Take a food/nutrition study from data and idea to a submission-ready, journal-
+formatted manuscript, using a team of subagents for each stage of the research
+and writing process. Original work; architecture informed by open community
+paper-writing and Nature-style skills (see the repo README Acknowledgements).
 
-## First move — always resolve the target journal
-Before drafting or restructuring, invoke the **`journal-selector`** skill to get
-the target journal's `Formatting constraints` (structure, word/abstract limits,
-reference style, figure spec). If the user names a journal anywhere in the
-request ("publish on Food Chemistry", "Food Chemistry style"), pass it straight
-through. If no journal is set, ask once, or proceed with generic food-science
-conventions and state the assumption. **Route every figure request to the
-`food-figure` skill**, passing the journal's `figure_dpi` / column widths.
+## First move — resolve the target journal
+Before drafting, call **`journal-selector`** to load the target journal's
+structure, limits, and reference style. If none is named, default to **APA 7.0**
+and state the assumption. The journal's constraints govern structure, word/
+abstract limits, reference style, and the figure spec passed to `food-figure`.
 
 ## Modes
-- **outline** — section-by-section skeleton mapped to the journal's structure + an evidence map (claim → data → citation).
-- **full** — complete draft from the author's data/notes/outline.
-- **section** — draft or rewrite one section (abstract, introduction, methods, results, discussion, conclusion).
+- **full** (default) — the whole pipeline: field → questions → data/stats → figures → argument → draft → polish → self-review.
+- **plan** — Socratic planning of the paper chapter by chapter (no full draft).
+- **outline** — detailed outline + evidence map only.
+- **section** — draft or rewrite one section (intro/methods/results/discussion/abstract).
+- **stats** — statistical analysis plan/execution guidance only.
 - **revise** — revise against reviewer comments (pairs with `food-review`).
-- **format-to-journal** — convert an existing draft to the target journal's structure, limits, and reference style.
+- **format-convert** — convert an existing draft to the target journal's structure + reference style.
+- **polish** — language editing to publication-quality English.
 
-## Manuscript structure (IMRaD default; override with the journal skill)
-1. **Title & abstract** — abstract to the journal's limit and style (structured vs unstructured — e.g. British Food Journal requires a structured abstract). Keywords per journal count.
-2. **Introduction** — knowledge gap → objective; end with a crisp aim/hypothesis.
-3. **Materials and methods** — reproducible detail: sample source (cultivar/breed/batch), preparation, storage; instruments and settings; assay conditions (HPLC/GC/LC-MS columns, mobile phase, detector; antioxidant assays with the reference standard, e.g. Trolox equivalents); microbiological media and incubation; experimental design, replication (n), and the full statistical model.
-4. **Results** — report with food-science conventions: proximate composition as g/100 g (state wet/dry basis) with AOAC method; microbial counts as log CFU/g with detection limit; texture (TPA parameters) and rheology with settings; mean ± SD/SEM with n; significance shown consistently (letters from post-hoc, or asterisks with the test named).
-5. **Discussion** — interpret against mechanism and literature; avoid overclaiming beyond the data; note limitations (single batch, panel size, matrix effects).
-6. **Conclusion** — what changed in understanding, and the practical/food-system implication.
-7. **Declarations** — competing interests, funding, author contributions (CRediT), data availability, and ethics (human sensory panels, animal tissue, or pathogen work).
+## Subagent team (dispatch via the Agent tool; independent stages run in parallel)
+| # | Subagent | Stage of the research process |
+|---|---|---|
+| 1 | `intake` | Capture paper type, target journal, data/materials, and goals; set the plan. |
+| 2 | `literature_lead` | Understand the field — calls the **`food-research`** skill for the evidence base. |
+| 3 | `question_framer` | Research questions / hypotheses / objectives + the contribution. |
+| 4 | `data_curator` | Curate the dataset: integrity, units, missing data, metadata, provenance. |
+| 5 | `statistician` | Statistical plan + analysis appropriate to the food/nutrition design. |
+| 6 | `viz_designer` | Figures & tables — calls the **`food-figure`** skill at the journal spec. |
+| 7 | `structure_architect` | Outline mapped to the target journal's structure + evidence map. |
+| 8 | `argument_builder` | Claim–evidence–reasoning chains; results→discussion logic. |
+| 9 | `draft_writer` | Draft each section with food-science reporting conventions. |
+| 10 | `polisher` | Edit to clear, publication-quality scientific English. |
+| 11 | `citation_manager` | References + in-text citations in the journal's style (APA 7.0 default). |
+| 12 | `internal_reviewer` | Pre-submission self-review — calls the **`food-review`** panel. |
 
-## References — match the journal's style exactly
-Apply the `reference_style` from the resolved journal skill. Common food-journal styles this suite supports:
-- **numbered-vancouver** (e.g. Food Chemistry, most Elsevier): in-text `[1]`, list by order of appearance.
-- **author-date** (Harvard/APA variants; many Wiley, T&F, Springer, ADSA): in-text `(Author & Author, 2023)`, alphabetical.
-- **nature-superscript-numbered** (Nature Food/npj): superscript numbers; article titles required.
-- **acs-numbered** (JAFC); **rsc-superscript-numbered** (Food & Function); **numbered-mdpi** (Foods/Antioxidants/Toxins); **harvard-emerald** (British Food Journal).
+## Workflow
 
-When switching journals, **re-flow the entire reference list and in-text markers** to the new style — do not leave mixed styles. Keep DOIs.
+```mermaid
+flowchart TD
+    A[intake<br/>type, journal, data, goals] --> JS[journal-selector<br/>load journal constraints]
+    A --> L[literature_lead<br/>-> food-research evidence base]
+    L --> Q[question_framer<br/>RQs / hypotheses / contribution]
+    A --> D[data_curator<br/>curate + check dataset]
+    D --> S[statistician<br/>analysis plan + results]
+    S --> V[viz_designer<br/>-> food-figure figures & tables]
+    Q --> ST[structure_architect<br/>journal-mapped outline + evidence map]
+    S --> ST
+    V --> ST
+    ST --> AR[argument_builder<br/>CER chains, results->discussion]
+    AR --> W[draft_writer<br/>section drafts]
+    W --> P[polisher<br/>publication English]
+    P --> C[citation_manager<br/>journal reference style]
+    C --> IR[internal_reviewer<br/>-> food-review panel]
+    IR -- revise --> W
+    IR -- ready --> OUT[Submission-ready manuscript]
+```
 
-## Food-science reporting defaults (enforce unless told otherwise)
-Units in SI; report n and error type on every mean; name every statistical test and threshold; disclose panel type and size for sensory work; validated methods (LOD/LOQ, recovery) for analytical claims; identification by standards or MS/MS, not library hits alone.
-
-## Figures & tables
-All figures via **`food-figure`** at the journal's spec. Tables editable (never images). Cite every display item in order; keep within the journal's display-item limit.
-
-## Output
-Markdown by default; on request, provide conversion notes to DOCX (Pandoc) or LaTeX. Always provide the abstract and keywords, and a submission checklist drawn from the journal skill.
+## Food & nutrition reporting defaults (enforced by `draft_writer` / `data_curator` / `statistician`)
+Composition as g/100 g (basis + AOAC method); sensory panel type/size/scale +
+ethics; microbial counts log CFU/g with LOD; TPA/rheology parameters + settings;
+HPLC/GC/LC-MS conditions, LOD/LOQ, recovery, identification by standards/MS-MS;
+mean ± SD/SEM with n; the statistical model, test, post-hoc, and threshold, with
+significance shown consistently. Reproducible Methods (cultivar/breed/batch,
+prep, storage). Ethics/food-safety statements where relevant.
 
 ## Handoffs
-`food-research` (evidence in) → **food-paper** → `food-review` (critique) → **food-paper** (revise). Orchestrated by `food-pipeline`.
+`food-research` (evidence in) → **food-paper** → `food-review` (external panel) →
+**food-paper** revise. Orchestrated by `food-pipeline`.
