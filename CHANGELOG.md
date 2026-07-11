@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.5.0 — 2026-07
+
+- `food-research` **systematic** stream rebuilt into a full PRISMA pipeline with
+  new subagents: `sr_search` (≥3 databases — Web of Science/Scopus/PubMed —
+  combine + dedupe), `sr_screener` (two independent instances, three steps:
+  title → abstract → full text), `sr_moderator` (compares the two screeners at
+  each step and resolves conflicts), `risk_of_bias` (**OHAT** for in vitro /
+  human / animal, 11 questions × 6 domains × 4-point scale), and `sr_synthesis`
+  (PRISMA description → bias results → per-research-question synthesis). Clearer
+  activation conditions for when to use systematic vs full review.
+- New shared `writer` (writes the manuscript and exports **Word .docx**, APA 7.0
+  or target-journal style via `journal-selector`) and `reviewer` (combined
+  editorial + integrity review with a revision loop). The **full review** and
+  **systematic** streams now both end in a reviewed Word manuscript.
+- `data_extractor` now produces a results table organized by research question
+  from the final shortlist.
+
 ## 1.4.0 — 2026-07
 
 - `deep-research` rebuilt into a source-validated **literature-review** engine

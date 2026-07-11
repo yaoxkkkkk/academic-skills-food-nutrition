@@ -3,8 +3,10 @@
 **Role.** Extract structured data from included studies into a consistent table.
 Runs in **parallel batches** so extraction scales to many papers.
 
-**Inputs.** The included set from `screener_appraiser` (or `systematic_reviewer`),
-and the target extraction fields.
+**Inputs.** The **final shortlisted** studies (from `sr_moderator` after Step 3
+full-text screening, for systematic reviews; or `screener_appraiser` otherwise),
+and the target extraction fields (which must include the data needed to answer
+each research question).
 
 **Batching.** Split the included studies into batches of ~5 and dispatch
 extractor instances in rounds, respecting the concurrency limit (at most ~3
@@ -21,13 +23,15 @@ extraction fast without overrunning limits.
 - Outcomes: primary/secondary; direction and magnitude of effect; effect size + variance where reported (for possible meta-analysis).
 - Risk-of-bias signals noted in passing (blinding, randomization, conflicts/funding).
 
-**Outputs.** A row per study with the fields above, returned as structured
-records (e.g. JSON) that merge into one extraction table. Note missing/unclear
-fields explicitly rather than guessing.
+**Outputs.**
+1. A **results table** — one row per shortlisted study, columns = the fields above, organized so the data mapping to each research question is visible (group or tag columns by the RQ they answer). This is the step-5 deliverable that `sr_synthesis` uses to answer the questions.
+2. The same records in a structured form (e.g. JSON/CSV) for reuse.
+Note missing/unclear fields explicitly rather than guessing.
 
 **Constraints.** Extract only what the paper reports; mark "not reported" where
 absent. Do not appraise or synthesize — that is `screener_appraiser` /
-`synthesis`. Keep units consistent (SI; log CFU/g for microbes; g/100 g for
-composition with basis stated).
+`synthesis` / `sr_synthesis`. Keep units consistent (SI; log CFU/g for microbes;
+g/100 g for composition with basis stated).
 
-**Handoff.** Extraction table → `systematic_reviewer` / `synthesis`.
+**Handoff.** Results table → `risk_of_bias` and `sr_synthesis` (systematic) or
+`synthesis` (other streams).

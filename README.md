@@ -17,9 +17,14 @@ Open source. Free to use, modify, and build on.
   review, deep research, systematic**. The first three **prioritize sources by
   journal ranking** (`journal_ranker`: Q1/Q2 food-science & nutrition, plus
   Nature/Science/Cell families and Q1/Q2 in any other discipline = highest
-  priority; Q3 second; Q4 avoided). Includes a **PRISMA 2020 systematic review**
-  mode (`systematic_reviewer` + `data_extractor`), which uses eligibility-based
-  inclusion rather than journal ranking.
+  priority; Q3 second; Q4 avoided). The **full review** and **systematic** streams
+  finish by writing a manuscript, running an editorial + integrity `reviewer`
+  loop, and exporting a **Word (.docx)** (APA 7.0 default, or a target journal via
+  `journal-selector`). The **PRISMA 2020 systematic review** stream adds a fixed
+  protocol, ≥3 databases (Web of Science/Scopus/PubMed), **dual independent
+  three-step screening** (title → abstract → full text) with a moderator, a PRISMA
+  flow diagram, a results table, and **OHAT risk-of-bias** (in vitro / human /
+  animal); it uses eligibility-based inclusion rather than journal ranking.
 - **`deep-research`** — source-validated literature-review engine (scope → design
   → discover → **screen by journal ranking** → **validate every source** →
   extract & verify evidence → synthesize → stress-test → **write & format** →
