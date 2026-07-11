@@ -67,6 +67,42 @@ journals: [`journals/_coverage.md`](../journals/_coverage.md).
 - **qas-crops-foods** — Quality Assurance and Safety of Crops & Foods
 - **agri-food-security** — Agriculture & Food Security (BMC declarations block)
 
+### Nutrition journals (Nutrition & Dietetics category)
+Grouped by publisher format, same as food. Clinical-nutrition titles add
+structured abstracts, trial registration, and reporting guidelines.
+- **elsevier-food** — Progress in Lipid Research; Advances in Nutrition; American
+  Journal of Clinical Nutrition; Clinical Nutrition; Clinical Nutrition ESPEN;
+  Journal of Nutrition; Journal of Nutritional Biochemistry; Journal of the
+  Academy of Nutrition and Dietetics; Journal of Nutrition Health & Aging;
+  Current Developments in Nutrition; Journal of Renal Nutrition; Nutrition
+  Metabolism and Cardiovascular Diseases; Nutrition; Nutrition Research; Appetite;
+  NFS Journal
+- **wiley-food** — Obesity; International Journal of Eating Disorders; Nutrition
+  Bulletin; Nutrition & Dietetics; Journal of Parenteral and Enteral Nutrition;
+  Journal of Pediatric Gastroenterology and Nutrition; Journal of Nutrition and
+  Metabolism; International Journal of Food Science
+- **springer-food** — Current Obesity Reports; Current Nutrition Reports;
+  European Journal of Nutrition; International Journal of Obesity; Nutrition &
+  Diabetes; European Journal of Clinical Nutrition; Plant Foods for Human Nutrition
+- **crit-rev-food** (Taylor & Francis) — Journal of the International Society of
+  Sports Nutrition; International Journal of Food Sciences and Nutrition; Journal
+  of the American Nutrition Association; Nutritional Neuroscience; Journal of
+  Dietary Supplements
+- **foods-mdpi** — Nutrients; Dietetics; Obesities
+- **annu-rev-food** — Annual Review of Nutrition (invited only)
+- **agri-food-security** (BMC) — International Journal of Behavioral Nutrition and
+  Physical Activity; Lipids in Health and Disease; Journal of Eating Disorders;
+  Nutrition Journal; Nutrition & Metabolism; BMC Nutrition; Genes and Nutrition
+- **food-quality-safety** (Oxford) — Nutrition Reviews
+- **cambridge-nutrition** — British Journal of Nutrition; Nutrition Research
+  Reviews; Proceedings of the Nutrition Society; Public Health Nutrition; Journal
+  of Nutritional Science
+- **frontiers-nutrition** — Frontiers in Nutrition; Frontiers in Sustainable Food Systems
+- **nutrition-other** — Obesity Facts (Karger); Current Opinion in Clinical
+  Nutrition and Metabolic Care (Lippincott); Hepatobiliary Surgery and Nutrition
+  (AME); Beneficial Microbes (Brill); Food & Nutrition Research (Swedish Nutrition
+  Foundation)
+
 ## Output contract
 Return: `{journal, publisher, skill_folder, reference_style, abstract_words,
 figure_spec, notes}` drawn from the resolved skill's constraints block, so the

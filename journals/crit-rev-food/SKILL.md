@@ -41,9 +41,22 @@ Figures ≥300 dpi (line art ≥600 dpi); TIFF/EPS/PDF/PNG; color figures free o
 - [ ] Disclosure (competing interests) + Funding + Data availability statements
 - [ ] ORCID for authors · [ ] Figures ≥300 dpi · [ ] Cover letter (for reviews: scope + why comprehensive/timely)
 
+## Also covers — Taylor & Francis / Routledge nutrition journals
+Same T&F template (author–date/APA); clinical titles add trial registration and
+reporting guidelines.
+
+| Journal | Abbrev | Notes |
+|---|---|---|
+| Journal of the International Society of Sports Nutrition | J INT SOC SPORT NUTR | OA; sports nutrition |
+| International Journal of Food Sciences and Nutrition | INT J FOOD SCI NUTR | Research |
+| Journal of the American Nutrition Association | J AM NUTR ASSOC | Clinical/dietetics (Routledge) |
+| Nutritional Neuroscience | NUTR NEUROSCI | Research |
+| Journal of Dietary Supplements | J DIET SUPPL | Research |
+
 ## Formatting constraints
 ```yaml
 publisher: Taylor & Francis
+scope: food & nutrition
 reference_style: author-date-apa
 abstract_words: 250
 keywords_max: 7

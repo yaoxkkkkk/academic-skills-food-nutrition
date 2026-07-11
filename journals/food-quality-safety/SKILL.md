@@ -38,9 +38,13 @@ Figures ≥300 dpi (line art higher); TIFF/EPS/PDF; RGB online; editable tables;
 - [ ] Funding + Conflict of Interest + Data Availability statements
 - [ ] Ethics/consent statements where applicable · [ ] Figures ≥300 dpi · [ ] Cover letter
 
+## Also covers — Oxford University Press nutrition journal
+Same OUP template. **Nutrition Reviews** (NUTR REV) — OUP; comprehensive
+nutrition reviews; confirm structure/limits at the OUP journal site.
+
 ## Formatting constraints
 ```yaml
-journal: Food Quality and Safety
+journal: Food Quality and Safety (+ Nutrition Reviews)
 publisher: Oxford University Press
 reference_style: numbered
 abstract_words: 250

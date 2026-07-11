@@ -40,9 +40,14 @@ Figures ≥300 dpi (line art higher); Annual Reviews uses professional redraw �
 - [ ] Author–date (Annual Reviews) Literature Cited · [ ] Permissions for reused figures
 - [ ] Figures ≥300 dpi, editable source provided
 
+## Also covers — Annual Review of Nutrition
+Same Annual Reviews format (invited only; author–date; Summary Points / Future
+Issues). **Annual Review of Nutrition** (ANNU REV NUTR) — invited comprehensive
+nutrition reviews.
+
 ## Formatting constraints
 ```yaml
-journal: Annual Review of Food Science and Technology
+journal: Annual Review of Food Science and Technology; Annual Review of Nutrition
 publisher: Annual Reviews
 submission: invited-only
 reference_style: author-date-annual-reviews

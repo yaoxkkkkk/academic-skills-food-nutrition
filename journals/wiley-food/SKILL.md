@@ -52,9 +52,25 @@ Most listed titles are Gold open access (APC). Include ethics/consent statements
 - [ ] Conflict of interest + Author Contributions + Data Availability statements
 - [ ] ORCID for corresponding author · [ ] Figures ≥300 dpi · [ ] Cover letter
 
+## Also covers — Wiley nutrition journals
+Same Wiley template (mostly author–date/APA); clinical titles add structured
+abstracts, trial registration, and reporting guidelines.
+
+| Journal | Abbrev | Notes |
+|---|---|---|
+| Obesity | OBESITY | Clinical/obesity |
+| International Journal of Eating Disorders | INT J EAT DISORDER | Clinical |
+| Nutrition Bulletin | NUTR BULL | Reviews/commentary |
+| Nutrition & Dietetics | NUTR DIET | Dietetics |
+| Journal of Parenteral and Enteral Nutrition | JPEN-PARENTER ENTER | Clinical |
+| Journal of Pediatric Gastroenterology and Nutrition | J PEDIATR GASTR NUTR | Clinical |
+| Journal of Nutrition and Metabolism | J NUTR METAB | OA research |
+| International Journal of Food Science | INT J FOOD SCI | OA research |
+
 ## Formatting constraints
 ```yaml
 publisher: Wiley
+scope: food & nutrition
 reference_style: per-journal   # author-date default; eFood numbered
 abstract_words: 250
 keywords_max: 6

@@ -46,9 +46,19 @@ Figures ≥300 dpi (≥1000 dpi for line art); place near first citation; MDPI a
 - [ ] Numbered MDPI-style references with DOIs · [ ] Figures ≥300 dpi
 - [ ] Cover letter · [ ] Suggested reviewers (MDPI requests several)
 
+## Also covers — MDPI nutrition journals
+Same MDPI template (numbered MDPI style, mandatory statement sections).
+
+| Journal | Abbrev | Scope |
+|---|---|---|
+| Nutrients | NUTRIENTS | Human nutrition, diet, health |
+| Dietetics | DIETETICS-BASEL | Dietetics (OA) |
+| Obesities | OBESITIES-BASEL | Obesity (OA) |
+
 ## Formatting constraints
 ```yaml
 publisher: MDPI
+scope: food & nutrition
 reference_style: numbered-mdpi
 abstract_words: 200
 keywords: {min: 3, max: 10}

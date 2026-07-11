@@ -74,9 +74,34 @@ Vector (EPS/PDF) preferred; raster ≥300 dpi (line art ≥1000 dpi); column wid
 - [ ] Declaration of competing interest · [ ] CRediT · [ ] Data availability
 - [ ] Figures ≥300 dpi, correct widths · [ ] Cover letter (scope fit, novelty, suggested reviewers)
 
+## Also covers — Elsevier nutrition journals
+Same Elsevier template; **clinical/nutrition** titles add structured abstracts,
+trial registration, and a reporting guideline (CONSORT/STROBE/PRISMA) per ICMJE.
+Reference style is per-journal (author–date or numbered — confirm at the GfA).
+
+| Journal | Abbrev | Notes |
+|---|---|---|
+| Progress in Lipid Research | PROG LIPID RES | Reviews |
+| Advances in Nutrition | ADV NUTR | Reviews |
+| American Journal of Clinical Nutrition | AM J CLIN NUTR | Clinical; structured abstract, trial reg. |
+| Clinical Nutrition | CLIN NUTR | Clinical (ESPEN); reporting guidelines |
+| Clinical Nutrition ESPEN | CLIN NUTR ESPEN | Clinical |
+| Journal of Nutrition | J NUTR | Nutrition research |
+| Journal of Nutritional Biochemistry | J NUTR BIOCHEM | Mechanistic |
+| Journal of the Academy of Nutrition and Dietetics | J ACAD NUTR DIET | Dietetics |
+| Journal of Nutrition Health & Aging | J NUTR HEALTH AGING | Clinical/aging |
+| Current Developments in Nutrition | CURR DEV NUTR | OA |
+| Journal of Renal Nutrition | J RENAL NUTR | Clinical |
+| Nutrition Metabolism and Cardiovascular Diseases | NUTR METAB CARDIOVAS | Clinical |
+| Nutrition | NUTRITION | Clinical |
+| Nutrition Research | NUTR RES | Research |
+| Appetite | APPETITE | Behavioral/sensory |
+| NFS Journal | NFS J | OA |
+
 ## Formatting constraints
 ```yaml
 publisher: Elsevier
+scope: food & nutrition
 reference_style: per-journal   # numbered-vancouver OR author-date; see table
 abstract_words: 250
 keywords_max: 6

@@ -34,8 +34,11 @@ Open source. Free to use, modify, and build on.
 - **`food-paper`** — journal-aware manuscript writing. Resolves the target
   journal first, drafts to its structure and limits, applies its reference
   style, and routes figures through `food-figure`.
-- **`food-review`** — referee-perspective peer review (methodology,
-  statistics, novelty/scope, plus food-safety/ethics) with an editor decision.
+- **`food-review`** — multi-reviewer peer-review panel (coordinating editor +
+  methodology, domain/novelty, and integrity/ethics reviewers + a devil's
+  advocate) with a **formatting-compliance check** against the target journal
+  (APA 7.0 default, or a specific journal via `journal-selector`), ending in an
+  editorial decision + revision checklist + response-letter skeleton.
 - **`food-pipeline`** — orchestrates the whole path from topic/data to a
   submission-ready manuscript, with journal selection up front.
 
@@ -43,11 +46,14 @@ Open source. Free to use, modify, and build on.
 - **`journal-selector`** — asks which journal you're targeting (or reads it from
   your request) and loads that journal's constraints. Covers **60 journals**
   (see [`journals/_coverage.md`](journals/_coverage.md)).
-- **`journals/*`** — 16 publisher-tiered author-guideline skills (Elsevier,
-  Wiley, Nature Portfolio, Springer, Taylor & Francis, MDPI, RSC, ACS, Annual
-  Reviews, Oxford, Emerald, KeAi/Tsinghua, Codon, BioMed Central). Each lists the
-  journals it covers, their limits, structure, **reference/citation style**, and
-  a submission checklist.
+- **`journals/*`** — 19 publisher-tiered author-guideline skills covering both
+  the **Food Science & Technology** and **Nutrition & Dietetics** journal lists
+  (Elsevier, Wiley, Nature Portfolio, Springer, Taylor & Francis, MDPI, RSC, ACS,
+  Annual Reviews, Oxford, Emerald, KeAi/Tsinghua, Codon, BioMed Central,
+  Cambridge, Frontiers, plus a niche-publisher skill). Each lists the journals it
+  covers (see [`journals/_coverage.md`](journals/_coverage.md) and
+  [`journals/_coverage_nutrition.md`](journals/_coverage_nutrition.md)), their
+  limits, structure, **reference/citation style**, and a submission checklist.
 
 ### Figures
 - **`food-figure`** — submission-grade food-science figures in Python or R

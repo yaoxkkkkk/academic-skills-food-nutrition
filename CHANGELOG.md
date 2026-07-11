@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.6.0 — 2026-07
+
+- `food-review` rebuilt into a multi-reviewer panel: `review_coordinator`
+  (editor-in-chief), `reviewer_methodology`, `reviewer_domain`,
+  `reviewer_integrity`, `devils_advocate`, and `format_checker` (formatting/
+  reference-style compliance vs the target journal — APA 7.0 default, or a
+  specific journal via `journal-selector`). Outputs an editorial decision +
+  revision checklist + response-letter skeleton.
+- Journal coverage extended to the **Nutrition & Dietetics** journal list,
+  grouped by publisher format alongside food: existing publisher skills
+  (Elsevier, Wiley, Springer, Taylor & Francis, MDPI, Annual Reviews, BMC,
+  Oxford) now list their nutrition journals, and three new skills were added —
+  `cambridge-nutrition`, `frontiers-nutrition`, and `nutrition-other` (niche
+  publishers). New `journals/_coverage_nutrition.md` map + checker update.
+
 ## 1.5.0 — 2026-07
 
 - `food-research` **systematic** stream rebuilt into a full PRISMA pipeline with

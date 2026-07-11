@@ -45,9 +45,24 @@ Figures ≥300 dpi (line art ≥600–1000 dpi); TIFF/EPS/PDF/PNG; RGB online; S
 - [ ] Statements & Declarations block (funding, competing interests, ethics, contributions, data availability)
 - [ ] Figures ≥300 dpi · [ ] Cover letter
 
+## Also covers — Springer / Springer Nature nutrition journals
+Same Springer template (author–date Springer Basic default; some numbered);
+clinical titles add structured abstracts, trial registration, reporting guidelines.
+
+| Journal | Abbrev | Notes |
+|---|---|---|
+| Current Obesity Reports | CURR OBES REP | Reviews |
+| Current Nutrition Reports | CURR NUTR REP | Reviews |
+| European Journal of Nutrition | EUR J NUTR | Research |
+| International Journal of Obesity | INT J OBESITY | Clinical/obesity |
+| Nutrition & Diabetes | NUTR DIABETES | OA clinical |
+| European Journal of Clinical Nutrition | EUR J CLIN NUTR | Clinical |
+| Plant Foods for Human Nutrition | PLANT FOOD HUM NUTR | Research |
+
 ## Formatting constraints
 ```yaml
 publisher: Springer
+scope: food & nutrition
 reference_style: per-journal   # author-date (Springer Basic) default; numbered for SpringerOpen title
 abstract_words: 250
 keywords_max: 6
