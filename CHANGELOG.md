@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.7.0 — 2026-07
+
+- `food-paper` rebuilt into a whole-process, 12-subagent manuscript system:
+  `intake`, `literature_lead` (→ food-research), `question_framer`,
+  `data_curator`, `statistician`, `viz_designer` (→ food-figure),
+  `structure_architect`, `argument_builder`, `draft_writer`, `polisher`,
+  `citation_manager`, and `internal_reviewer` (→ food-review). Covers the full
+  research lifecycle from field understanding through data analysis, statistics,
+  figures, argument, drafting, and self-review — journal-aware throughout.
+- `food-pipeline` rebuilt as a master orchestrator with its own `intake_router`
+  and `quality_gate` subagents; routes the project to the specialist skills
+  (each with its own subagent team) and enforces quality gates and the
+  review→revise loop across research → write → review → revise → finalize.
+- README revised to reflect the multi-subagent skill set; project attributed to
+  the Food Science Group, University of Melbourne.
+
 ## 1.6.0 — 2026-07
 
 - `food-review` rebuilt into a multi-reviewer panel: `review_coordinator`

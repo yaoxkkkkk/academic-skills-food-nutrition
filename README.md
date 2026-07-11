@@ -1,10 +1,13 @@
 # Academic Skills for Food & Nutrition Science
 
 Original, **MIT-licensed** Claude Code skills for the food & nutrition research
-lifecycle — **research → write → review → revise** — with built-in knowledge of
-food-science journal author guidelines and a food-science figure workflow.
+lifecycle — **research → write → review → revise → finalize** — where each core
+skill is a **multi-subagent system** and a master pipeline orchestrates them,
+with built-in knowledge of food & nutrition journal author guidelines and a
+food-science figure workflow.
 
-Open source. Free to use, modify, and build on.
+Developed by the **Food Science Group at the University of Melbourne**. Open
+source — free to use, modify, and build on.
 
 ## Skills
 
@@ -31,21 +34,30 @@ Open source. Free to use, modify, and build on.
   editorial + integrity review loop) with a 12-subagent team. Outputs a finished,
   formatted review (**APA 7.0** by default, or a target journal's style via
   `journal-selector`). Runs standalone or as `food-research`'s deep-dive engine.
-- **`food-paper`** — journal-aware manuscript writing. Resolves the target
-  journal first, drafts to its structure and limits, applies its reference
-  style, and routes figures through `food-figure`.
+- **`food-paper`** — whole-process manuscript system (12 subagents) covering the
+  full research lifecycle: understand the field (calls `food-research`), frame
+  research questions, **curate data**, run **statistics**, build **figures &
+  tables** (calls `food-figure`), construct arguments and discussion, draft,
+  **polish**, manage citations, and **self-review** (calls `food-review`) —
+  journal-aware throughout (APA 7.0 default, or a target journal via
+  `journal-selector`).
 - **`food-review`** — multi-reviewer peer-review panel (coordinating editor +
   methodology, domain/novelty, and integrity/ethics reviewers + a devil's
   advocate) with a **formatting-compliance check** against the target journal
   (APA 7.0 default, or a specific journal via `journal-selector`), ending in an
   editorial decision + revision checklist + response-letter skeleton.
-- **`food-pipeline`** — orchestrates the whole path from topic/data to a
-  submission-ready manuscript, with journal selection up front.
+- **`food-pipeline`** — **master orchestrator** that routes a project to the
+  specialist skills (each with its own subagent team) and enforces quality gates:
+  journal selection → research (`food-research`/`deep-research`) → write & analyze
+  (`food-paper` → `food-figure`) → peer review (`food-review`) → revise →
+  re-review → finalize, with mandatory author decision points.
 
 ### Journal knowledge
 - **`journal-selector`** — asks which journal you're targeting (or reads it from
-  your request) and loads that journal's constraints. Covers **60 journals**
-  (see [`journals/_coverage.md`](journals/_coverage.md)).
+  your request) and loads that journal's constraints. Covers the **Food Science &
+  Technology** (60) and **Nutrition & Dietetics** (59) journal lists (see
+  [`journals/_coverage.md`](journals/_coverage.md) and
+  [`journals/_coverage_nutrition.md`](journals/_coverage_nutrition.md)).
 - **`journals/*`** — 19 publisher-tiered author-guideline skills covering both
   the **Food Science & Technology** and **Nutrition & Dietetics** journal lists
   (Elsevier, Wiley, Nature Portfolio, Springer, Taylor & Francis, MDPI, RSC, ACS,
@@ -81,9 +93,11 @@ Author-guideline details record a `Source:` URL and a `Verified:` date. Publishe
 pages change and several block automated access — confirm exact numeric limits at
 the source before submitting; structure and reference styles are the stable part.
 
-## License
+## License & maintainer
 
-MIT — see [LICENSE](LICENSE). Free for any use, including commercial.
+MIT — see [LICENSE](LICENSE). Free for any use, including commercial. Developed
+and maintained by the **Food Science Group, University of Melbourne**
+(PangeZAU / PangenomeAI).
 
 ## Acknowledgements
 

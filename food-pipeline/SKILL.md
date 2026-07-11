@@ -1,46 +1,71 @@
 ---
 name: food-pipeline
-description: "Orchestrate the full food & nutrition paper workflow end to end: pick the target journal, research, write, review, and revise. Use when the user wants to go from a topic or dataset to a submission-ready manuscript, or wants the whole process coordinated rather than one step. Triggers: write my paper end to end, take this from research to submission, run the full paper workflow, help me get this published, manage the whole paper process."
+description: "Master orchestrator for the whole food & nutrition research-to-publication workflow. Coordinates the specialist skills — each with its own subagent set — into one governed path: journal selection, research (food-research / deep-research), writing & analysis (food-paper), figures (food-figure), peer review (food-review), revision, and finalization. Use when the user wants the entire process managed end to end, or a project routed to the right skills with quality gates. Triggers: run the full paper workflow, take this from research to submission, manage the whole project, research to publication, end-to-end paper, orchestrate my paper."
 metadata:
-  version: "1.0.0"
+  version: "2.0.0"
   verified: "2026-07"
-  related_skills: [journal-selector, food-research, food-paper, food-review, food-figure]
+  related_skills: [journal-selector, food-research, deep-research, food-paper, food-figure, food-review]
+  subagents: [intake_router, quality_gate]
 ---
 
-# Food-Pipeline — End-to-End Food & Nutrition Paper Orchestrator
+# Food-Pipeline — Master Research-to-Publication Orchestrator
 
-Coordinate the other skills into one path from idea/data to a submission-ready
-manuscript. Original work.
+The top-level conductor. It does not do research, writing, or review itself — it
+**routes the project to the specialist skills** (each a multi-subagent system),
+enforces quality gates between stages, and manages the review→revise loop.
+Original work.
 
-## Stage 0 — Target journal (do this first)
-Invoke **`journal-selector`** to resolve the target journal and load its
-`Formatting constraints`. If the user named a journal ("publish on Food
-Chemistry"), pass it through; otherwise ask once or default to generic
-food-science conventions and say so. These constraints govern every later stage.
-All figures in later stages go through **`food-figure`** at the journal's spec.
+## Skills it orchestrates (each brings its own subagent team)
+- **`journal-selector`** — target-journal constraints (structure, limits, reference style, figure spec).
+- **`food-research`** — literature/evidence synthesis (quick brief / full review / **systematic** PRISMA + OHAT). Use **`deep-research`** instead for an open-ended, source-validated deep dive or a standalone literature review.
+- **`food-paper`** — whole-process manuscript system (field → questions → data/stats → figures → argument → draft → polish → self-review).
+- **`food-figure`** — submission-grade figures at the journal spec (invoked within `food-paper`).
+- **`food-review`** — multi-reviewer peer-review panel + formatting compliance.
+
+## Own subagents
+- **`intake_router`** — reads the project's current state and materials, resolves the target journal, picks the entry stage, and assembles the context each downstream skill needs.
+- **`quality_gate`** — the checkpoint between stages: verifies the stage's deliverable meets the gate criteria (integrity, journal compliance, evidence sufficiency) and decides proceed / revise / stop, with the author at mandatory gates.
 
 ## Stages
-| Stage | Skill | Output |
-|---|---|---|
-| 0 · JOURNAL | `journal-selector` | Journal constraints (structure, limits, reference style, figure spec) |
-| 1 · RESEARCH | `food-research` | Evidence brief + gap list |
-| 2 · WRITE | `food-paper` | Draft mapped to the journal's structure, references in its style, figures via `food-figure` |
-| 3 · REVIEW | `food-review` | Reviewer reports + editor decision + revision checklist |
-| 4 · REVISE | `food-paper` (revise) | Revised draft + point-by-point response |
-| 5 · FINALIZE | `food-paper` (format-to-journal) | Submission-ready draft + checklist |
+| Stage | Skill / agent | Deliverable | Gate |
+|---|---|---|---|
+| 0 · ROUTE | `intake_router` + `journal-selector` | Entry point + journal constraints | — |
+| 1 · RESEARCH | `food-research` (or `deep-research`) | Evidence brief / gap list / (systematic report) | evidence sufficiency |
+| 2 · WRITE | `food-paper` | Draft: analysis, figures (`food-figure`), argument, references | integrity + journal compliance |
+| 3 · REVIEW | `food-review` | Panel report + editorial decision + revision checklist | **mandatory** author decision |
+| 4 · REVISE | `food-paper` (revise) | Revised draft + point-by-point response | issues resolved |
+| 5 · RE-REVIEW | `food-review` (re-review) | Verification of the revision | accept / one more loop (cap 2) |
+| 6 · FINALIZE | `food-paper` (format-convert) + `writer` | Submission-ready manuscript + checklist (Word/target format) | final compliance |
 
-## Flow and checkpoints
-1. Stage 0 → confirm journal with the user.
-2. Stage 1 → present the evidence brief; confirm before writing.
-3. Stage 2 → draft; **checkpoint** for author input on framing and data.
-4. Stage 3 → review; **mandatory checkpoint** — author decides which concerns to address.
-5. Stage 4 → revise against chosen concerns; loop to Stage 3 once more if issues remain (cap at two review rounds).
-6. Stage 5 → finalize to the journal's format; produce the submission checklist.
+## Workflow
 
-Entry can be mid-pipeline: a dataset starts at Stage 1, a full draft starts at
-Stage 2 or 3, reviewer comments start at Stage 4.
+```mermaid
+flowchart TD
+    A[Project in] --> R[intake_router<br/>state + materials + journal + entry stage]
+    R --> J[journal-selector]
+    R --> S1[Stage 1 RESEARCH<br/>food-research / deep-research]
+    S1 --> G1{quality_gate<br/>evidence sufficient?}
+    G1 -- yes --> S2[Stage 2 WRITE<br/>food-paper -> food-figure]
+    G1 -- no --> S1
+    S2 --> G2{quality_gate<br/>integrity + journal compliance}
+    G2 -- pass --> S3[Stage 3 REVIEW<br/>food-review panel]
+    G2 -- fail --> S2
+    S3 --> G3{{author decision<br/>mandatory gate}}
+    G3 -- revise --> S4[Stage 4 REVISE<br/>food-paper revise]
+    S4 --> S5[Stage 5 RE-REVIEW<br/>food-review re-review]
+    S5 -- issues --> S4
+    S5 -- accept --> S6[Stage 6 FINALIZE<br/>format + Word export]
+    G3 -- accept --> S6
+    S6 --> OUT[Submission-ready manuscript]
+```
+
+## Entry points (mid-pipeline)
+`intake_router` detects where to start: a topic/dataset → Stage 1; a full draft →
+Stage 2 or 3; reviewer comments in hand → Stage 4. It never restarts completed
+stages unnecessarily.
 
 ## Rules
-- Re-flow references and re-check limits whenever the target journal changes.
-- Keep food-science reporting standards throughout (n, error type, validated methods, panel details, ethics).
-- Never advance past a mandatory checkpoint without author input.
+- **Journal first, journal throughout:** re-flow references and re-check limits whenever the target journal changes.
+- **Gates are real:** `quality_gate` can send a stage back; integrity and review gates cannot be skipped, and the review decision is always the author's.
+- **Food-science standards everywhere:** n and error type, validated methods, panel details, ethics/food-safety — enforced at every write/review gate.
+- **Don't duplicate work:** the specialist skills own their subagents; the pipeline sequences and gates them, it does not re-implement them.
