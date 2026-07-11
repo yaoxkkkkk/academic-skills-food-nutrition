@@ -62,7 +62,11 @@ MIT — see [LICENSE](LICENSE). Free for any use, including commercial.
 
 ## Acknowledgements
 
-This is original, independently written work. It was informed by, but contains no
-code or text from, earlier community projects exploring academic-research and
-scientific-figure skills for Claude Code. Workflow concepts are not
-copyrightable; the wording here is our own.
+This is original, independently written work released under MIT. It was informed
+by — but contains no code or text from — earlier community projects exploring
+academic-research and scientific-figure skills for Claude Code, including the
+`nature-skills` collection (Apache-2.0) and `academic-research-skills`
+(CC-BY-NC-4.0). Only non-copyrightable workflow *concepts* (e.g. multi-source
+search, layered retrieval, staged screening) were drawn on; all wording here is
+our own, so this project is free of their license obligations and is offered
+under MIT.

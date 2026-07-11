@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 — 2026-07
+
+- `food-research` expanded to a comprehensive, multi-source workflow: four-layer
+  search (structured → backward chaining → forward chaining → semantic),
+  two-phase screening with a food-science quality rubric, and cross-source
+  synthesis with an evidence matrix, evidence grading, coverage advisory, and gap
+  analysis. MCP-tool-aware (PubMed, Consensus, bioRxiv, CrossRef, …) with web
+  fallback.
+- Added four `food-research` subagents: `search_strategist`, `source_scout`,
+  `screener_appraiser`, `synthesis`.
+
 ## 1.0.0 — 2026-07
 
 First open-source release. Original, MIT-licensed work.
