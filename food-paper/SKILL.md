@@ -13,6 +13,8 @@ metadata:
     - references/statistics-reporting.md
     - references/declarations-guide.md
     - references/apa7-quickref.md
+    - references/faithfulness-and-citation.md
+    - references/latex-guide.md
 ---
 
 # Food-Paper — Whole-Process Manuscript System for Food & Nutrition Science
@@ -35,7 +37,7 @@ abstract limits, reference style, and the figure spec passed to `food-figure`.
 - **section** — draft or rewrite one section (intro/methods/results/discussion/abstract).
 - **stats** — statistical analysis plan/execution guidance only.
 - **revise** — revise against reviewer comments (pairs with `food-review`).
-- **format-convert** — convert an existing draft to the target journal's structure + reference style.
+- **format-convert** — convert a draft to the target journal's structure + reference style; output **Markdown, LaTeX (.tex), or DOCX**, and **build a PDF** via Pandoc or `latexmk` (see `references/latex-guide.md`). Yes — this skill can prepare and edit LaTeX drafts.
 - **polish** — language editing to publication-quality English.
 
 ## Subagent team (dispatch via the Agent tool; independent stages run in parallel)
@@ -91,6 +93,15 @@ prep, storage). Ethics/food-safety statements where relevant.
 - `references/statistics-reporting.md` — `statistician`: what to report and which test.
 - `references/declarations-guide.md` — CRediT, funding, COI, data availability, ethics.
 - `references/apa7-quickref.md` — default citation style for `citation_manager` (canonical APA 7.0 for the suite).
+- `references/faithfulness-and-citation.md` — **grounding rules + four-gate citation check; the suite's no-fabrication contract.** Run `scripts/verify_citations.py` on the reference set.
+- `references/latex-guide.md` — prepare/edit LaTeX drafts and build the PDF (Pandoc / latexmk).
+
+## Grounding (non-negotiable)
+Write **only** from the user's data and verified literature. Never invent
+references, DOIs, numbers, or results; unsupported content is marked
+`[UNVERIFIED]`/`[EVIDENCE GAP]`, never filled from memory. `citation_manager` and
+`draft_writer` enforce the four-gate citation check in
+`references/faithfulness-and-citation.md`.
 
 ## Handoffs
 `food-research` (evidence in) → **food-paper** → `food-review` (external panel) →

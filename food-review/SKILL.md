@@ -75,6 +75,7 @@ skeleton the author can fill in. Critique the work, not the author.
 - `references/editorial-decisions.md` — `review_coordinator`: Accept/Minor/Major/Reject logic + overrides.
 - `references/ethics-integrity-checklist.md` — `reviewer_integrity` (canonical; shared with `deep-research`).
 - `food-paper/references/statistics-reporting.md` — `reviewer_methodology`: stats red flags.
+- `food-paper/references/faithfulness-and-citation.md` — `reviewer_integrity`: verify every citation is real (four-gate) and every claim is source-bound; flag any fabricated/unsupported content.
 
 ## Handoff
 Feeds `food-paper` (revise mode) for the author to act on; part of the
