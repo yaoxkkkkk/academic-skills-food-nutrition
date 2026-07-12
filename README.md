@@ -107,8 +107,12 @@ structure so cross-skill references resolve.
   journal's spec. Covers all common scientific figure types (bar/box/violin,
   line/kinetic, scatter/regression, Bland-Altman, sensory radar, chromatograms,
   TPA/rheology, dose-response, survival, PCA/PLS-DA, clustered heatmaps, forest,
-  microscopy plates, multi-panel), with nine reference docs plus data-profiler and
-  backend-preference scripts. Exports journal-ready SVG/PDF/TIFF.
+  microscopy plates, multi-panel), with Python (matplotlib/seaborn/subplot_mosaic/
+  statsmodels) and R (ggplot2/patchwork/ComplexHeatmap/ggrepel + svglite/cairo_pdf/
+  ragg) template libraries, curated colourblind-safe palettes, per-figure
+  provenance + captions, and a QA gate. Exports journal-ready SVG/PDF/TIFF. For
+  **schematics/graphical abstracts**, an opt-in AI-image route (Gemini/ChatGPT/
+  Claude) with a structured prompt method — never for data figures.
 
 ## How it fits together
 
@@ -153,8 +157,7 @@ statement as a *draft to be verified*, never as established fact.
 - **Follow your institution's academic-integrity rules.**
 
 ### University of Melbourne policy (for UoM staff and students)
-This project is initiated at the University of Melbourne; UoM users must comply
-with University policy on acknowledging and using generative AI. Always check the
+This project is initiated by the Food Science Research Team at the University of Melbourne; UoM users must comply with University policy on acknowledging and using generative AI. Always check the
 current policy and your course/coordinator's specific requirements:
 - [Acknowledging use of AI tools and technologies](https://students.unimelb.edu.au/academic-skills/academic-integrity/acknowledging-use-of-ai-tools-and-technologies)
 - [Academic integrity](https://students.unimelb.edu.au/academic-skills/academic-integrity)
@@ -197,7 +200,8 @@ This is original, independently written work released under MIT. It was informed
 by — but contains no code or text from — earlier community projects exploring
 academic-research and scientific-figure skills for Claude Code, including the
 `nature-skills` collection (Apache-2.0), `deer-flow` (MIT), `Light-skills` (MIT),
-and `academic-research-skills` (CC-BY-NC-4.0). Only non-copyrightable workflow
+`academic-figure-skills` and `academic-figure-generator` (MIT), and
+`academic-research-skills` (CC-BY-NC-4.0). Only non-copyrightable workflow
 *concepts* (e.g. multi-source search, layered retrieval, staged screening,
 parallel extraction, PRISMA structure, subagent teams, evidence/citation
 verification gates, and publication figure styles) were drawn on; all wording

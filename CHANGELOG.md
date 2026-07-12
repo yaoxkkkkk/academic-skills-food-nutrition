@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.16.0 — 2026-07
+
+Learned from the MIT `academic-figure-skills` / `academic-figure-generator`
+projects and the visualization-agent pattern; improved `food-figure`:
+
+- **AI-image route enriched** — a structured four-layer prompt method, a
+  schematic figure-type taxonomy (process/mechanism/experimental-design/graphical-
+  abstract/comparison, food examples), text-budget and flat-academic style rules,
+  a JSON structured-spec option, and reinforced anti-fabrication (schematics only,
+  never data figures, never invented values).
+- **`references/color-palettes.md`** — curated colourblind-safe palettes
+  (qualitative / sequential / diverging / monochrome) with a by-data-type decision
+  hierarchy; `design-principles` now points to it.
+- **`references/figure-provenance.md`** — a per-figure trace card (data → script →
+  what it shows → supported claim → limitations) + self-contained caption (APA 7.0
+  or journal) + LaTeX inclusion; ties figures to real data (grounding).
+- **QA checklist** gains explicit blocked pitfalls (no 3-D, no pie, no dual y-axes,
+  no truncated axes, error bars + n required, no rainbow colormap) and a
+  provenance/caption check. Figures are now delivered with a caption + trace card.
+
 ## 1.15.0 — 2026-07
 
 - **food-figure expanded** (informed by the nature-figure project):

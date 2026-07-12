@@ -2,46 +2,63 @@
 
 **Default is always Python or R.** Use an AI image model **only when the user
 explicitly asks** to generate the image with **Gemini, ChatGPT, or Claude** (or
-another named image model) instead of code.
+another named image model) — and **only for conceptual visuals**. Method informed
+by the MIT `academic-figure-skills` / `academic-figure-generator` projects (see
+the repo README Acknowledgements); wording here is original.
 
-## When it is allowed
-Only for **conceptual/qualitative visuals**:
-- Mechanism diagrams (e.g. a food-process or reaction pathway, encapsulation
-  release, gut-microbiome interaction)
-- Graphical abstracts / concept art
-- Workflow or process pipelines
-- Before/after or split-panel schematic illustrations
+## When it is allowed — schematic figure types
+Only for **conceptual/qualitative visuals** (no data axes/values):
+| Type | Structure | Food/nutrition example |
+|---|---|---|
+| **Process / workflow** | Input → Step 1 → Step 2 → Output | Extraction/encapsulation pipeline; sample-prep workflow |
+| **Mechanism / pathway** | Entities + labelled arrows (cause→effect) | Antioxidant action; gut-microbiome interaction; Maillard pathway |
+| **Experimental design** | Groups × treatments × timepoints (schematic) | Storage/shelf-life trial layout; sensory panel design |
+| **Graphical abstract** | Split or circular concept summarising the paper | The paper's core finding as one concept image |
+| **Comparison (conceptual)** | N columns, shared parts grey, differences highlighted | Coating A vs B mechanism (no measured values) |
 
 ## When it is NOT allowed
-**Never** use an AI image model for **any data-bearing figure** — bar/line/scatter
-plots, heatmaps, chromatograms, microscopy, dose–response, forest plots, PCA, etc.
-Those are quantitative evidence and **must** be produced in Python or R from the
-real data. This preserves scientific integrity and reproducibility.
+**Never** use an AI image model for a **data-bearing figure** — bar/line/scatter,
+heatmap, chromatogram, microscopy, dose–response, forest, PCA, etc. Those are
+quantitative evidence and **must** be produced in Python/R from the real data.
 
-## Non-negotiable rules
-- **No fabricated data or values.** The image must not contain invented numbers,
-  axes with values, p-values, error bars, sample sizes, or made-up mechanisms.
+## Prompt method (four layers)
+1. **Understand the concept** from the manuscript: the central claim, the key
+   entities, the cause→effect logic, and the layout (left-to-right / circular /
+   split panels). Use only what the source states.
+2. **Global description** — open with figure type, subject, layout, and style:
+   *"A clean, flat academic [process/mechanism] schematic, [layout], white
+   background, minimal text, no data values."*
+3. **Section-by-section** — describe each region with `=== SECTION ===` markers:
+   the boxes/entities, their labels, the arrows/connections and their labels, and
+   any small icons. Keep the geometry explicit.
+4. **Style specification** — flat academic aesthetic; the palette (see
+   `color-palettes.md`); border-only colour on white fill; consistent fonts.
+
+For tight control, output a **structured JSON spec** (boxes with positions/labels,
+arrows with from→to/label) and hand that to the model — it renders text and layout
+more reliably than prose alone.
+
+## Text budget (labels only; details go in the caption)
+Module/box titles ≤5 words; sub-labels ≤3 words; pipeline steps ≤2 words. **No
+equations, parameters, or numbers inside the image** — those belong in the figure
+**caption**. Assume AI text rendering is imperfect and re-label the final image in
+a vector editor (Inkscape/Illustrator).
+
+## Visual style constraints
+Flat, academic: **no gradients, shadows, or 3-D**. 2–3 hues + greyscale from the
+chosen palette; white fill dominant (≥70%); colour reserved for borders/arrows,
+not filled background panels; small-caps labels with thin grey dividers.
+
+## Non-negotiable (anti-fabrication)
+- **No fabricated data or values** — no invented numbers, axes with values,
+  p-values, error bars, sample sizes, or made-up mechanisms/sub-steps not in the
+  source. Mark anything uncertain as *"to confirm"*, don't invent it.
 - **No fabricated logos, journal marks, or institutional branding.**
-- **Draft concept, not evidence.** Treat the output as a visual draft; the
-  underlying science must be established and cited elsewhere in the manuscript.
-- **Legibility is limited** — AI images often render text poorly. Re-label the
-  final figure in a vector editor (Inkscape/Illustrator) or overlay text in
-  Python/R before submission.
-- **Disclose** AI image generation per the venue's policy (see
-  `food-paper/references/declarations-guide.md`), and check the journal permits
+- **Draft concept, not evidence** — the underlying science must be established and
+  cited in the manuscript text.
+- **Disclose** AI image generation per the venue's policy
+  (`food-paper/references/declarations-guide.md`), and check the journal permits
   AI-generated figures — many restrict them.
-
-## Workflow (when opted-in)
-1. **Define the concept** from the manuscript: the central idea, the key entities,
-   the cause→effect logic, and the layout (left-to-right / circular / split).
-2. **Write a tight prompt:** "clean scientific mechanism schematic, minimal text,
-   flat vector style, labelled boxes and arrows, white background, no fabricated
-   data or numbers, [entities], [relationships], [layout]."
-3. **Generate** with the model the user requested (Gemini / ChatGPT / Claude image
-   generation), using that tool's own image interface. Prefer a high resolution
-   and the aspect ratio the journal wants (e.g. graphical-abstract box).
-4. **Review & finalize:** check for fabricated content and mislabelling; fix text
-   in a vector editor; confirm it matches the manuscript's claims.
 
 If the user has not asked for AI image generation, do not use it — return to the
 Python/R backend gate.

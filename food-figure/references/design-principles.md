@@ -1,6 +1,8 @@
 # Design Principles
 
 ## Colour
+Full palette catalog (qualitative / sequential / diverging / monochrome + the
+by-data-type decision hierarchy): **`color-palettes.md`**.
 - **Colourblind-safe by default.** Use the Okabe–Ito palette:
   `#000000 #E69F00 #56B4E9 #009E73 #F0E442 #0072B2 #D55E00 #CC79A7`.
 - Never `jet`/rainbow for continuous data — use perceptually uniform maps
