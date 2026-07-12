@@ -101,3 +101,7 @@ claude plugin validate .    # optional, if claude CLI is installed
 - Change history: `CHANGELOG.md`.
 - License: `LICENSE` (MIT).
 - Acknowledgements / provenance: `README.md` (Acknowledgements) and `NOTICE`/attribution.
+
+## Contact
+Development team: **food_agents@lists.unimelb.edu.au**. Food research teams
+interested in contributing or collaborating are welcome to reach out.
