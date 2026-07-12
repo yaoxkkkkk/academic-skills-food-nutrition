@@ -6,6 +6,12 @@ already in pandas/numpy, the key panel needs custom layout/image mosaics, or the
 user's pipeline is Python.
 
 ## Publication defaults
+Quickest: apply the bundled style file, then override DPI/size per journal:
+```python
+import matplotlib.pyplot as plt
+plt.style.use("food-figure/assets/publication.mplstyle")  # Okabe-Ito, small fonts, editable vector text
+```
+Or set rcParams directly:
 ```python
 import matplotlib as mpl, matplotlib.pyplot as plt
 mpl.rcParams.update({

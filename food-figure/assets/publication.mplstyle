@@ -1,0 +1,50 @@
+# food-figure publication style for matplotlib.
+# Use:  import matplotlib.pyplot as plt; plt.style.use("food-figure/assets/publication.mplstyle")
+# Journal-ready defaults: small sans-serif fonts, thin lines, no top/right spines,
+# editable vector text, 300 dpi. Override DPI/size per the target journal spec.
+
+# --- fonts ---
+font.family        : sans-serif
+font.sans-serif    : Arial, Helvetica, DejaVu Sans
+font.size          : 8
+axes.titlesize     : 9
+axes.labelsize     : 8
+xtick.labelsize    : 7
+ytick.labelsize    : 7
+legend.fontsize    : 7
+
+# --- lines & markers ---
+axes.linewidth     : 0.8
+lines.linewidth    : 1.2
+lines.markersize   : 4
+patch.linewidth    : 0.8
+errorbar.capsize   : 3
+
+# --- spines & ticks ---
+axes.spines.top    : False
+axes.spines.right  : False
+xtick.direction    : out
+ytick.direction    : out
+xtick.major.width  : 0.8
+ytick.major.width  : 0.8
+
+# --- grid (off by default; enable per-axes if needed) ---
+axes.grid          : False
+grid.linewidth     : 0.5
+grid.alpha         : 0.4
+
+# --- legend ---
+legend.frameon     : False
+legend.handlelength: 1.5
+
+# --- colour cycle: Okabe-Ito (colourblind-safe) ---
+axes.prop_cycle    : cycler('color', ['000000','E69F00','56B4E9','009E73','F0E442','0072B2','D55E00','CC79A7'])
+
+# --- figure & export ---
+figure.dpi         : 300
+savefig.dpi        : 300
+savefig.bbox       : tight
+savefig.pad_inches : 0.02
+pdf.fonttype       : 42
+ps.fonttype        : 42
+svg.fonttype       : none

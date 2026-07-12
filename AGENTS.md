@@ -48,9 +48,10 @@ A PR that changes skills but not README/CHANGELOG will be rejected.
 # 1. Journal coverage maps resolve (food 60, nutrition list)
 python3 scripts/check_journal_coverage.py
 
-# 2. food-figure scripts self-test
+# 2. scripts self-test
 python3 food-figure/scripts/analyze_data.py --selftest
 python3 food-figure/scripts/backend_pref.py --selftest
+python3 scripts/verify_citations.py --selftest        # citation/anti-fabrication gate
 
 # 3. Manifests are valid JSON (and, if you have Claude Code, validate the plugin)
 python3 -c "import json;[json.load(open(p)) for p in ['.claude-plugin/plugin.json','.claude-plugin/marketplace.json']];print('json ok')"
@@ -63,6 +64,17 @@ claude plugin validate .    # optional, if claude CLI is installed
 ```
 
 ## Content rules
+- **Grounding — no fabrication (applies to every research/writing/review agent).**
+  All output must be written **100% from true information** collected from the
+  literature and the user's own data. **Never invent** a reference, DOI, author,
+  year, venue, quotation, locator, statistic, effect size, sample size, or result.
+  If a source does not report a value, write "not reported"; if a claim cannot be
+  traced to a verified source, mark it `[UNVERIFIED]` / `[EVIDENCE GAP]` and route
+  it back for sourcing — do not fill it from memory. Every citation must pass the
+  four-gate check (exists → identity matches → not retracted → source actually
+  supports the claim at a locator). See
+  `food-paper/references/faithfulness-and-citation.md` and run
+  `python3 scripts/verify_citations.py <cites.json>` on the reference set.
 - **Original text only.** This project is MIT. Do NOT copy text from CC-BY-NC or
   other non-permissive sources (e.g. the upstream `academic-research-skills`).
   Workflow *ideas* are fine; the wording must be your own. Permissive sources

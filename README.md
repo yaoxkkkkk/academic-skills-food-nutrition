@@ -157,9 +157,10 @@ worldwide are warmly welcomed — open an issue or pull request.
 This is original, independently written work released under MIT. It was informed
 by — but contains no code or text from — earlier community projects exploring
 academic-research and scientific-figure skills for Claude Code, including the
-`nature-skills` collection (Apache-2.0), `deer-flow` (MIT), and
-`academic-research-skills` (CC-BY-NC-4.0). Only non-copyrightable workflow
+`nature-skills` collection (Apache-2.0), `deer-flow` (MIT), `Light-skills` (MIT),
+and `academic-research-skills` (CC-BY-NC-4.0). Only non-copyrightable workflow
 *concepts* (e.g. multi-source search, layered retrieval, staged screening,
-parallel extraction, PRISMA structure, subagent teams) were drawn on; all wording
+parallel extraction, PRISMA structure, subagent teams, evidence/citation
+verification gates, and publication figure styles) were drawn on; all wording
 here is our own, so this project is free of their license obligations and is
 offered under MIT.

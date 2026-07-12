@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.12.0 — 2026-07
+
+Informed by investigating the MIT `Light-skills` project (evidence/citation
+gates, typesetting, figure styles):
+
+- **Anti-fabrication / grounding (no made-up information).** New
+  `food-paper/references/faithfulness-and-citation.md` (four-gate citation check
+  + no-fabrication rules) and `scripts/verify_citations.py` (runnable gate that
+  fails on references with no verifiable identifier or unbound claims). A repo-wide
+  grounding rule added to `AGENTS.md`; the rule is wired into `food-paper`,
+  `deep-research`, `food-research`, and `food-review`.
+- **LaTeX support** documented and enabled: `food-paper/references/latex-guide.md`
+  (Pandoc and latexmk/tectonic routes, engine/bib selection, journal templates,
+  figure inclusion); `food-paper` format-convert mode now states it can prepare/
+  edit `.tex` and build a PDF.
+- **Figure style file** `food-figure/assets/publication.mplstyle` (Okabe-Ito,
+  publication defaults) referenced from the Python guide.
+- README acknowledges `Light-skills` (MIT).
+
 ## 1.11.5 — 2026-07
 
 - OHAT risk-of-bias, in vitro: added `food-research/references/ohat-risk-of-bias.md`
