@@ -6,8 +6,32 @@ skill is a **multi-subagent system** and a master pipeline orchestrates them,
 with built-in knowledge of food & nutrition journal author guidelines and a
 food-science figure workflow.
 
-Developed by the **Food Science Group at the University of Melbourne**. Open
-source — free to use, modify, and build on.
+This open project was **initiated by the Food Science Group at the University of
+Melbourne**, and we warmly welcome food & nutrition research groups from around
+the world to use, adapt, and contribute to it. MIT-licensed and open source.
+
+## Install
+
+**Claude Code** (one command):
+
+```bash
+claude plugin marketplace add PangenomeAI/academic-skills-food-nutrition && \
+claude plugin install academic-skills-food-nutrition@academic-skills-food-nutrition
+```
+
+Then restart Claude Code (or run `/plugin`). Update later with
+`claude plugin update academic-skills-food-nutrition`.
+
+**Both Claude Code and Codex** (one command via the installer):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/PangenomeAI/academic-skills-food-nutrition/main/install.sh | bash
+```
+
+Or, from a local clone: `./install.sh` (both) · `./install.sh claude` · `./install.sh codex`.
+The installer registers the Claude Code plugin and copies the skills bundle into
+Codex's skills directory (`${CODEX_HOME:-~/.codex}/skills/`), preserving the repo
+structure so cross-skill references resolve.
 
 ## Skills
 
@@ -96,11 +120,12 @@ Author-guideline details record a `Source:` URL and a `Verified:` date. Publishe
 pages change and several block automated access — confirm exact numeric limits at
 the source before submitting; structure and reference styles are the stable part.
 
-## License & maintainer
+## License & community
 
-MIT — see [LICENSE](LICENSE). Free for any use, including commercial. Developed
-and maintained by the **Food Science Group, University of Melbourne**
-(PangeZAU / PangenomeAI).
+MIT — see [LICENSE](LICENSE). Free for any use, including commercial. This open
+project was **initiated by the Food Science Group, University of Melbourne**
+(PangeZAU / PangenomeAI). Contributions from food & nutrition research groups
+worldwide are warmly welcomed — open an issue or pull request.
 
 ## Acknowledgements
 

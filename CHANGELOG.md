@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.10.0 — 2026-07
+
+- Added a one-command **installer** (`install.sh`) that installs the skills as a
+  Claude Code plugin (via `claude plugin marketplace add` + `install`) and as a
+  Codex skills bundle (`${CODEX_HOME:-~/.codex}/skills/`), with a `curl | bash`
+  remote form. README gained an **Install** section (native Claude Code one-liner
+  + installer).
+- Reworded attribution: the project is **initiated by the Food Science Group,
+  University of Melbourne** and welcomes food & nutrition research groups
+  worldwide to use and contribute.
+
 ## 1.9.0 — 2026-07
 
 - Added curated, food-tuned **reference libraries** to the multi-agent skills
