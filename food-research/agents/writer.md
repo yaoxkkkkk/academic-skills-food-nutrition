@@ -23,7 +23,13 @@ style.
    systematic reviews — Discussion, Limitations, Conclusion, References).
 2. Ensure every in-text citation resolves to the reference list; keep tables and
    figures numbered and cited in order.
-3. Add the AI-assistance disclosure line.
+3. Add an **Acknowledgements** section that **always** discloses AI use: name
+   **this tool** (Academic Skills for Food & Nutrition Science) and the **AI
+   model(s) and version(s)** used (e.g. Claude Opus 4.8 via Claude Code / OpenAI
+   Codex / Gemini), what the AI did, and that the authors verified and take
+   responsibility for all AI-assisted content (see
+   `../../food-paper/references/declarations-guide.md`; use the journal's required
+   location for the AI statement if different).
 
 ## Word export
 Convert the finalized markdown to `.docx`:

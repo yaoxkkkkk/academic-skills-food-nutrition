@@ -25,6 +25,7 @@ Blueprint. On revision loops, also the feedback from `editor` and
 - **Discussion** — what the evidence collectively shows, its limitations, and the coverage advisory.
 - **Gaps & future directions** — the forward agenda from the synthesis.
 - **Conclusion.**
+- **Acknowledgements** — **always** disclose AI use: name **this tool** (Academic Skills for Food & Nutrition Science) and the **AI model(s) and version(s)** used (e.g. Claude Opus 4.8 via Claude Code / OpenAI Codex / Gemini), what the AI did, and that the authors verified and take responsibility for all AI-assisted content (see `food-paper/references/declarations-guide.md`; move to the journal's required location if needed).
 - **References** — the formatted list from `bibliography`.
 
 ## Rules

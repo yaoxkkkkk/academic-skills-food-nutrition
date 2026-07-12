@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.18.0 — 2026-07
+
+- **Mandatory AI-use acknowledgement** when writing a manuscript. `food-paper`
+  (`draft_writer`), `deep-research` (`compiler`), and `food-research` (`writer`)
+  now always add an **Acknowledgements** section disclosing **this tool**
+  (Academic Skills for Food & Nutrition Science) and the **AI model(s) and
+  version(s)** used (e.g. Claude Opus 4.8 via Claude Code / OpenAI Codex /
+  Gemini), what the AI did, and that the authors verified and take responsibility
+  for all AI-assisted content. `declarations-guide.md` updated with the required
+  content + template (move to the journal's required AI-statement location where
+  applicable).
+
 ## 1.17.0 — 2026-07
 
 - Added **multidisciplinary & cross-discipline journal skills** (from the MIT
