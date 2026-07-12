@@ -2,10 +2,14 @@
 name: food-research
 description: "Run a comprehensive, multi-source literature and evidence-synthesis workflow for food & nutrition science. Use when the user wants to research a food/nutrition topic in depth, do a literature review, build an evidence brief, screen and synthesize many sources, verify citations, or scope a systematic review. Coordinates food-science databases, preprints, semantic search, and food-safety/regulatory sources; runs a four-layer search, two-phase screening, and cross-source synthesis via subagents; grades evidence and maps gaps. Triggers: research this topic, deep literature review, comprehensive review, evidence synthesis, systematic review, scope a review, find all the literature, what does the evidence say, food science research, nutrition evidence, survey the field."
 metadata:
-  version: "4.0.0"
+  version: "4.1.0"
   verified: "2026-07"
   related_skills: [deep-research, journal-selector, food-paper, food-review, food-pipeline]
   subagents: [search_strategist, source_scout, screener_appraiser, journal_ranker, synthesis, writer, reviewer, systematic_reviewer, sr_search, sr_screener, sr_moderator, data_extractor, risk_of_bias, sr_synthesis]
+  references:
+    - references/literature-sources.md
+    - references/source-quality-hierarchy.md
+    - references/reporting-guidelines.md
 ---
 
 # Food-Research — Comprehensive Evidence Synthesis for Food & Nutrition Science
@@ -170,6 +174,11 @@ intended paper section); **literature/evidence matrix**; graded conclusions;
 For a subtopic that needs open-ended investigation beyond the literature (e.g.
 regulatory landscape, market/technology state), call the **`deep-research`**
 skill and fold its sourced synthesis back into the evidence brief.
+
+## References (load as needed)
+- `references/literature-sources.md` — databases + APIs (FSTA/PubMed/WoS/Scopus/CrossRef/OpenAlex + EFSA/FDA/USDA) for `search_strategist`/`source_scout`/`sr_search`.
+- `references/source-quality-hierarchy.md` — evidence grading for `screener_appraiser`/`synthesis`.
+- `references/reporting-guidelines.md` — EQUATOR/PRISMA/CONSORT/STROBE for the systematic stream and appraisal.
 
 ## Handoff
 Sources tagged and assigned by section feed `food-paper` (Introduction and

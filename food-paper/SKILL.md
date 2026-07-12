@@ -2,10 +2,17 @@
 name: food-paper
 description: "Multi-subagent manuscript system for food & nutrition science covering the whole research process: understand the field (literature), frame research questions, curate and analyze data, run statistics, build figures and tables, construct arguments and discussion, draft and polish the manuscript, and self-review — journal-aware throughout. Resolves the target journal first and formats to it (APA 7.0 default or a specific journal via journal-selector); routes figures through food-figure and deep literature through food-research. Use to write, outline, revise, or format a food-science paper or any section. Triggers: write my paper, draft a manuscript, food science paper, outline my paper, revise my manuscript, analyze my data and write it up, statistics for my paper, build figures for my paper, polish my manuscript, format for a journal, publish on <journal>."
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   verified: "2026-07"
   related_skills: [journal-selector, food-figure, food-research, food-review, food-pipeline]
   subagents: [intake, literature_lead, question_framer, data_curator, statistician, viz_designer, structure_architect, argument_builder, draft_writer, polisher, citation_manager, internal_reviewer]
+  references:
+    - references/paper-structure.md
+    - references/writing-style.md
+    - references/writing-quality-check.md
+    - references/statistics-reporting.md
+    - references/declarations-guide.md
+    - references/apa7-quickref.md
 ---
 
 # Food-Paper — Whole-Process Manuscript System for Food & Nutrition Science
@@ -76,6 +83,14 @@ HPLC/GC/LC-MS conditions, LOD/LOQ, recovery, identification by standards/MS-MS;
 mean ± SD/SEM with n; the statistical model, test, post-hoc, and threshold, with
 significance shown consistently. Reproducible Methods (cultivar/breed/batch,
 prep, storage). Ethics/food-safety statements where relevant.
+
+## References (load as needed)
+- `references/paper-structure.md` — `structure_architect`: IMRaD/review patterns + abstract types.
+- `references/writing-style.md` — `draft_writer`/`polisher`: scientific style, title/intro rhetoric.
+- `references/writing-quality-check.md` — self-check before `internal_reviewer`.
+- `references/statistics-reporting.md` — `statistician`: what to report and which test.
+- `references/declarations-guide.md` — CRediT, funding, COI, data availability, ethics.
+- `references/apa7-quickref.md` — default citation style for `citation_manager` (canonical APA 7.0 for the suite).
 
 ## Handoffs
 `food-research` (evidence in) → **food-paper** → `food-review` (external panel) →

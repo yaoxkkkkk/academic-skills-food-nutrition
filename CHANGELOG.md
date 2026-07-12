@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.9.0 — 2026-07
+
+- Added curated, food-tuned **reference libraries** to the multi-agent skills
+  (progressive disclosure), adapting only the genuinely useful upstream references
+  and dropping internal-machinery ones:
+  - Shared/canonical: `apa7-quickref` (food-paper), `literature-sources`,
+    `source-quality-hierarchy`, `reporting-guidelines` (food-research),
+    `ethics-integrity-checklist` (food-review) — cross-referenced by other skills.
+  - `food-pipeline`: `pipeline-state-machine`, `quality-gates`, `mode-advisor`.
+  - `deep-research`: `reasoning-and-fallacies`.
+  - `food-paper`: `writing-style`, `writing-quality-check`, `paper-structure`,
+    `declarations-guide`, `statistics-reporting`.
+  - `food-review`: `review-criteria`, `quality-rubrics`, `editorial-decisions`.
+  Each skill's frontmatter lists its references and a "References (load as needed)"
+  section points agents to them.
+
 ## 1.8.0 — 2026-07
 
 - `food-figure` rebuilt into a comprehensive, multi-file figure system:

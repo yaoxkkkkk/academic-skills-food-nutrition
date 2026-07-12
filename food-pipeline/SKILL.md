@@ -2,10 +2,14 @@
 name: food-pipeline
 description: "Master orchestrator for the whole food & nutrition research-to-publication workflow. Coordinates the specialist skills — each with its own subagent set — into one governed path: journal selection, research (food-research / deep-research), writing & analysis (food-paper), figures (food-figure), peer review (food-review), revision, and finalization. Use when the user wants the entire process managed end to end, or a project routed to the right skills with quality gates. Triggers: run the full paper workflow, take this from research to submission, manage the whole project, research to publication, end-to-end paper, orchestrate my paper."
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   verified: "2026-07"
   related_skills: [journal-selector, food-research, deep-research, food-paper, food-figure, food-review]
   subagents: [intake_router, quality_gate]
+  references:
+    - references/pipeline-state-machine.md
+    - references/quality-gates.md
+    - references/mode-advisor.md
 ---
 
 # Food-Pipeline — Master Research-to-Publication Orchestrator
@@ -63,6 +67,11 @@ flowchart TD
 `intake_router` detects where to start: a topic/dataset → Stage 1; a full draft →
 Stage 2 or 3; reviewer comments in hand → Stage 4. It never restarts completed
 stages unnecessarily.
+
+## References (load as needed)
+- `references/mode-advisor.md` — `intake_router` uses it to pick entry stage, research flavor, and skills.
+- `references/pipeline-state-machine.md` — states, transitions, entry points, loop caps.
+- `references/quality-gates.md` — the per-stage gate criteria `quality_gate` applies.
 
 ## Rules
 - **Journal first, journal throughout:** re-flow references and re-check limits whenever the target journal changes.

@@ -2,10 +2,15 @@
 name: food-review
 description: "Multi-reviewer peer-review system for food & nutrition manuscripts. Simulates an editorial panel — a coordinating editor, three domain reviewers (methodology/statistics, domain/novelty, integrity/ethics), and a devil's advocate — plus a formatting-compliance check against the target journal (APA 7.0 by default, or a specific journal via journal-selector). Use for pre-submission review, reviewer reports, mock peer review, or a critique before submitting. Triggers: review my paper, peer review, referee report, reviewer reports, critique my manuscript, pre-submission review, is my paper ready, mock review, editorial review, assess novelty and rigor."
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   verified: "2026-07"
   related_skills: [journal-selector, food-paper, food-research]
   subagents: [review_coordinator, reviewer_methodology, reviewer_domain, reviewer_integrity, devils_advocate, format_checker]
+  references:
+    - references/review-criteria.md
+    - references/quality-rubrics.md
+    - references/editorial-decisions.md
+    - references/ethics-integrity-checklist.md
 ---
 
 # Food-Review — Multi-Reviewer Peer Review for Food & Nutrition Manuscripts
@@ -63,6 +68,13 @@ minor, each concern actionable), the devil's advocate challenge, the formatting
 compliance report, and the coordinator's **editorial decision** (Accept / Minor /
 Major / Reject) with a prioritized revision checklist and a response-letter
 skeleton the author can fill in. Critique the work, not the author.
+
+## References (load as needed)
+- `references/review-criteria.md` — what each reviewer checks (food-tuned).
+- `references/quality-rubrics.md` — 1–5 scoring per dimension + weights.
+- `references/editorial-decisions.md` — `review_coordinator`: Accept/Minor/Major/Reject logic + overrides.
+- `references/ethics-integrity-checklist.md` — `reviewer_integrity` (canonical; shared with `deep-research`).
+- `food-paper/references/statistics-reporting.md` — `reviewer_methodology`: stats red flags.
 
 ## Handoff
 Feeds `food-paper` (revise mode) for the author to act on; part of the

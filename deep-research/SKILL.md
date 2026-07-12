@@ -2,10 +2,12 @@
 name: deep-research
 description: "General-purpose deep research that produces a fully written, source-validated literature review on any question: scope it, design the method, discover and screen sources by journal ranking, validate every source, extract and verify evidence, synthesize, stress-test, then write and format the review (APA 7.0 by default, or a target journal's style) and polish it through an editorial + integrity review loop. Use standalone for a deep dive or literature review, or as the deep-dive engine called by food-research. Runs a 12-subagent team with iterate-to-saturation and compile↔review loops. Triggers: deep research, research this in depth, write a literature review, investigate thoroughly, comprehensive review, state of the evidence, briefing on, dig into, deep dive."
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   verified: "2026-07"
   related_skills: [food-research, journal-selector, food-paper, food-pipeline]
   subagents: [research_scope, research_architect, investigator, source_screener, source_verifier, bibliography, claim_verifier, synthesizer, critic, compiler, editor, ethics_reviewer]
+  references:
+    - references/reasoning-and-fallacies.md
 ---
 
 # Deep-Research — Source-Validated Literature Review Engine
@@ -77,6 +79,14 @@ journal's structure, limits, and reference style.
 Every claim sourced; fact separated from interpretation; disagreement shown, not
 averaged; uncertainty surfaced. Upstream evidence beats parametric knowledge —
 mark missing evidence `[EVIDENCE GAP]`, never fabricate.
+
+## References (load as needed)
+- `references/reasoning-and-fallacies.md` — `synthesizer`/`critic`: sound argument + fallacies.
+- `food-research/references/literature-sources.md` — databases/APIs for `investigator`.
+- `food-research/references/source-quality-hierarchy.md` — evidence grading for `source_verifier`/`synthesizer`.
+- `food-research/references/reporting-guidelines.md` — EQUATOR/PRISMA/CONSORT/STROBE.
+- `food-paper/references/apa7-quickref.md` — APA 7.0 for `bibliography`/`compiler` (default style).
+- `food-review/references/ethics-integrity-checklist.md` — for `ethics_reviewer`.
 
 ## Handoff
 Standalone → deliver the final review. Called by `food-research` → return the
