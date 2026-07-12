@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Academic Skills for Food & Nutrition Science — open AI research skills for Claude Code and Codex" width="100%">
+</p>
+
 # Academic Skills for Food & Nutrition Science
 
 > **AI research assistant for food science and nutrition** — Claude Code & Codex

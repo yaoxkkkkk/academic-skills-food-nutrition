@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.11.3 — 2026-07
+
+- Added a project banner (`assets/banner.svg`) at the top of the README.
+
 ## 1.11.2 — 2026-07
 
 - `AGENTS.md`: strengthened the language rule — **all project files must be in

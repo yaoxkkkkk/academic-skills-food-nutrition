@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Academic Skills for Food and Nutrition Science — open AI research skills for Claude Code and Codex">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b3d2e"/>
+      <stop offset="0.55" stop-color="#15803d"/>
+      <stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <clipPath id="round"><rect x="0" y="0" width="1200" height="340" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect x="0" y="0" width="1200" height="340" fill="url(#bg)"/>
+
+    <!-- decorative shapes -->
+    <circle cx="1090" cy="30" r="230" fill="#ffffff" opacity="0.05"/>
+    <circle cx="1170" cy="310" r="170" fill="#fbbf24" opacity="0.07"/>
+    <circle cx="1040" cy="250" r="90" fill="#ffffff" opacity="0.04"/>
+
+    <!-- emblem: leaf (nature/food) + ascending bars (data/science) -->
+    <g transform="translate(150,170)">
+      <circle cx="0" cy="0" r="94" fill="#ffffff" opacity="0.09"/>
+      <circle cx="0" cy="0" r="94" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2"/>
+      <!-- leaf -->
+      <path d="M0,-62 C-30,-40 -30,-4 0,12 C30,-4 30,-40 0,-62 Z" fill="#4ade80"/>
+      <path d="M0,-54 L0,8" stroke="#0b3d2e" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+      <path d="M0,-34 L-16,-26 M0,-16 L-16,-8 M0,-34 L16,-26 M0,-16 L16,-8" stroke="#0b3d2e" stroke-width="2" opacity="0.35"/>
+      <!-- ascending bars -->
+      <rect x="-30" y="26" width="16" height="20" rx="3" fill="#fbbf24"/>
+      <rect x="-8"  y="14" width="16" height="32" rx="3" fill="#fde68a"/>
+      <rect x="14"  y="2"  width="16" height="44" rx="3" fill="#fbbf24"/>
+    </g>
+
+    <!-- text block -->
+    <text x="300" y="90" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" letter-spacing="4" font-weight="600" fill="#fcd34d">ACADEMIC SKILLS · OPEN SOURCE · MIT</text>
+
+    <text x="298" y="158" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="62" font-weight="800" fill="#ffffff">Food &amp; Nutrition Science</text>
+
+    <text x="300" y="202" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#d1fae5">AI research skills for Claude Code &amp; Codex</text>
+
+    <text x="300" y="242" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#a7f3d0">Research · Systematic review · Figures · Journal formatting · Peer review</text>
+
+    <text x="300" y="300" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" fill="#ffffff" opacity="0.72">Initiated by the Food Science Group, University of Melbourne</text>
+  </g>
+</svg>
