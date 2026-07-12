@@ -15,6 +15,8 @@ metadata:
     - references/r-guide.md
     - references/food-recipes.md
     - references/journal-specs.md
+    - references/color-palettes.md
+    - references/figure-provenance.md
     - references/ai-image-generation.md
   examples:
     - examples/python_food_figures.py
@@ -67,9 +69,13 @@ catalog are in `references/data-to-figure.md` and `references/chart-types.md`.
 Never force a chart the data can't support (e.g. bar-of-means where a
 distribution matters → box/violin + points).
 
-### 3 — Figure contract (before code)
+### 3 — Figure contract + provenance (before code)
 Fix the conclusion, evidence logic, export needs (target journal), and review
-risks. See `references/figure-contract.md`.
+risks (`references/figure-contract.md`). Open a **figure trace card**
+(`references/figure-provenance.md`): the real data source, the script that makes
+the figure, what it shows, and the claim it supports — so the plotted values match
+the reported statistics. Choose the palette by data type
+(`references/color-palettes.md`).
 
 ### 4 — Backend gate (blocking)
 - **Data figures → Python or R (always).** Resolve the backend by priority:
@@ -105,11 +111,18 @@ legend you hand back must use **relative paths**, never local machine paths — 
 with `python3 scripts/privacy_scan.py` (see
 `food-paper/references/privacy-and-confidentiality.md`).
 
+### Deliver
+Hand back, per figure: the file(s) (vector + raster), the **figure trace card**,
+a **self-contained caption** (APA 7.0 or the journal's style — see
+`references/figure-provenance.md`), and the plotting code. For a `.tex` build,
+include the `\includegraphics` environment.
+
 ## Modes
 - **recommend** — analyze data and suggest figures, no rendering yet.
-- **make** (default) — full pipeline to a rendered, exported figure.
+- **make** (default) — full pipeline to a rendered, exported figure + caption + trace card.
 - **revise / audit** — critique or fix an existing figure against the QA checklist and journal spec.
 - **multi-panel** — compose labelled panels (a, b, c) that share a logical thread.
+- **schematic** — a graphical abstract / mechanism diagram: Python/R by default, or the opt-in AI-image route (`references/ai-image-generation.md`) if the user asks.
 
 ## Scope
 Reproducible, code-generated, submission-grade scientific figures for food &

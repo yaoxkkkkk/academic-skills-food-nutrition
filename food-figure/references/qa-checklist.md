@@ -11,5 +11,15 @@
 - [ ] **Self-contained:** legend states what each panel shows, the error type, n, and the test; scale bars on all micrographs.
 - [ ] **Cited:** every figure/panel is referenced in the manuscript text in order.
 - [ ] **Reproducible:** an editable source (`.svg`/`.pdf`) and the plotting code are kept.
+- [ ] **Provenance + caption:** a figure trace card and a self-contained caption exist and the plotted values match the reported statistics (see `figure-provenance.md`).
+- [ ] **Font size:** ≥8 pt (≥7 pt ticks/legend) at final print size.
+
+## Blocked pitfalls (never ship these)
+- **No 3-D charts** — they distort perception; use a 2-D equivalent.
+- **No pie charts** — use a bar chart (or 100% stacked bar for parts of a whole).
+- **No dual y-axes** — use separate aligned panels instead.
+- **No truncated/misleading axes** — bars start at 0; disclose any non-zero baseline.
+- **No missing error/n** — show error type + biological n, or state why not applicable.
+- **No rainbow/`jet`** colormap for continuous data (use viridis/cividis).
 
 If any item fails, fix it before handing the figure back.
