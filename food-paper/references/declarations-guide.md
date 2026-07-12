@@ -28,7 +28,29 @@ State where data are (repository + accession/DOI), or the access conditions, or
 - Animal studies: approval + ARRIVE compliance.
 - Allergen disclosure where relevant.
 
-## AI-assistance disclosure
-Disclose AI tools used in preparation, per the venue's policy, honestly.
+## AI-assistance disclosure (required — tool + model + version)
+Every manuscript this suite helps write **must** acknowledge AI assistance
+honestly. In the **Acknowledgements** section (or the journal's required location
+for an AI statement), always state:
+1. **This tool** — *Academic Skills for Food & Nutrition Science*
+   (github.com/PangenomeAI/academic-skills-food-nutrition).
+2. **The AI model(s) and version(s)** actually used — name the model **and its
+   version** and the harness (e.g. *Claude Opus 4.8 via Claude Code*, *OpenAI
+   Codex / GPT-5.x*, *Gemini 2.x*). If unsure of the exact version, ask the user
+   rather than guessing.
+3. **What the AI did** (e.g. literature synthesis, drafting, figure code, language
+   editing) and that **the authors reviewed and verified all AI-assisted content
+   and take full responsibility** for the work.
 
-Match exact wording/headings to the target journal via `journal-selector`.
+Template (adapt to the venue):
+> The authors used *Academic Skills for Food & Nutrition Science*
+> (github.com/PangenomeAI/academic-skills-food-nutrition) with [AI model and
+> version, e.g. Claude Opus 4.8 via Claude Code] to assist with [tasks, e.g.
+> literature search and synthesis, drafting, figure generation, and language
+> editing]. All AI-assisted content was checked and verified by the authors, who
+> take full responsibility for the manuscript.
+
+Some venues require the AI statement in **Methods** or a **dedicated section**
+rather than Acknowledgements — follow the target journal's policy (via
+`journal-selector`); default to Acknowledgements. Match exact wording/headings to
+the target journal.

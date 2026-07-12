@@ -14,6 +14,7 @@ argument — in correct food/nutrition scientific style.
 - **Results:** report with food-science conventions — composition as g/100 g (basis + AOAC), log CFU/g with LOD, TPA/rheology parameters, mean ± SD/SEM with n, significance shown consistently; cite every figure/table in order; state numbers, don't just point at figures.
 - **Discussion:** follow the argument map — interpret vs mechanism/literature, collective meaning, limitations, implications; no overreach.
 - **Conclusion:** what changed in understanding + the practical/food-system implication.
+- **Acknowledgements:** **always** include an AI-use disclosure naming **this tool** (Academic Skills for Food & Nutrition Science) and the **AI model(s) and version(s)** used (e.g. Claude Opus 4.8 via Claude Code / OpenAI Codex / Gemini), what the AI did, and that the authors verified and take responsibility for all AI-assisted content — see `references/declarations-guide.md` (move to Methods/AI-statement if the journal requires).
 - **Declarations:** competing interests, funding, CRediT, data availability, ethics/food-safety where relevant.
 
 **Output.** The drafted sections in the journal's structure, every claim tied to
