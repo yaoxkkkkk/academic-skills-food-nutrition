@@ -131,7 +131,9 @@ the source before submitting; structure and reference styles are the stable part
 
 ## Contributing
 
-We welcome contributions from food & nutrition research groups worldwide.
+We welcome contributions from food & nutrition research groups worldwide. If your
+team would like to contribute or collaborate, please contact the development team
+at **[food_agents@lists.unimelb.edu.au](mailto:food_agents@lists.unimelb.edu.au)**.
 
 **Branching model — please read:** `main` is release-only; **never push to it
 directly**. Do your work on the **`development`** branch and open a **pull request**

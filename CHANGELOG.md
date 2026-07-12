@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.11.4 — 2026-07
+
+- Added the development team contact email
+  (`food_agents@lists.unimelb.edu.au`) to README, CONTRIBUTING.md, and AGENTS.md
+  for research teams wishing to contribute or collaborate.
+
 ## 1.11.3 — 2026-07
 
 - Added a project banner (`assets/banner.svg`) at the top of the README.

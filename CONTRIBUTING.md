@@ -27,6 +27,9 @@ See **[AGENTS.md](AGENTS.md)** — it is the complete, machine-actionable contra
 structure conventions). AI coding agents (Claude Code, Codex, Cursor, …) should
 read `AGENTS.md` first.
 
-## Questions
-Open an issue. By contributing you agree your work is original and released under
-the project's MIT license.
+## Questions & contact
+Open an issue, or contact the development team at
+**[food_agents@lists.unimelb.edu.au](mailto:food_agents@lists.unimelb.edu.au)** —
+food research teams interested in contributing or collaborating are warmly
+welcome to reach out. By contributing you agree your work is original and
+released under the project's MIT license.
