@@ -206,6 +206,10 @@ project was **initiated by the Food Science Group, University of Melbourne**
 (PangeZAU / PangenomeAI). Contributions from food & nutrition research groups
 worldwide are warmly welcomed — open an issue or pull request.
 
+### Contributors and institutions
+
+- **Zijian Liang** — Food Science Research Team, University of Melbourne.
+
 ## Acknowledgements
 
 This is original, independently written work released under MIT. It was informed
