@@ -38,13 +38,13 @@ curl -fsSL https://raw.githubusercontent.com/PangenomeAI/academic-skills-food-nu
 ```
 
 Or, from a local clone: `./install.sh` (all) · `./install.sh claude` · `./install.sh codex` · `./install.sh minimax`.
-The installer registers the Claude Code plugin and copies the skills bundle into
-Codex's skills directory (`${CODEX_HOME:-~/.codex}/skills/`) and MiniMax Agent's
-shared skills directory (`${MINIMAX_SKILLS_DIR:-~/.agents/skills}/`), preserving
-the repo structure so cross-skill references resolve. Then restart the app so it
-rescans skills. (For [MiniMax Agent](https://agent.minimax.io/), if your build
-uses a different location, set `MINIMAX_SKILLS_DIR` or add the folder via the
-in-app Skill Creator/import.)
+The installer registers the Claude Code plugin, and for **Codex**
+(`${CODEX_HOME:-~/.codex}/skills/`) and **[MiniMax Agent](https://agent.minimax.io/)**
+(Mavis; `${MAVIS_SKILLS_DIR:-~/.mavis/skills}/`) it installs **each skill flat**
+(`…/skills/<name>/SKILL.md`, so the agent discovers it) **plus** the shared
+`journals/` and `scripts/` directories so cross-skill references resolve. Restart
+the app so it rescans skills. (Override the location with `CODEX_HOME` /
+`MAVIS_SKILLS_DIR`, or add via MiniMax's in-app Skill Creator/import.)
 
 ## Skills
 
