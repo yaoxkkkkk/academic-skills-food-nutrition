@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.21.0 — 2026-07
+
+- **Fixed the Codex/MiniMax installer** (reported by a MiniMax/Mavis test). Two
+  bugs: (1) wrong MiniMax path — now installs to Mavis's `~/.mavis/skills`
+  (override `MAVIS_SKILLS_DIR`), not `~/.agents/skills`; (2) wrong layout — the
+  whole repo was copied as one folder, leaving `SKILL.md` files two levels deep
+  where agents don't recurse. Now each skill is installed **flat**
+  (`…/skills/<name>/SKILL.md`) **plus** the shared `journals/` and `scripts/`
+  directories, so `journal-selector` and the helper scripts keep working. Applies
+  to both Codex and MiniMax Agent. `minimax` accepts the `mavis` alias.
+
 ## 1.20.0 — 2026-07
 
 - **MiniMax Agent support.** `install.sh` gains a `minimax` target that installs
