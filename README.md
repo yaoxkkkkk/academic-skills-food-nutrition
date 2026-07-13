@@ -121,10 +121,14 @@ the app so it rescans skills. (Override the location with `CODEX_HOME` /
   provenance + captions, and a QA gate. Exports journal-ready SVG/PDF/TIFF. For
   **schematics/graphical abstracts**, an opt-in AI-image route (Gemini/ChatGPT/
   Claude) with a structured prompt method — never for data figures. A runnable
-  **synthetic/illustrative gallery** covers grouped bars, dose-response,
-  probiotic kinetics, sensory radar, Bland–Altman, and forest-plot layouts with
-  source data, captions, and figure trace cards; it also documents an AI
-  schematic-route test and its QA/reproducibility safeguards.
+  **synthetic/illustrative Figure-story gallery** provides four final 11- or
+  12-panel food-science figures spanning active packaging, probiotic storage,
+  trained sensory analysis, and analytical-method validation. Each narrative
+  progresses from a code-drawn experimental schematic through topic-specific raw
+  and derived evidence to an explicitly illustrative synthesis panel, with
+  deterministic source-data generation, PDF + PNG exports, captions, and trace
+  cards. The gallery also documents an AI schematic-route test and its
+  QA/reproducibility safeguards.
 
 ## How it fits together
 

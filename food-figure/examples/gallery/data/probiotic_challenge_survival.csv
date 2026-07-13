@@ -1,0 +1,129 @@
+"treatment","challenge","exposure_min","batch","log_CFU_mL"
+"Free cells","Acid pH 2.5",0,"B1",8.16758992005099
+"Encapsulated","Acid pH 2.5",0,"B1",8.13769504349405
+"Free cells","Bile 0.3%",0,"B1",7.93686446546272
+"Encapsulated","Bile 0.3%",0,"B1",8.16618503263567
+"Free cells","Acid pH 2.5",30,"B1",7.7424009779003
+"Encapsulated","Acid pH 2.5",30,"B1",7.91890886129447
+"Free cells","Bile 0.3%",30,"B1",7.91551182760002
+"Encapsulated","Bile 0.3%",30,"B1",7.95300084920205
+"Free cells","Acid pH 2.5",60,"B1",7.10097730344632
+"Encapsulated","Acid pH 2.5",60,"B1",7.41161201642742
+"Free cells","Bile 0.3%",60,"B1",7.19234314732747
+"Encapsulated","Bile 0.3%",60,"B1",7.51765266612139
+"Free cells","Acid pH 2.5",90,"B1",6.26994803004222
+"Encapsulated","Acid pH 2.5",90,"B1",7.2800103344633
+"Free cells","Bile 0.3%",90,"B1",7.00979919350253
+"Encapsulated","Bile 0.3%",90,"B1",7.41216580423194
+"Free cells","Acid pH 2.5",0,"B2",8.17183626795715
+"Encapsulated","Acid pH 2.5",0,"B2",8.0729929807718
+"Free cells","Bile 0.3%",0,"B2",8.2021765968458
+"Encapsulated","Bile 0.3%",0,"B2",8.18767663568933
+"Free cells","Acid pH 2.5",30,"B2",7.68156269629263
+"Encapsulated","Acid pH 2.5",30,"B2",7.91883064330867
+"Free cells","Bile 0.3%",30,"B2",7.7586878560935
+"Encapsulated","Bile 0.3%",30,"B2",7.86790683024251
+"Free cells","Acid pH 2.5",60,"B2",7.01908106348388
+"Encapsulated","Acid pH 2.5",60,"B2",7.40335447246733
+"Free cells","Bile 0.3%",60,"B2",7.24347669541762
+"Encapsulated","Bile 0.3%",60,"B2",7.77414182536666
+"Free cells","Acid pH 2.5",90,"B2",6.25838674918073
+"Encapsulated","Acid pH 2.5",90,"B2",7.36363119605967
+"Free cells","Bile 0.3%",90,"B2",6.78117119014387
+"Encapsulated","Bile 0.3%",90,"B2",7.57843227695394
+"Free cells","Acid pH 2.5",0,"B3",8.13630309988759
+"Encapsulated","Acid pH 2.5",0,"B3",8.52421792805371
+"Free cells","Bile 0.3%",0,"B3",8.21792034271023
+"Encapsulated","Bile 0.3%",0,"B3",8.28765064261586
+"Free cells","Acid pH 2.5",30,"B3",7.58816906790377
+"Encapsulated","Acid pH 2.5",30,"B3",7.92297547869548
+"Free cells","Bile 0.3%",30,"B3",7.79076393287222
+"Encapsulated","Bile 0.3%",30,"B3",8.0343645538606
+"Free cells","Acid pH 2.5",60,"B3",7.00486595154435
+"Encapsulated","Acid pH 2.5",60,"B3",7.53102398358591
+"Free cells","Bile 0.3%",60,"B3",7.3814688898372
+"Encapsulated","Bile 0.3%",60,"B3",7.84834316598697
+"Free cells","Acid pH 2.5",90,"B3",6.54003397170491
+"Encapsulated","Acid pH 2.5",90,"B3",7.28654604358484
+"Free cells","Bile 0.3%",90,"B3",6.95398277093095
+"Encapsulated","Bile 0.3%",90,"B3",7.60733791949715
+"Free cells","Acid pH 2.5",0,"B4",8.28965154952824
+"Encapsulated","Acid pH 2.5",0,"B4",8.20719851498222
+"Free cells","Bile 0.3%",0,"B4",8.0736286674379
+"Encapsulated","Bile 0.3%",0,"B4",8.21192116298887
+"Free cells","Acid pH 2.5",30,"B4",7.66263295218139
+"Encapsulated","Acid pH 2.5",30,"B4",8.02925296541263
+"Free cells","Bile 0.3%",30,"B4",7.65079801858313
+"Encapsulated","Bile 0.3%",30,"B4",8.22241862364387
+"Free cells","Acid pH 2.5",60,"B4",6.99137183154604
+"Encapsulated","Acid pH 2.5",60,"B4",7.52723088429058
+"Free cells","Bile 0.3%",60,"B4",7.32183400613111
+"Encapsulated","Bile 0.3%",60,"B4",7.53026212301995
+"Free cells","Acid pH 2.5",90,"B4",6.29740051684981
+"Encapsulated","Acid pH 2.5",90,"B4",7.25031809971665
+"Free cells","Bile 0.3%",90,"B4",6.98488222058642
+"Encapsulated","Bile 0.3%",90,"B4",7.31785551543955
+"Free cells","Acid pH 2.5",0,"B5",8.19729478238432
+"Encapsulated","Acid pH 2.5",0,"B5",8.43002701616767
+"Free cells","Bile 0.3%",0,"B5",8.30310125699044
+"Encapsulated","Bile 0.3%",0,"B5",8.2416341942644
+"Free cells","Acid pH 2.5",30,"B5",7.66922673160377
+"Encapsulated","Acid pH 2.5",30,"B5",7.89607421435778
+"Free cells","Bile 0.3%",30,"B5",7.60975093643728
+"Encapsulated","Bile 0.3%",30,"B5",7.94751270907258
+"Free cells","Acid pH 2.5",60,"B5",6.928899240076
+"Encapsulated","Acid pH 2.5",60,"B5",7.70239182723221
+"Free cells","Bile 0.3%",60,"B5",7.45962629830461
+"Encapsulated","Bile 0.3%",60,"B5",7.85979645046394
+"Free cells","Acid pH 2.5",90,"B5",6.49214312623123
+"Encapsulated","Acid pH 2.5",90,"B5",7.12553850298107
+"Free cells","Bile 0.3%",90,"B5",6.82959261291145
+"Encapsulated","Bile 0.3%",90,"B5",7.69228450754429
+"Free cells","Acid pH 2.5",0,"B6",8.13501184484224
+"Encapsulated","Acid pH 2.5",0,"B6",8.02666365072185
+"Free cells","Bile 0.3%",0,"B6",8.26846102140452
+"Encapsulated","Bile 0.3%",0,"B6",8.01107347912114
+"Free cells","Acid pH 2.5",30,"B6",7.57357659502028
+"Encapsulated","Acid pH 2.5",30,"B6",7.62401501775292
+"Free cells","Bile 0.3%",30,"B6",7.87883221451608
+"Encapsulated","Bile 0.3%",30,"B6",7.85275402516809
+"Free cells","Acid pH 2.5",60,"B6",6.8859011799987
+"Encapsulated","Acid pH 2.5",60,"B6",7.62668095550106
+"Free cells","Bile 0.3%",60,"B6",7.37351662219418
+"Encapsulated","Bile 0.3%",60,"B6",7.63883299554873
+"Free cells","Acid pH 2.5",90,"B6",6.62829059072925
+"Encapsulated","Acid pH 2.5",90,"B6",7.20078530723593
+"Free cells","Bile 0.3%",90,"B6",6.81221337451346
+"Encapsulated","Bile 0.3%",90,"B6",7.61488161170327
+"Free cells","Acid pH 2.5",0,"B7",8.30743849544509
+"Encapsulated","Acid pH 2.5",0,"B7",8.25572986536439
+"Free cells","Bile 0.3%",0,"B7",8.1996891328614
+"Encapsulated","Bile 0.3%",0,"B7",8.23345516255276
+"Free cells","Acid pH 2.5",30,"B7",7.81969130097995
+"Encapsulated","Acid pH 2.5",30,"B7",7.96985626782759
+"Free cells","Bile 0.3%",30,"B7",7.67992590564757
+"Encapsulated","Bile 0.3%",30,"B7",8.07985070214347
+"Free cells","Acid pH 2.5",60,"B7",6.94326016014967
+"Encapsulated","Acid pH 2.5",60,"B7",7.61237302400514
+"Free cells","Bile 0.3%",60,"B7",7.24421472082968
+"Encapsulated","Bile 0.3%",60,"B7",7.59043438252443
+"Free cells","Acid pH 2.5",90,"B7",6.52260864179653
+"Encapsulated","Acid pH 2.5",90,"B7",7.27483200388712
+"Free cells","Bile 0.3%",90,"B7",6.95290564373628
+"Encapsulated","Bile 0.3%",90,"B7",7.50480626573636
+"Free cells","Acid pH 2.5",0,"B8",8.32245293395337
+"Encapsulated","Acid pH 2.5",0,"B8",8.28393310500038
+"Free cells","Bile 0.3%",0,"B8",7.76244625671627
+"Encapsulated","Bile 0.3%",0,"B8",8.29058887240227
+"Free cells","Acid pH 2.5",30,"B8",7.55067950395355
+"Encapsulated","Acid pH 2.5",30,"B8",7.83271459452577
+"Free cells","Bile 0.3%",30,"B8",7.5339388664811
+"Encapsulated","Bile 0.3%",30,"B8",7.89086328177375
+"Free cells","Acid pH 2.5",60,"B8",6.81920289874995
+"Encapsulated","Acid pH 2.5",60,"B8",7.63572773551286
+"Free cells","Bile 0.3%",60,"B8",7.28588523764782
+"Encapsulated","Bile 0.3%",60,"B8",7.85279687247337
+"Free cells","Acid pH 2.5",90,"B8",6.43797350051827
+"Encapsulated","Acid pH 2.5",90,"B8",7.13261416445654
+"Free cells","Bile 0.3%",90,"B8",6.93927180528556
+"Encapsulated","Bile 0.3%",90,"B8",7.31571080418822

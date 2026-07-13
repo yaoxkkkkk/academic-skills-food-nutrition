@@ -1,0 +1,16 @@
+"operator","condition","relative_bias_percent"
+"Operator A","Time -20%",-2.50388466543779
+"Operator B","Time -20%",-1.88949484020327
+"Operator C","Time -20%",-1.42295232996969
+"Operator A","Nominal",-0.215392306973864
+"Operator B","Nominal",0.647901998692571
+"Operator C","Nominal",0.455252630432759
+"Operator A","Time +20%",0.886784489172678
+"Operator B","Time +20%",1.21141249664743
+"Operator C","Time +20%",2.03408324227046
+"Operator A","pH -0.2",-2.00967115806581
+"Operator B","pH -0.2",-0.303431105799257
+"Operator C","pH -0.2",-1.01323968722026
+"Operator A","pH +0.2",1.16051312697751
+"Operator B","pH +0.2",1.83917874133274
+"Operator C","pH +0.2",2.187476379446

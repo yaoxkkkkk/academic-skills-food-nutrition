@@ -1,0 +1,721 @@
+"panelist","product","session","attribute","score"
+"P01","Plain",1,"Berry aroma",2.74369803548552
+"P02","Plain",1,"Berry aroma",2.588509860792
+"P03","Plain",1,"Berry aroma",1.7088802216641
+"P04","Plain",1,"Berry aroma",1.17895376335987
+"P05","Plain",1,"Berry aroma",2.44158259824534
+"P06","Plain",1,"Berry aroma",2.51373944313092
+"P07","Plain",1,"Berry aroma",2.15019744804609
+"P08","Plain",1,"Berry aroma",2.21943661301085
+"P09","Plain",1,"Berry aroma",1.12967743635471
+"P10","Plain",1,"Berry aroma",2.47225506388782
+"P11","Plain",1,"Berry aroma",2.39528378631667
+"P12","Plain",1,"Berry aroma",2.5870501016253
+"P13","Plain",1,"Berry aroma",2.51943301109773
+"P14","Plain",1,"Berry aroma",2.06363043380916
+"P15","Plain",1,"Berry aroma",1.51542805692098
+"P16","Plain",1,"Berry aroma",2.92512958519326
+"P17","Plain",1,"Berry aroma",2.57466146330867
+"P18","Plain",1,"Berry aroma",3.4983157420318
+"P19","Plain",1,"Berry aroma",3.57093573324921
+"P20","Plain",1,"Berry aroma",2.63358754666448
+"P21","Plain",1,"Berry aroma",3.96053252138179
+"P22","Plain",1,"Berry aroma",3.58776068860845
+"P23","Plain",1,"Berry aroma",2.36049658412657
+"P24","Plain",1,"Berry aroma",1.66175848572024
+"P01","Berry-low",1,"Berry aroma",4.55410977641912
+"P02","Berry-low",1,"Berry aroma",4.75521921378572
+"P03","Berry-low",1,"Berry aroma",3.64444350444437
+"P04","Berry-low",1,"Berry aroma",4.36197068977349
+"P05","Berry-low",1,"Berry aroma",5.35723473926129
+"P06","Berry-low",1,"Berry aroma",4.94902466853225
+"P07","Berry-low",1,"Berry aroma",3.59221762953556
+"P08","Berry-low",1,"Berry aroma",2.79280949267266
+"P09","Berry-low",1,"Berry aroma",4.31481740127486
+"P10","Berry-low",1,"Berry aroma",6.28461923041193
+"P11","Berry-low",1,"Berry aroma",4.3512158918408
+"P12","Berry-low",1,"Berry aroma",3.61712477977746
+"P13","Berry-low",1,"Berry aroma",4.51198067488975
+"P14","Berry-low",1,"Berry aroma",4.24609195718237
+"P15","Berry-low",1,"Berry aroma",4.90350678381327
+"P16","Berry-low",1,"Berry aroma",4.40814367297018
+"P17","Berry-low",1,"Berry aroma",4.3774763299759
+"P18","Berry-low",1,"Berry aroma",4.53779645092418
+"P19","Berry-low",1,"Berry aroma",4.14682198985309
+"P20","Berry-low",1,"Berry aroma",4.55865041362099
+"P21","Berry-low",1,"Berry aroma",4.49200668209828
+"P22","Berry-low",1,"Berry aroma",3.33957063149601
+"P23","Berry-low",1,"Berry aroma",4.80775614410111
+"P24","Berry-low",1,"Berry aroma",3.15311142808985
+"P01","Berry-high",1,"Berry aroma",5.80167796836221
+"P02","Berry-high",1,"Berry aroma",6.3807311441513
+"P03","Berry-high",1,"Berry aroma",4.85694329488384
+"P04","Berry-high",1,"Berry aroma",6.43699470129453
+"P05","Berry-high",1,"Berry aroma",4.75872439241663
+"P06","Berry-high",1,"Berry aroma",6.63692917995874
+"P07","Berry-high",1,"Berry aroma",7.16530012448581
+"P08","Berry-high",1,"Berry aroma",5.73767025129165
+"P09","Berry-high",1,"Berry aroma",5.29100521770787
+"P10","Berry-high",1,"Berry aroma",6.16339200428018
+"P11","Berry-high",1,"Berry aroma",6.61775820015939
+"P12","Berry-high",1,"Berry aroma",6.14560503516903
+"P13","Berry-high",1,"Berry aroma",6.66566354352865
+"P14","Berry-high",1,"Berry aroma",5.33486219326898
+"P15","Berry-high",1,"Berry aroma",6.06886883787381
+"P16","Berry-high",1,"Berry aroma",5.63322235483641
+"P17","Berry-high",1,"Berry aroma",5.60932591217269
+"P18","Berry-high",1,"Berry aroma",5.82182896003793
+"P19","Berry-high",1,"Berry aroma",5.84549067100883
+"P20","Berry-high",1,"Berry aroma",6.66313941635985
+"P21","Berry-high",1,"Berry aroma",6.77954051392783
+"P22","Berry-high",1,"Berry aroma",6.45881949484756
+"P23","Berry-high",1,"Berry aroma",6.15884552478305
+"P24","Berry-high",1,"Berry aroma",6.27757018166538
+"P01","Plain",2,"Berry aroma",2.7043547971305
+"P02","Plain",2,"Berry aroma",2.20261689126957
+"P03","Plain",2,"Berry aroma",2.12930068936514
+"P04","Plain",2,"Berry aroma",2.63673212340547
+"P05","Plain",2,"Berry aroma",2.59066469243027
+"P06","Plain",2,"Berry aroma",2.61973409632563
+"P07","Plain",2,"Berry aroma",2.30785864865213
+"P08","Plain",2,"Berry aroma",3.24797375245002
+"P09","Plain",2,"Berry aroma",2.27497476228477
+"P10","Plain",2,"Berry aroma",1.87539943156491
+"P11","Plain",2,"Berry aroma",2.85753763355787
+"P12","Plain",2,"Berry aroma",1.93332668740605
+"P13","Plain",2,"Berry aroma",2.81421859531544
+"P14","Plain",2,"Berry aroma",2.25992292615151
+"P15","Plain",2,"Berry aroma",2.54118467532848
+"P16","Plain",2,"Berry aroma",1.97579188037185
+"P17","Plain",2,"Berry aroma",2.4770744773243
+"P18","Plain",2,"Berry aroma",1.74673844986099
+"P19","Plain",2,"Berry aroma",2.16042429032919
+"P20","Plain",2,"Berry aroma",2.48034892064308
+"P21","Plain",2,"Berry aroma",3.55961215761752
+"P22","Plain",2,"Berry aroma",1.91483430128418
+"P23","Plain",2,"Berry aroma",2.29451340347071
+"P24","Plain",2,"Berry aroma",2.57293944806973
+"P01","Berry-low",2,"Berry aroma",4.99817222129968
+"P02","Berry-low",2,"Berry aroma",4.4057407003555
+"P03","Berry-low",2,"Berry aroma",4.76369099124097
+"P04","Berry-low",2,"Berry aroma",4.49757984805372
+"P05","Berry-low",2,"Berry aroma",5.24914455255856
+"P06","Berry-low",2,"Berry aroma",4.10167139593924
+"P07","Berry-low",2,"Berry aroma",4.42025739823386
+"P08","Berry-low",2,"Berry aroma",5.01006590462919
+"P09","Berry-low",2,"Berry aroma",3.75591407776186
+"P10","Berry-low",2,"Berry aroma",5.91781459133434
+"P11","Berry-low",2,"Berry aroma",4.0386403971768
+"P12","Berry-low",2,"Berry aroma",4.32303366898906
+"P13","Berry-low",2,"Berry aroma",5.82252796827383
+"P14","Berry-low",2,"Berry aroma",4.4439305838901
+"P15","Berry-low",2,"Berry aroma",2.91264491752996
+"P16","Berry-low",2,"Berry aroma",4.38563357264674
+"P17","Berry-low",2,"Berry aroma",4.37505978745882
+"P18","Berry-low",2,"Berry aroma",4.90166056088505
+"P19","Berry-low",2,"Berry aroma",4.03728267575989
+"P20","Berry-low",2,"Berry aroma",4.71879580399636
+"P21","Berry-low",2,"Berry aroma",4.65022348135396
+"P22","Berry-low",2,"Berry aroma",3.51709059942811
+"P23","Berry-low",2,"Berry aroma",3.97793151303026
+"P24","Berry-low",2,"Berry aroma",4.62889837057957
+"P01","Berry-high",2,"Berry aroma",4.91416440518275
+"P02","Berry-high",2,"Berry aroma",6.86642595168717
+"P03","Berry-high",2,"Berry aroma",5.71172238520897
+"P04","Berry-high",2,"Berry aroma",5.85333241389872
+"P05","Berry-high",2,"Berry aroma",5.35129177524488
+"P06","Berry-high",2,"Berry aroma",6.79973278777534
+"P07","Berry-high",2,"Berry aroma",5.79745161751295
+"P08","Berry-high",2,"Berry aroma",5.82974894501855
+"P09","Berry-high",2,"Berry aroma",6.20858250967489
+"P10","Berry-high",2,"Berry aroma",6.53209012275282
+"P11","Berry-high",2,"Berry aroma",6.51095059720404
+"P12","Berry-high",2,"Berry aroma",7.39436361704151
+"P13","Berry-high",2,"Berry aroma",6.93908383970966
+"P14","Berry-high",2,"Berry aroma",6.51488902531701
+"P15","Berry-high",2,"Berry aroma",5.48602901853363
+"P16","Berry-high",2,"Berry aroma",6.59585960419705
+"P17","Berry-high",2,"Berry aroma",6.8079357156335
+"P18","Berry-high",2,"Berry aroma",6.08554073121542
+"P19","Berry-high",2,"Berry aroma",7.21626001406004
+"P20","Berry-high",2,"Berry aroma",5.99453039843123
+"P21","Berry-high",2,"Berry aroma",7.06824664012556
+"P22","Berry-high",2,"Berry aroma",4.87748128279569
+"P23","Berry-high",2,"Berry aroma",6.23449653070477
+"P24","Berry-high",2,"Berry aroma",5.96646460747844
+"P01","Plain",1,"Sweetness",5.00070035158628
+"P02","Plain",1,"Sweetness",4.77499316104767
+"P03","Plain",1,"Sweetness",5.371874154884
+"P04","Plain",1,"Sweetness",4.33907749065822
+"P05","Plain",1,"Sweetness",4.68192989497532
+"P06","Plain",1,"Sweetness",5.40974544257763
+"P07","Plain",1,"Sweetness",5.23886028829264
+"P08","Plain",1,"Sweetness",4.04127462940023
+"P09","Plain",1,"Sweetness",3.91351506531451
+"P10","Plain",1,"Sweetness",5.8890780215384
+"P11","Plain",1,"Sweetness",4.34221732207658
+"P12","Plain",1,"Sweetness",5.10233332174246
+"P13","Plain",1,"Sweetness",4.9431112603904
+"P14","Plain",1,"Sweetness",4.59732658793626
+"P15","Plain",1,"Sweetness",4.07848007323783
+"P16","Plain",1,"Sweetness",4.79599746891304
+"P17","Plain",1,"Sweetness",4.22315373749192
+"P18","Plain",1,"Sweetness",4.69968170482631
+"P19","Plain",1,"Sweetness",4.0269148893775
+"P20","Plain",1,"Sweetness",5.01191368774665
+"P21","Plain",1,"Sweetness",5.03530121012997
+"P22","Plain",1,"Sweetness",4.62516206361194
+"P23","Plain",1,"Sweetness",4.65806556030173
+"P24","Plain",1,"Sweetness",4.27568661505054
+"P01","Berry-low",1,"Sweetness",6.28963080619668
+"P02","Berry-low",1,"Sweetness",5.55931304172961
+"P03","Berry-low",1,"Sweetness",5.54691371527899
+"P04","Berry-low",1,"Sweetness",5.67436445086869
+"P05","Berry-low",1,"Sweetness",6.08266858288328
+"P06","Berry-low",1,"Sweetness",5.95086638551182
+"P07","Berry-low",1,"Sweetness",5.4718563626732
+"P08","Berry-low",1,"Sweetness",6.46043819363713
+"P09","Berry-low",1,"Sweetness",5.54767336314705
+"P10","Berry-low",1,"Sweetness",5.20082470105939
+"P11","Berry-low",1,"Sweetness",4.42249049598058
+"P12","Berry-low",1,"Sweetness",6.35468876145654
+"P13","Berry-low",1,"Sweetness",6.27720386322521
+"P14","Berry-low",1,"Sweetness",5.26572895253337
+"P15","Berry-low",1,"Sweetness",5.2512358376531
+"P16","Berry-low",1,"Sweetness",5.8785500295514
+"P17","Berry-low",1,"Sweetness",5.17435770534577
+"P18","Berry-low",1,"Sweetness",6.62785973327145
+"P19","Berry-low",1,"Sweetness",6.30172961131832
+"P20","Berry-low",1,"Sweetness",5.80831309646375
+"P21","Berry-low",1,"Sweetness",5.83999311758833
+"P22","Berry-low",1,"Sweetness",5.31567762918617
+"P23","Berry-low",1,"Sweetness",5.9965473768966
+"P24","Berry-low",1,"Sweetness",6.29942845424092
+"P01","Berry-high",1,"Sweetness",6.86448774052033
+"P02","Berry-high",1,"Sweetness",5.24651030029896
+"P03","Berry-high",1,"Sweetness",6.70974409017846
+"P04","Berry-high",1,"Sweetness",6.02515988873304
+"P05","Berry-high",1,"Sweetness",5.55564357881407
+"P06","Berry-high",1,"Sweetness",6.82896432895707
+"P07","Berry-high",1,"Sweetness",5.9930047073439
+"P08","Berry-high",1,"Sweetness",6.19836519562978
+"P09","Berry-high",1,"Sweetness",5.65768675284892
+"P10","Berry-high",1,"Sweetness",8.06017715234322
+"P11","Berry-high",1,"Sweetness",6.81718377095159
+"P12","Berry-high",1,"Sweetness",6.29508601737386
+"P13","Berry-high",1,"Sweetness",6.51678164087897
+"P14","Berry-high",1,"Sweetness",5.089869227686
+"P15","Berry-high",1,"Sweetness",5.93383591397032
+"P16","Berry-high",1,"Sweetness",7.24580801360498
+"P17","Berry-high",1,"Sweetness",5.6738302529985
+"P18","Berry-high",1,"Sweetness",5.13458583227798
+"P19","Berry-high",1,"Sweetness",6.25704785522754
+"P20","Berry-high",1,"Sweetness",4.81549863144445
+"P21","Berry-high",1,"Sweetness",6.14416632670082
+"P22","Berry-high",1,"Sweetness",4.97477810165032
+"P23","Berry-high",1,"Sweetness",5.1795483626438
+"P24","Berry-high",1,"Sweetness",6.55210807503105
+"P01","Plain",2,"Sweetness",4.1294607555753
+"P02","Plain",2,"Sweetness",6.24078194310467
+"P03","Plain",2,"Sweetness",3.49815197764822
+"P04","Plain",2,"Sweetness",4.35925674830731
+"P05","Plain",2,"Sweetness",4.47956971863349
+"P06","Plain",2,"Sweetness",4.30116082034162
+"P07","Plain",2,"Sweetness",5.45443563521003
+"P08","Plain",2,"Sweetness",4.8951048882696
+"P09","Plain",2,"Sweetness",3.87665116990739
+"P10","Plain",2,"Sweetness",3.94963271585336
+"P11","Plain",2,"Sweetness",5.6298784189483
+"P12","Plain",2,"Sweetness",4.82719423547529
+"P13","Plain",2,"Sweetness",4.73796854662006
+"P14","Plain",2,"Sweetness",3.54333917403587
+"P15","Plain",2,"Sweetness",3.04813345183251
+"P16","Plain",2,"Sweetness",4.23746842772561
+"P17","Plain",2,"Sweetness",5.32117314866496
+"P18","Plain",2,"Sweetness",4.38628880093852
+"P19","Plain",2,"Sweetness",4.31722584447667
+"P20","Plain",2,"Sweetness",2.94549370594904
+"P21","Plain",2,"Sweetness",5.67790772140065
+"P22","Plain",2,"Sweetness",3.83712312482172
+"P23","Plain",2,"Sweetness",5.68690834155275
+"P24","Plain",2,"Sweetness",4.65034443192834
+"P01","Berry-low",2,"Sweetness",4.76209076789275
+"P02","Berry-low",2,"Sweetness",5.8161374036827
+"P03","Berry-low",2,"Sweetness",4.66563810860758
+"P04","Berry-low",2,"Sweetness",4.91050549009312
+"P05","Berry-low",2,"Sweetness",3.92584757044492
+"P06","Berry-low",2,"Sweetness",5.80148171133238
+"P07","Berry-low",2,"Sweetness",6.11807822900923
+"P08","Berry-low",2,"Sweetness",5.601423694338
+"P09","Berry-low",2,"Sweetness",4.65755626681197
+"P10","Berry-low",2,"Sweetness",5.95417350407107
+"P11","Berry-low",2,"Sweetness",4.88812506186041
+"P12","Berry-low",2,"Sweetness",6.2731562929486
+"P13","Berry-low",2,"Sweetness",5.80954301348358
+"P14","Berry-low",2,"Sweetness",5.77909868966015
+"P15","Berry-low",2,"Sweetness",5.96445919957747
+"P16","Berry-low",2,"Sweetness",6.21949424150437
+"P17","Berry-low",2,"Sweetness",5.05955887764488
+"P18","Berry-low",2,"Sweetness",4.17212247410192
+"P19","Berry-low",2,"Sweetness",5.93517177090312
+"P20","Berry-low",2,"Sweetness",5.73184003074905
+"P21","Berry-low",2,"Sweetness",7.35486162943437
+"P22","Berry-low",2,"Sweetness",4.89596022758243
+"P23","Berry-low",2,"Sweetness",6.47825877668988
+"P24","Berry-low",2,"Sweetness",5.57728739201631
+"P01","Berry-high",2,"Sweetness",6.26648972595547
+"P02","Berry-high",2,"Sweetness",6.87757770187593
+"P03","Berry-high",2,"Sweetness",5.9551406694112
+"P04","Berry-high",2,"Sweetness",6.42139739540845
+"P05","Berry-high",2,"Sweetness",4.37270212823164
+"P06","Berry-high",2,"Sweetness",6.99898942458426
+"P07","Berry-high",2,"Sweetness",6.40334776910013
+"P08","Berry-high",2,"Sweetness",6.790586968545
+"P09","Berry-high",2,"Sweetness",5.71984655310863
+"P10","Berry-high",2,"Sweetness",7.31790523833625
+"P11","Berry-high",2,"Sweetness",6.65232313721273
+"P12","Berry-high",2,"Sweetness",6.91442247545284
+"P13","Berry-high",2,"Sweetness",6.56228638203341
+"P14","Berry-high",2,"Sweetness",6.4065489975638
+"P15","Berry-high",2,"Sweetness",4.69221716118995
+"P16","Berry-high",2,"Sweetness",4.85973940967548
+"P17","Berry-high",2,"Sweetness",5.90569907055625
+"P18","Berry-high",2,"Sweetness",5.47584026618332
+"P19","Berry-high",2,"Sweetness",6.15826408054814
+"P20","Berry-high",2,"Sweetness",6.44743795698341
+"P21","Berry-high",2,"Sweetness",7.15383724124211
+"P22","Berry-high",2,"Sweetness",7.4006855464742
+"P23","Berry-high",2,"Sweetness",5.85367007527233
+"P24","Berry-high",2,"Sweetness",5.08956876220488
+"P01","Plain",1,"Sourness",3.97224939759155
+"P02","Plain",1,"Sourness",4.38942647227833
+"P03","Plain",1,"Sourness",4.30570228826479
+"P04","Plain",1,"Sourness",4.27023176303827
+"P05","Plain",1,"Sourness",4.28484915877132
+"P06","Plain",1,"Sourness",4.39141580632023
+"P07","Plain",1,"Sourness",5.53364226243438
+"P08","Plain",1,"Sourness",4.35004010637823
+"P09","Plain",1,"Sourness",3.49459096092065
+"P10","Plain",1,"Sourness",4.67912787906904
+"P11","Plain",1,"Sourness",4.29227050886493
+"P12","Plain",1,"Sourness",3.8485144870287
+"P13","Plain",1,"Sourness",4.28135291650431
+"P14","Plain",1,"Sourness",4.66336302661608
+"P15","Plain",1,"Sourness",4.97922013021643
+"P16","Plain",1,"Sourness",3.34350963976408
+"P17","Plain",1,"Sourness",4.82207659744066
+"P18","Plain",1,"Sourness",5.51371695200492
+"P19","Plain",1,"Sourness",4.32772390683154
+"P20","Plain",1,"Sourness",4.677678691001
+"P21","Plain",1,"Sourness",4.57202430005959
+"P22","Plain",1,"Sourness",2.62531296574296
+"P23","Plain",1,"Sourness",3.63895335471935
+"P24","Plain",1,"Sourness",3.0137342461812
+"P01","Berry-low",1,"Sourness",4.19099392775753
+"P02","Berry-low",1,"Sourness",4.7226594743535
+"P03","Berry-low",1,"Sourness",4.43889510227526
+"P04","Berry-low",1,"Sourness",4.15514700008739
+"P05","Berry-low",1,"Sourness",3.65806627232127
+"P06","Berry-low",1,"Sourness",4.98406336415854
+"P07","Berry-low",1,"Sourness",3.64417585016628
+"P08","Berry-low",1,"Sourness",4.9437696306311
+"P09","Berry-low",1,"Sourness",3.71198348135198
+"P10","Berry-low",1,"Sourness",5.52887619315339
+"P11","Berry-low",1,"Sourness",4.57612981713318
+"P12","Berry-low",1,"Sourness",3.99275201985816
+"P13","Berry-low",1,"Sourness",4.69860227369645
+"P14","Berry-low",1,"Sourness",4.31193440948769
+"P15","Berry-low",1,"Sourness",4.53261861760259
+"P16","Berry-low",1,"Sourness",4.25118269564319
+"P17","Berry-low",1,"Sourness",4.67715891776145
+"P18","Berry-low",1,"Sourness",3.79861814542367
+"P19","Berry-low",1,"Sourness",5.09282615324583
+"P20","Berry-low",1,"Sourness",5.08942736195895
+"P21","Berry-low",1,"Sourness",4.25995229647476
+"P22","Berry-low",1,"Sourness",3.90685754892384
+"P23","Berry-low",1,"Sourness",3.84466985914596
+"P24","Berry-low",1,"Sourness",3.72471306030881
+"P01","Berry-high",1,"Sourness",3.79736015764381
+"P02","Berry-high",1,"Sourness",3.19033561345852
+"P03","Berry-high",1,"Sourness",4.46553173324322
+"P04","Berry-high",1,"Sourness",4.38219286940317
+"P05","Berry-high",1,"Sourness",3.55165071247943
+"P06","Berry-high",1,"Sourness",4.73691639653169
+"P07","Berry-high",1,"Sourness",5.20232316508247
+"P08","Berry-high",1,"Sourness",3.03706171176734
+"P09","Berry-high",1,"Sourness",2.39816698998668
+"P10","Berry-high",1,"Sourness",4.95869473451133
+"P11","Berry-high",1,"Sourness",3.88354744777734
+"P12","Berry-high",1,"Sourness",4.00494999225523
+"P13","Berry-high",1,"Sourness",4.82731995090723
+"P14","Berry-high",1,"Sourness",3.35311768469517
+"P15","Berry-high",1,"Sourness",3.37896450919771
+"P16","Berry-high",1,"Sourness",3.33375342056892
+"P17","Berry-high",1,"Sourness",5.28385701667162
+"P18","Berry-high",1,"Sourness",4.71363862627773
+"P19","Berry-high",1,"Sourness",2.72829198307139
+"P20","Berry-high",1,"Sourness",4.02822362344024
+"P21","Berry-high",1,"Sourness",3.50309356089994
+"P22","Berry-high",1,"Sourness",4.1802112893177
+"P23","Berry-high",1,"Sourness",4.46995992913895
+"P24","Berry-high",1,"Sourness",4.52727779081547
+"P01","Plain",2,"Sourness",4.30294784311762
+"P02","Plain",2,"Sourness",5.20004528526031
+"P03","Plain",2,"Sourness",4.30942028479489
+"P04","Plain",2,"Sourness",4.48422132206796
+"P05","Plain",2,"Sourness",4.78654894081591
+"P06","Plain",2,"Sourness",4.14370813903671
+"P07","Plain",2,"Sourness",4.60101321699923
+"P08","Plain",2,"Sourness",4.83120072656762
+"P09","Plain",2,"Sourness",3.74092567849335
+"P10","Plain",2,"Sourness",5.71103373662722
+"P11","Plain",2,"Sourness",5.58109321755962
+"P12","Plain",2,"Sourness",4.01759735321356
+"P13","Plain",2,"Sourness",5.31897826701147
+"P14","Plain",2,"Sourness",4.65022475813231
+"P15","Plain",2,"Sourness",3.37281320555498
+"P16","Plain",2,"Sourness",3.74570734783493
+"P17","Plain",2,"Sourness",4.1773214464705
+"P18","Plain",2,"Sourness",4.76152467366104
+"P19","Plain",2,"Sourness",5.01319591118571
+"P20","Plain",2,"Sourness",4.90526207274413
+"P21","Plain",2,"Sourness",5.28705620326521
+"P22","Plain",2,"Sourness",4.20435206690542
+"P23","Plain",2,"Sourness",6.13651566162802
+"P24","Plain",2,"Sourness",4.52157208059964
+"P01","Berry-low",2,"Sourness",4.97031994882908
+"P02","Berry-low",2,"Sourness",4.69145702865888
+"P03","Berry-low",2,"Sourness",3.39236148147253
+"P04","Berry-low",2,"Sourness",4.45957432989179
+"P05","Berry-low",2,"Sourness",2.83393023062811
+"P06","Berry-low",2,"Sourness",5.07907795492711
+"P07","Berry-low",2,"Sourness",3.3634355084108
+"P08","Berry-low",2,"Sourness",4.48002883220393
+"P09","Berry-low",2,"Sourness",5.09551391915403
+"P10","Berry-low",2,"Sourness",4.7093798247283
+"P11","Berry-low",2,"Sourness",3.94646802944647
+"P12","Berry-low",2,"Sourness",4.25327484465737
+"P13","Berry-low",2,"Sourness",4.28794186342375
+"P14","Berry-low",2,"Sourness",5.48882417299988
+"P15","Berry-low",2,"Sourness",3.07448497924789
+"P16","Berry-low",2,"Sourness",3.62368114929621
+"P17","Berry-low",2,"Sourness",4.71705593669258
+"P18","Berry-low",2,"Sourness",4.17358455890027
+"P19","Berry-low",2,"Sourness",5.18454246926722
+"P20","Berry-low",2,"Sourness",4.08991830006974
+"P21","Berry-low",2,"Sourness",3.76736631982811
+"P22","Berry-low",2,"Sourness",3.26171182749311
+"P23","Berry-low",2,"Sourness",4.54303072252151
+"P24","Berry-low",2,"Sourness",4.52004319544371
+"P01","Berry-high",2,"Sourness",2.69487035273091
+"P02","Berry-high",2,"Sourness",5.03009428516564
+"P03","Berry-high",2,"Sourness",2.95399021239085
+"P04","Berry-high",2,"Sourness",3.4565395196061
+"P05","Berry-high",2,"Sourness",4.11834048110479
+"P06","Berry-high",2,"Sourness",4.65767871957728
+"P07","Berry-high",2,"Sourness",3.06857065078793
+"P08","Berry-high",2,"Sourness",5.178177210372
+"P09","Berry-high",2,"Sourness",3.1231030751431
+"P10","Berry-high",2,"Sourness",3.97834133855138
+"P11","Berry-high",2,"Sourness",4.15881674159059
+"P12","Berry-high",2,"Sourness",3.57256185256964
+"P13","Berry-high",2,"Sourness",3.81074195093074
+"P14","Berry-high",2,"Sourness",2.7208556581418
+"P15","Berry-high",2,"Sourness",3.92572131615542
+"P16","Berry-high",2,"Sourness",4.32914689484863
+"P17","Berry-high",2,"Sourness",5.3578817652945
+"P18","Berry-high",2,"Sourness",3.25552132414901
+"P19","Berry-high",2,"Sourness",5.12661800574608
+"P20","Berry-high",2,"Sourness",3.62318865638435
+"P21","Berry-high",2,"Sourness",5.21705121158273
+"P22","Berry-high",2,"Sourness",3.33788730245127
+"P23","Berry-high",2,"Sourness",4.01105666121035
+"P24","Berry-high",2,"Sourness",3.80919445695918
+"P01","Plain",1,"Creaminess",5.07641668981968
+"P02","Plain",1,"Creaminess",6.73499885618137
+"P03","Plain",1,"Creaminess",5.88294282231105
+"P04","Plain",1,"Creaminess",5.91135900760116
+"P05","Plain",1,"Creaminess",5.43104663487126
+"P06","Plain",1,"Creaminess",5.73980168635598
+"P07","Plain",1,"Creaminess",5.18840988529647
+"P08","Plain",1,"Creaminess",5.07793379284999
+"P09","Plain",1,"Creaminess",5.52069463813641
+"P10","Plain",1,"Creaminess",7.32529571529503
+"P11","Plain",1,"Creaminess",5.99732463780637
+"P12","Plain",1,"Creaminess",7.01717440786156
+"P13","Plain",1,"Creaminess",4.77208642573103
+"P14","Plain",1,"Creaminess",4.3628397694726
+"P15","Plain",1,"Creaminess",5.95544937629002
+"P16","Plain",1,"Creaminess",4.20838660573621
+"P17","Plain",1,"Creaminess",6.15226833960213
+"P18","Plain",1,"Creaminess",5.68775865384358
+"P19","Plain",1,"Creaminess",5.87347310969003
+"P20","Plain",1,"Creaminess",6.5848319057008
+"P21","Plain",1,"Creaminess",5.41452879578833
+"P22","Plain",1,"Creaminess",4.89443680965326
+"P23","Plain",1,"Creaminess",6.41354442543229
+"P24","Plain",1,"Creaminess",5.97148115433207
+"P01","Berry-low",1,"Creaminess",6.08112264101393
+"P02","Berry-low",1,"Creaminess",6.52814176487829
+"P03","Berry-low",1,"Creaminess",5.4578747776433
+"P04","Berry-low",1,"Creaminess",4.76930399051674
+"P05","Berry-low",1,"Creaminess",4.31666797053071
+"P06","Berry-low",1,"Creaminess",6.2379948567592
+"P07","Berry-low",1,"Creaminess",4.88601353673664
+"P08","Berry-low",1,"Creaminess",6.62603832415651
+"P09","Berry-low",1,"Creaminess",5.88270844270354
+"P10","Berry-low",1,"Creaminess",7.41085796365377
+"P11","Berry-low",1,"Creaminess",6.17668479008259
+"P12","Berry-low",1,"Creaminess",6.29621588507527
+"P13","Berry-low",1,"Creaminess",6.4710293599167
+"P14","Berry-low",1,"Creaminess",6.05087462682699
+"P15","Berry-low",1,"Creaminess",6.24440920375976
+"P16","Berry-low",1,"Creaminess",6.56484543321617
+"P17","Berry-low",1,"Creaminess",6.27123827010142
+"P18","Berry-low",1,"Creaminess",6.04452257355318
+"P19","Berry-low",1,"Creaminess",6.47735256184414
+"P20","Berry-low",1,"Creaminess",6.0053889162008
+"P21","Berry-low",1,"Creaminess",6.16352505771484
+"P22","Berry-low",1,"Creaminess",6.30675780612944
+"P23","Berry-low",1,"Creaminess",5.28017737404791
+"P24","Berry-low",1,"Creaminess",6.00670943246118
+"P01","Berry-high",1,"Creaminess",4.07985262587468
+"P02","Berry-high",1,"Creaminess",5.27195733594092
+"P03","Berry-high",1,"Creaminess",5.55323229471337
+"P04","Berry-high",1,"Creaminess",5.07835843939417
+"P05","Berry-high",1,"Creaminess",5.08723912626728
+"P06","Berry-high",1,"Creaminess",6.99088098363791
+"P07","Berry-high",1,"Creaminess",5.93711622017505
+"P08","Berry-high",1,"Creaminess",4.45735406542501
+"P09","Berry-high",1,"Creaminess",5.19927299047299
+"P10","Berry-high",1,"Creaminess",5.97528448806934
+"P11","Berry-high",1,"Creaminess",5.21636814344317
+"P12","Berry-high",1,"Creaminess",5.51816185374291
+"P13","Berry-high",1,"Creaminess",6.34345419647406
+"P14","Berry-high",1,"Creaminess",5.71497030232754
+"P15","Berry-high",1,"Creaminess",4.99674099336161
+"P16","Berry-high",1,"Creaminess",4.40951805932464
+"P17","Berry-high",1,"Creaminess",6.44573756050466
+"P18","Berry-high",1,"Creaminess",5.92403649750938
+"P19","Berry-high",1,"Creaminess",6.13705947968818
+"P20","Berry-high",1,"Creaminess",6.93053979552373
+"P21","Berry-high",1,"Creaminess",6.52094675612913
+"P22","Berry-high",1,"Creaminess",4.85828577897168
+"P23","Berry-high",1,"Creaminess",6.11811392466074
+"P24","Berry-high",1,"Creaminess",7.01940536402278
+"P01","Plain",2,"Creaminess",5.15410656857391
+"P02","Plain",2,"Creaminess",5.7650621863262
+"P03","Plain",2,"Creaminess",6.13898431675601
+"P04","Plain",2,"Creaminess",5.29689020879107
+"P05","Plain",2,"Creaminess",5.77164709397343
+"P06","Plain",2,"Creaminess",6.3784733955235
+"P07","Plain",2,"Creaminess",5.93963887429479
+"P08","Plain",2,"Creaminess",5.67628006965417
+"P09","Plain",2,"Creaminess",5.12055057875666
+"P10","Plain",2,"Creaminess",6.74556148132663
+"P11","Plain",2,"Creaminess",6.58205798199093
+"P12","Plain",2,"Creaminess",6.8592645701899
+"P13","Plain",2,"Creaminess",6.02399103700017
+"P14","Plain",2,"Creaminess",6.73039176921484
+"P15","Plain",2,"Creaminess",5.62246941399937
+"P16","Plain",2,"Creaminess",4.44797242352624
+"P17","Plain",2,"Creaminess",6.36921688138012
+"P18","Plain",2,"Creaminess",6.01589797490775
+"P19","Plain",2,"Creaminess",5.28889320734265
+"P20","Plain",2,"Creaminess",6.47393112079038
+"P21","Plain",2,"Creaminess",6.55530855952019
+"P22","Plain",2,"Creaminess",4.32065212325168
+"P23","Plain",2,"Creaminess",4.62731253880646
+"P24","Plain",2,"Creaminess",6.37288821555977
+"P01","Berry-low",2,"Creaminess",4.87391807131806
+"P02","Berry-low",2,"Creaminess",5.86905469866712
+"P03","Berry-low",2,"Creaminess",5.25392073463405
+"P04","Berry-low",2,"Creaminess",5.31430862525258
+"P05","Berry-low",2,"Creaminess",5.40095936540687
+"P06","Berry-low",2,"Creaminess",6.19851155348849
+"P07","Berry-low",2,"Creaminess",6.19366759600463
+"P08","Berry-low",2,"Creaminess",4.76271848110923
+"P09","Berry-low",2,"Creaminess",6.12053384847751
+"P10","Berry-low",2,"Creaminess",7.01168840976051
+"P11","Berry-low",2,"Creaminess",6.71654916454988
+"P12","Berry-low",2,"Creaminess",6.25947468528152
+"P13","Berry-low",2,"Creaminess",6.78645203951843
+"P14","Berry-low",2,"Creaminess",6.33055839149634
+"P15","Berry-low",2,"Creaminess",6.32898800849887
+"P16","Berry-low",2,"Creaminess",6.18448912136606
+"P17","Berry-low",2,"Creaminess",5.35577687715318
+"P18","Berry-low",2,"Creaminess",5.95428044629225
+"P19","Berry-low",2,"Creaminess",5.97982021540173
+"P20","Berry-low",2,"Creaminess",6.7719062396277
+"P21","Berry-low",2,"Creaminess",6.08461029058857
+"P22","Berry-low",2,"Creaminess",6.36006176879786
+"P23","Berry-low",2,"Creaminess",5.72860756239943
+"P24","Berry-low",2,"Creaminess",6.05784971438482
+"P01","Berry-high",2,"Creaminess",5.47474408670957
+"P02","Berry-high",2,"Creaminess",5.20311397117353
+"P03","Berry-high",2,"Creaminess",5.60016374397251
+"P04","Berry-high",2,"Creaminess",6.72535400660342
+"P05","Berry-high",2,"Creaminess",6.04541081516103
+"P06","Berry-high",2,"Creaminess",6.15338528304482
+"P07","Berry-high",2,"Creaminess",6.27695748288207
+"P08","Berry-high",2,"Creaminess",5.73522051888986
+"P09","Berry-high",2,"Creaminess",4.81567751190739
+"P10","Berry-high",2,"Creaminess",6.0186400234775
+"P11","Berry-high",2,"Creaminess",6.30260688618243
+"P12","Berry-high",2,"Creaminess",5.03671113161254
+"P13","Berry-high",2,"Creaminess",5.32496760583834
+"P14","Berry-high",2,"Creaminess",4.98775157573722
+"P15","Berry-high",2,"Creaminess",5.7514669214764
+"P16","Berry-high",2,"Creaminess",5.03871907805099
+"P17","Berry-high",2,"Creaminess",5.87877142968327
+"P18","Berry-high",2,"Creaminess",5.4650480838749
+"P19","Berry-high",2,"Creaminess",6.01954799999904
+"P20","Berry-high",2,"Creaminess",5.76645009851617
+"P21","Berry-high",2,"Creaminess",6.77142939903642
+"P22","Berry-high",2,"Creaminess",6.04851863554123
+"P23","Berry-high",2,"Creaminess",6.12472358227603
+"P24","Berry-high",2,"Creaminess",5.99753553766391
+"P01","Plain",1,"Aftertaste",3.53652871972174
+"P02","Plain",1,"Aftertaste",4.21584408451045
+"P03","Plain",1,"Aftertaste",3.84940835228927
+"P04","Plain",1,"Aftertaste",3.83705631864691
+"P05","Plain",1,"Aftertaste",4.09849178551251
+"P06","Plain",1,"Aftertaste",4.91515892527283
+"P07","Plain",1,"Aftertaste",3.38293877586008
+"P08","Plain",1,"Aftertaste",3.50225001815984
+"P09","Plain",1,"Aftertaste",4.40843570643505
+"P10","Plain",1,"Aftertaste",3.43108676799143
+"P11","Plain",1,"Aftertaste",4.18625407686961
+"P12","Plain",1,"Aftertaste",3.10154535166605
+"P13","Plain",1,"Aftertaste",3.66734250569014
+"P14","Plain",1,"Aftertaste",2.41977003087102
+"P15","Plain",1,"Aftertaste",4.22213485600156
+"P16","Plain",1,"Aftertaste",3.09296898890928
+"P17","Plain",1,"Aftertaste",2.11897527849417
+"P18","Plain",1,"Aftertaste",3.62657968662484
+"P19","Plain",1,"Aftertaste",4.83053815020662
+"P20","Plain",1,"Aftertaste",2.90388503876131
+"P21","Plain",1,"Aftertaste",3.49246409024117
+"P22","Plain",1,"Aftertaste",2.91824856787501
+"P23","Plain",1,"Aftertaste",3.43896849644879
+"P24","Plain",1,"Aftertaste",3.82181869005001
+"P01","Berry-low",1,"Aftertaste",3.46080328224452
+"P02","Berry-low",1,"Aftertaste",4.55147343998634
+"P03","Berry-low",1,"Aftertaste",4.94661699731675
+"P04","Berry-low",1,"Aftertaste",4.2641949396596
+"P05","Berry-low",1,"Aftertaste",3.38454225923005
+"P06","Berry-low",1,"Aftertaste",5.14475064419119
+"P07","Berry-low",1,"Aftertaste",4.84505868006837
+"P08","Berry-low",1,"Aftertaste",4.37924111341357
+"P09","Berry-low",1,"Aftertaste",4.17794935428957
+"P10","Berry-low",1,"Aftertaste",5.40282338737895
+"P11","Berry-low",1,"Aftertaste",3.62773153689097
+"P12","Berry-low",1,"Aftertaste",4.35191801761787
+"P13","Berry-low",1,"Aftertaste",6.1529909709553
+"P14","Berry-low",1,"Aftertaste",3.23853383378209
+"P15","Berry-low",1,"Aftertaste",3.17913638893565
+"P16","Berry-low",1,"Aftertaste",3.7899705493621
+"P17","Berry-low",1,"Aftertaste",3.73479103490936
+"P18","Berry-low",1,"Aftertaste",4.70147219531594
+"P19","Berry-low",1,"Aftertaste",5.36112980190394
+"P20","Berry-low",1,"Aftertaste",4.38843105668282
+"P21","Berry-low",1,"Aftertaste",4.56754351949793
+"P22","Berry-low",1,"Aftertaste",3.93177135647738
+"P23","Berry-low",1,"Aftertaste",6.08497519963509
+"P24","Berry-low",1,"Aftertaste",3.77261229009682
+"P01","Berry-high",1,"Aftertaste",3.16247051324404
+"P02","Berry-high",1,"Aftertaste",6.34653589669581
+"P03","Berry-high",1,"Aftertaste",3.95751501019144
+"P04","Berry-high",1,"Aftertaste",3.87151768647937
+"P05","Berry-high",1,"Aftertaste",3.46914009231001
+"P06","Berry-high",1,"Aftertaste",3.30969339257497
+"P07","Berry-high",1,"Aftertaste",4.51439989929499
+"P08","Berry-high",1,"Aftertaste",5.34909414319886
+"P09","Berry-high",1,"Aftertaste",4.68826087244383
+"P10","Berry-high",1,"Aftertaste",5.18901880673899
+"P11","Berry-high",1,"Aftertaste",6.38075665711365
+"P12","Berry-high",1,"Aftertaste",5.54373022698635
+"P13","Berry-high",1,"Aftertaste",5.01081540774525
+"P14","Berry-high",1,"Aftertaste",6.13598080780528
+"P15","Berry-high",1,"Aftertaste",6.17135161909858
+"P16","Berry-high",1,"Aftertaste",4.63867521100272
+"P17","Berry-high",1,"Aftertaste",5.39811235712674
+"P18","Berry-high",1,"Aftertaste",2.86603071324607
+"P19","Berry-high",1,"Aftertaste",5.38201636154021
+"P20","Berry-high",1,"Aftertaste",4.63799408158703
+"P21","Berry-high",1,"Aftertaste",5.6688297319761
+"P22","Berry-high",1,"Aftertaste",5.33231703124878
+"P23","Berry-high",1,"Aftertaste",3.98997595110193
+"P24","Berry-high",1,"Aftertaste",4.28850793994593
+"P01","Plain",2,"Aftertaste",2.14226988916659
+"P02","Plain",2,"Aftertaste",3.49254512985475
+"P03","Plain",2,"Aftertaste",2.90881970184497
+"P04","Plain",2,"Aftertaste",3.63208723455521
+"P05","Plain",2,"Aftertaste",2.6954364234093
+"P06","Plain",2,"Aftertaste",2.47291101187013
+"P07","Plain",2,"Aftertaste",3.71907200253648
+"P08","Plain",2,"Aftertaste",2.70215134273688
+"P09","Plain",2,"Aftertaste",2.81624849706188
+"P10","Plain",2,"Aftertaste",4.00915607483039
+"P11","Plain",2,"Aftertaste",4.25573975513249
+"P12","Plain",2,"Aftertaste",3.44136693127652
+"P13","Plain",2,"Aftertaste",3.55184514551248
+"P14","Plain",2,"Aftertaste",4.0313011187556
+"P15","Plain",2,"Aftertaste",3.49786016176335
+"P16","Plain",2,"Aftertaste",3.29945958396176
+"P17","Plain",2,"Aftertaste",2.76477275353043
+"P18","Plain",2,"Aftertaste",3.62125844054684
+"P19","Plain",2,"Aftertaste",3.50595650927845
+"P20","Plain",2,"Aftertaste",3.70699509264328
+"P21","Plain",2,"Aftertaste",3.72550350987985
+"P22","Plain",2,"Aftertaste",4.79909875714937
+"P23","Plain",2,"Aftertaste",3.4810262735648
+"P24","Plain",2,"Aftertaste",3.34192650212359
+"P01","Berry-low",2,"Aftertaste",4.74658345744099
+"P02","Berry-low",2,"Aftertaste",4.62966265434025
+"P03","Berry-low",2,"Aftertaste",5.14914847585315
+"P04","Berry-low",2,"Aftertaste",4.07077771823236
+"P05","Berry-low",2,"Aftertaste",4.42973082881168
+"P06","Berry-low",2,"Aftertaste",5.01057280465053
+"P07","Berry-low",2,"Aftertaste",2.76803007359912
+"P08","Berry-low",2,"Aftertaste",2.9814871328133
+"P09","Berry-low",2,"Aftertaste",4.74683340015715
+"P10","Berry-low",2,"Aftertaste",4.63361773452455
+"P11","Berry-low",2,"Aftertaste",4.55083008646818
+"P12","Berry-low",2,"Aftertaste",4.29868683111614
+"P13","Berry-low",2,"Aftertaste",3.79442340289208
+"P14","Berry-low",2,"Aftertaste",4.00990004547927
+"P15","Berry-low",2,"Aftertaste",3.94670690261996
+"P16","Berry-low",2,"Aftertaste",3.58610976896006
+"P17","Berry-low",2,"Aftertaste",3.96877791846304
+"P18","Berry-low",2,"Aftertaste",3.26443842397096
+"P19","Berry-low",2,"Aftertaste",3.48062335365064
+"P20","Berry-low",2,"Aftertaste",4.51948916162095
+"P21","Berry-low",2,"Aftertaste",5.10255640364994
+"P22","Berry-low",2,"Aftertaste",4.61441095534996
+"P23","Berry-low",2,"Aftertaste",4.91313968526371
+"P24","Berry-low",2,"Aftertaste",5.04275334079824
+"P01","Berry-high",2,"Aftertaste",4.75365245697845
+"P02","Berry-high",2,"Aftertaste",4.88790235956807
+"P03","Berry-high",2,"Aftertaste",4.5062541757739
+"P04","Berry-high",2,"Aftertaste",6.02430472934514
+"P05","Berry-high",2,"Aftertaste",3.97046525634467
+"P06","Berry-high",2,"Aftertaste",4.8094287846003
+"P07","Berry-high",2,"Aftertaste",4.7090536638027
+"P08","Berry-high",2,"Aftertaste",4.45082756486323
+"P09","Berry-high",2,"Aftertaste",5.33133142677827
+"P10","Berry-high",2,"Aftertaste",6.76046429075465
+"P11","Berry-high",2,"Aftertaste",5.84286907573983
+"P12","Berry-high",2,"Aftertaste",5.2530405333846
+"P13","Berry-high",2,"Aftertaste",3.70647418121553
+"P14","Berry-high",2,"Aftertaste",5.67123147683724
+"P15","Berry-high",2,"Aftertaste",4.57794200253949
+"P16","Berry-high",2,"Aftertaste",3.77229828412311
+"P17","Berry-high",2,"Aftertaste",6.018507523984
+"P18","Berry-high",2,"Aftertaste",3.95606998197399
+"P19","Berry-high",2,"Aftertaste",4.63807185097112
+"P20","Berry-high",2,"Aftertaste",4.94139144019129
+"P21","Berry-high",2,"Aftertaste",5.02601527555569
+"P22","Berry-high",2,"Aftertaste",3.5695839726242
+"P23","Berry-high",2,"Aftertaste",4.16702259017964
+"P24","Berry-high",2,"Aftertaste",5.32223767434507
