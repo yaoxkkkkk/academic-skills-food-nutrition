@@ -49,7 +49,12 @@ once revision has run.
 4. **Summary of changes applied** — one paragraph naming which IDs got tracked
    edits, which got editor queries, and which are recommendations / residual.
 5. **Part B — Scientific-quality review & revision log.**
-   - **Editorial decision** — `Recommendation: <decision>` + rationale.
+   - **Editorial decision (panel verdict).** State exactly one of **Accept ·
+     Minor Revision · Major Revision · Reject**, as `Recommendation: <decision>`,
+     followed by the **decisive reasons** — the specific concerns that drove the
+     verdict (cite their issue IDs) and what would move it to a lower-severity
+     outcome. This is the coordinator's weighing of the whole panel, not any single
+     reviewer.
    - **Scientific-quality comments** — `SQ#` items, each concern + `Response (<type>)`.
    - **Round 2 (re-review) additions** — `R2-*` items (only if a second round ran).
    - **Loop status & residual (author-dependent) items** — an honest convergence

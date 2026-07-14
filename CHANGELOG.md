@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.28.1 — 2026-07
+
+- **Editorial decision made explicit in the report format.** `report-format.md`
+  now spells out that Part B carries the **panel verdict — exactly one of Accept ·
+  Minor Revision · Major Revision · Reject — with the decisive reasons** (citing
+  issue IDs and what would lower the severity), as the coordinator's weighing of
+  the whole panel. (The decision was already produced; this pins it in the spec so
+  it is never dropped.)
+
 ## 1.28.0 — 2026-07
 
 - **Structured review report + revision-log format, and manuscript editor queries.**
