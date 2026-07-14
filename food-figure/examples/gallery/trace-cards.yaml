@@ -1,37 +1,66 @@
 figures:
   - figure: 1
-    data_source: data/polyphenol_retention.csv and data/film_extract_dose_response.csv; synthetic illustrative datasets
-    transformation: render_gallery.R; group mean and SD for panel a; group mean plus smoothing spline for panel b
-    shows: Illustrative layouts for packaging-treatment comparison and screening dose-response.
+    file_stem: figures/fig1_active_packaging
+    data_source: data/active_packaging_material.csv; data/active_packaging_storage.csv; data/active_packaging_dose_response.csv; all synthetic/illustrative
+    transformation: render_gallery.R; replicate summaries, endpoint kernel densities, smoothing spline, correlation matrix, standardised PCA, and illustrative integrated scores
+    panel_map:
+      a: Code-drawn film-to-food experimental schematic; no quantitative evidence.
+      b-c: Synthetic film mechanics and water-vapour permeability.
+      d-g: Synthetic chilled-storage kinetics and endpoint distributions.
+      h: Synthetic extract dose response with descriptive smooth.
+      i-j: Correlation matrix and PCA of standardised quality outcomes.
+      k: Illustrative integrated package-performance profile.
+    statistics_shown: Means +/- SD for material and storage summaries; raw synthetic endpoint replicates; Pearson correlations; PCA scores.
     supported_claims:
-      - text: Synthetic examples only; no manuscript claim is supported.
+      - text: Layout example only; no manuscript claim is supported.
         locator: Gallery README
-    statistics_shown: Panel a mean ± SD, n = 4 synthetic biological replicates; panel b replicate points and visual smooth only.
-    limitations: [Synthetic data, placeholder letters, no inferential analysis, unvalidated curve]
+    limitations: [Synthetic data, no inferential testing, unvalidated dose-response smooth, illustrative integrated scores]
+
   - figure: 2
-    data_source: data/probiotic_storage_kinetics.csv; synthetic illustrative dataset
-    transformation: render_gallery.R; group mean and SD by treatment and day
-    shows: Illustrative layout for probiotic viable-count storage kinetics.
+    file_stem: figures/fig2_probiotic_storage_kinetics
+    data_source: data/probiotic_storage_kinetics.csv; data/probiotic_challenge_survival.csv; data/probiotic_encapsulation_properties.csv; all synthetic/illustrative
+    transformation: render_gallery.R; batch and replicate summaries, illustrative linear model, endpoint kernel densities, batch decay-rate fits, scenario matrix, and integrated scores
+    panel_map:
+      a: Code-drawn formulation-to-performance schematic; no quantitative evidence.
+      b-e: Synthetic storage kinetics, residuals, and endpoint distributions.
+      f-g: Synthetic acid- and bile-challenge survival.
+      h-i: Illustrative encapsulation efficiency and batch-specific decay rates.
+      j-k: Synthetic robustness matrix and illustrative integrated profile.
+    statistics_shown: Means +/- SD; raw synthetic distributions; linear-model residuals; batch slopes with illustrative 95% intervals.
     supported_claims:
-      - text: Synthetic example only; no manuscript claim is supported.
+      - text: Layout example only; no manuscript claim is supported.
         locator: Gallery README
-    statistics_shown: Mean ± SD, n = 3 synthetic biological replicates per treatment-day combination.
-    limitations: [Synthetic data, no kinetic fit, illustrative threshold only]
+    limitations: [Synthetic data, illustrative threshold, simplified linear kinetics, no real strain or food matrix, illustrative integrated scores]
+
   - figure: 3
-    data_source: data/sensory_panel_profile.csv; synthetic illustrative dataset
-    transformation: render_gallery.R; direct plotting of synthetic mean scores
-    shows: Illustrative radar layout for a yogurt sensory profile.
+    file_stem: figures/fig3_sensory_radar
+    data_source: data/sensory_panel_ratings.csv and data/sensory_overall_liking.csv; both synthetic/illustrative
+    transformation: render_gallery.R; product means, kernel densities, standardised PCA, repeatability differences, one-way attribute models, and illustrative penalties and scores
+    panel_map:
+      a: Code-drawn blinded sensory-design schematic; no quantitative evidence.
+      b-d: Synthetic attribute profiles and replicate distributions.
+      e-f: PCA scores and loadings.
+      g-h: Illustrative repeatability and product discrimination.
+      i-j: Synthetic liking comparison and layout-only penalty analysis.
+      k: Illustrative integrated sensory-study profile.
+    statistics_shown: Synthetic means and raw scores; PCA; absolute repeat-session differences; one-way F statistics.
     supported_claims:
-      - text: Synthetic example only; no manuscript claim is supported.
+      - text: Layout example only; no manuscript claim is supported.
         locator: Gallery README
-    statistics_shown: Synthetic means only; panel size and uncertainty are not applicable to this layout test.
-    limitations: [Synthetic data, no panel protocol, radar area should not be interpreted as effect size]
+    limitations: [Synthetic panel, simplified models, heatmap shows eight of 24 illustrative panelists, penalty values are layout-only, illustrative integrated scores]
+
   - figure: 4
-    data_source: data/method_validation_agreement.csv and data/illustrative_forest_effects.csv; synthetic illustrative datasets
-    transformation: render_gallery.R; Bland–Altman mean difference and ±1.96 SD limits; direct CI plotting for forest layout
-    shows: Illustrative layouts for assay agreement and an evidence-synthesis forest plot.
+    file_stem: figures/fig4_method_validation_and_evidence
+    data_source: data/method_paired_measurements.csv; data/method_calibration_standards.csv; data/method_reaction_profiles.csv; data/method_recovery_precision.csv; data/method_robustness_matrix.csv; all synthetic/illustrative
+    transformation: render_gallery.R; calibration and comparison regressions, residuals, Bland-Altman bias and limits, recovery summaries, robustness matrix, waterfall contributions, and integrated scores
+    panel_map:
+      a: Code-drawn comparator-method validation schematic; no quantitative evidence.
+      b-d: Synthetic raw response, paired distributions, and calibration.
+      e-g: Method comparison, residual diagnostic, and Bland-Altman agreement.
+      h-j: Synthetic recovery, operator precision, and robustness.
+      k-l: Illustrative validation-component waterfall and integrated profile.
+    statistics_shown: Linear fits and illustrative R-squared; residuals; mean bias and mean +/- 1.96 SD limits; recovery means +/- SD; raw operator distributions.
     supported_claims:
-      - text: Synthetic example only; no manuscript claim is supported.
+      - text: Layout example only; no analytical method claim is supported.
         locator: Gallery README
-    statistics_shown: Panel a bias and limits of agreement from 12 synthetic pairs; panel b synthetic effect sizes and 95% CIs only.
-    limitations: [Synthetic data, no validation acceptance criteria, no meta-analysis pooling, no heterogeneity estimate]
+    limitations: [Synthetic data, no preregistered acceptance criteria, simplified diagnostics, illustrative waterfall and integrated scores]

@@ -2,7 +2,7 @@
 name: food-figure
 description: "Comprehensive figure system for food & nutrition manuscripts: analyzes the user's data, recommends the best figure(s) to make, then produces submission-grade graphics in Python or R at the target journal's spec. Handles all common scientific figure types (bar/box/violin, line/kinetic, scatter/regression, Bland–Altman, radar/sensory, chromatograms, TPA/rheology, dose–response, survival, PCA/PLS-DA, heatmaps/clustering, forest, microscopy plates, multi-panel). Use to make, create, design, revise, audit, or recommend figures/charts/plots for a food-science paper, or to work out what to plot from a dataset. If Python or R isn't chosen, ask once and remember it. Triggers: make a figure, create a figure, design a figure, what figure should I make, recommend a chart, plot my data, analyze my data and plot it, chart my results, food science figure, journal figure, scientific plotting, data visualization for a manuscript."
 metadata:
-  version: "2.1.0"
+  version: "2.3.0"
   verified: "2026-07"
   related_skills: [journal-selector, food-paper, food-research]
   references:
@@ -17,6 +17,7 @@ metadata:
     - references/journal-specs.md
     - references/color-palettes.md
     - references/figure-provenance.md
+    - references/figure-story-design.md
     - references/ai-image-generation.md
   examples:
     - examples/python_food_figures.py
@@ -77,6 +78,11 @@ the figure, what it shows, and the claim it supports — so the plotted values m
 the reported statistics. Choose the palette by data type
 (`references/color-palettes.md`).
 
+For a dense Figure 1/2-style request, first design the complete evidence story
+with `references/figure-story-design.md`: experimental sequence, evidence
+hierarchy, non-redundant panel questions, source-data map, opening schematic, and
+an integrated synthesis panel. Do not start by filling a grid with chart types.
+
 ### 4 — Backend gate (blocking)
 - **Data figures → Python or R (always).** Resolve the backend by priority:
   explicit request → language of the user's input files/data → saved preference
@@ -122,6 +128,9 @@ include the `\includegraphics` environment.
 - **make** (default) — full pipeline to a rendered, exported figure + caption + trace card.
 - **revise / audit** — critique or fix an existing figure against the QA checklist and journal spec.
 - **multi-panel** — compose labelled panels (a, b, c) that share a logical thread.
+- **figure-story** — design and render an 8–12 panel journal-style evidence
+  narrative from experimental design through primary results, diagnostics,
+  robustness, and an integrated conclusion.
 - **schematic** — a graphical abstract / mechanism diagram: Python/R by default, or the opt-in AI-image route (`references/ai-image-generation.md`) if the user asks.
 
 ## Scope

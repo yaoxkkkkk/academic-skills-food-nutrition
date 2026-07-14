@@ -1,35 +1,64 @@
-# Captions — Synthetic/Illustrative Gallery
+# Captions - Synthetic/Illustrative Gallery
 
-## Figure 1. Illustrative active-packaging screening workflow.
+## Figure 1. Active pectin packaging links film function to blueberry quality retention.
 
-Panel a shows synthetic polyphenol-retention values for blueberries after a
-defined chilled-storage scenario, grouped by packaging treatment. Bars are mean
-± SD of four synthetic biological replicates; letters are visual placeholders,
-not results of an inferential test. Panel b shows synthetic radical-scavenging
-screening values for a film extract across concentration. Points are replicate
-values and the line is a visual smooth, not a validated dose-response model.
-All values are illustrative and must not be interpreted as experimental data.
+(a) Code-drawn schematic of the illustrative film-to-food experimental logic.
+(b) Synthetic tensile stress-strain profiles for control, pectin, and
+active-pectin films. Points and error bars are means +/- SD from three synthetic
+film replicates. (c) Synthetic water-vapour permeability, shown as mean +/- SD
+from the same illustrative replicates. (d, e) Chilled-storage kinetics for
+polyphenol retention and weight loss, shown as mean +/- SD from eight synthetic
+biological replicates per treatment-day combination. (f, g) Day-21 replicate
+distributions for polyphenol retention and colour change. (h) Synthetic
+film-extract radical-scavenging dose response; the line is a visual smooth, not
+a validated mechanistic model. (i) Correlations among illustrative storage
+quality outcomes. (j) PCA scores computed from the four standardised quality
+variables. (k) Illustrative integrated package-performance profile; its scores
+and 80-point reference polygon are design aids, not acceptance criteria. All
+data and conclusions are synthetic/illustrative.
 
-## Figure 2. Illustrative storage kinetics of free and encapsulated probiotic cells.
+## Figure 2. Encapsulation improves probiotic survival across storage and challenge conditions.
 
-Synthetic viable counts are plotted as log CFU/g over 28 days of chilled storage.
-Symbols and lines show group means; error bars are SD of three synthetic
-biological replicates. The dashed 6 log CFU/g line is an illustrative visual
-reference only, not a regulatory or product-quality limit. No hypothesis test or
-kinetic-model parameter is reported.
+(a) Code-drawn schematic of the illustrative formulation and storage design.
+(b) Synthetic viable-count kinetics for free and encapsulated cells during 28 d
+of chilled storage, shown as mean +/- SD across eight batches and three
+synthetic biological replicates. The dashed 6 log CFU/g line is illustrative,
+not a regulatory or product-quality limit. (c) Residuals from an illustrative
+linear storage model. (d, e) Day-28 viable-count and total-loss distributions.
+(f) Synthetic acid-challenge survival kinetics. (g) Endpoint distributions
+after a synthetic bile challenge. (h) Encapsulation efficiency by illustrative
+batch. (i) Batch-specific encapsulated-cell decay-rate estimates with
+illustrative 95% intervals. (j) Synthetic endpoint survival across temperature
+and food-matrix perturbations. (k) Illustrative integrated probiotic-performance
+profile. No real strain, product, limit, or efficacy claim is represented.
 
-## Figure 3. Illustrative sensory profile of plain and berry yogurt.
+## Figure 3. Trained-panel profiling resolves yogurt sensory drivers and preference.
 
-The radar plot displays synthetic mean intensity scores on a 0–9 scale for five
-attributes. It is a design example only: panel composition, training, blinding,
-randomisation, panel size, and statistical analysis are not reported because no
-panel study was performed.
+(a) Code-drawn schematic of an illustrative blinded, random-order panel design.
+(b) Radar profiles of synthetic product means for five attributes. (c, d)
+Replicate distributions for berry-aroma intensity and overall liking. (e, f)
+PCA scores and loadings computed from standardised panelist-product attribute
+means. (g) Absolute session-to-session differences for the first eight
+illustrative panelists; the displayed subset is used only to keep the heatmap
+legible. (h) Illustrative product-discrimination F statistics from separate
+one-way models by attribute. (i) Panelist-level liking comparison for the two
+berry products. (j) Illustrative liking-penalty layout; values are not derived
+from a real just-about-right study. (k) Illustrative integrated sensory-study
+profile. All scores, panelists, products, protocols, and interpretations are
+synthetic/illustrative.
 
-## Figure 4. Illustrative rapid-assay agreement and evidence-summary layouts.
+## Figure 4. Integrated validation supports a rapid phenolic assay across matrices.
 
-Panel a is a Bland–Altman plot of synthetic paired phenolic-concentration
-measurements (mg/100 g) from an HPLC comparator and a rapid assay. The solid line
-is mean difference; dashed lines are mean difference ± 1.96 SD. Panel b is a
-layout-only forest plot using synthetic, anonymous study labels and synthetic
-standardised mean differences with 95% confidence intervals. It has no pooled
-effect, weights, heterogeneity statistic, or evidentiary interpretation.
+(a) Code-drawn schematic of the illustrative comparator-method validation
+logic. (b) Synthetic reaction-time response profiles at three standard
+concentrations. (c) Paired HPLC and rapid-assay distributions by concentration
+band. (d) Synthetic calibration observations and linear fit. (e) Rapid-assay
+versus comparator measurements with the identity line and fitted regression.
+(f) Regression residuals with a descriptive smooth. (g) Bland-Altman agreement
+with mean bias and mean +/- 1.96 SD limits. (h) Synthetic recovery by spike
+level, shown as mean +/- SD. (i) Operator-specific recovery-error distributions.
+(j) Relative bias under illustrative timing and pH perturbations. (k) Waterfall
+layout showing illustrative validation-component contributions to an integrated
+score. (l) Illustrative validation profile. All samples, thresholds, scores,
+measurements, and conclusions are synthetic/illustrative; no method is validated
+by this example.

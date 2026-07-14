@@ -1,31 +1,241 @@
-treatment,day,biological_replicate,log_cfu_g
-free_cells,0,1,8.22
-free_cells,0,2,8.15
-free_cells,0,3,8.19
-free_cells,7,1,7.61
-free_cells,7,2,7.54
-free_cells,7,3,7.58
-free_cells,14,1,6.74
-free_cells,14,2,6.66
-free_cells,14,3,6.71
-free_cells,21,1,5.62
-free_cells,21,2,5.55
-free_cells,21,3,5.59
-free_cells,28,1,4.72
-free_cells,28,2,4.63
-free_cells,28,3,4.69
-encapsulated_cells,0,1,8.20
-encapsulated_cells,0,2,8.17
-encapsulated_cells,0,3,8.24
-encapsulated_cells,7,1,7.96
-encapsulated_cells,7,2,7.88
-encapsulated_cells,7,3,7.92
-encapsulated_cells,14,1,7.55
-encapsulated_cells,14,2,7.48
-encapsulated_cells,14,3,7.51
-encapsulated_cells,21,1,6.93
-encapsulated_cells,21,2,6.86
-encapsulated_cells,21,3,6.90
-encapsulated_cells,28,1,6.31
-encapsulated_cells,28,2,6.25
-encapsulated_cells,28,3,6.28
+"treatment","day","batch","replicate","log_CFU_g"
+"Free cells",0,"B1",1,8.68761565332631
+"Encapsulated",0,"B1",1,8.57869442336436
+"Free cells",7,"B1",1,7.95965271017493
+"Encapsulated",7,"B1",1,8.15582178464507
+"Free cells",14,"B1",1,6.92659464698385
+"Encapsulated",14,"B1",1,7.6773353746958
+"Free cells",21,"B1",1,6.47369394838071
+"Encapsulated",21,"B1",1,7.38360419254085
+"Free cells",28,"B1",1,5.81975779770439
+"Encapsulated",28,"B1",1,6.95940135082015
+"Free cells",0,"B2",1,8.34096856446985
+"Encapsulated",0,"B2",1,8.59757393335493
+"Free cells",7,"B2",1,8.05109980078327
+"Encapsulated",7,"B2",1,8.42050845656633
+"Free cells",14,"B2",1,7.23193016460033
+"Encapsulated",14,"B2",1,7.83151471368562
+"Free cells",21,"B2",1,6.62354717208758
+"Encapsulated",21,"B2",1,7.52400629869618
+"Free cells",28,"B2",1,5.65473670168975
+"Encapsulated",28,"B2",1,7.05701601349195
+"Free cells",0,"B3",1,8.95775747721745
+"Encapsulated",0,"B3",1,9.02153172539689
+"Free cells",7,"B3",1,8.42029968791862
+"Encapsulated",7,"B3",1,8.77335506760922
+"Free cells",14,"B3",1,7.64456996080364
+"Encapsulated",14,"B3",1,8.46148439926077
+"Free cells",21,"B3",1,6.7231131864733
+"Encapsulated",21,"B3",1,7.84273134126847
+"Free cells",28,"B3",1,6.31670690599875
+"Encapsulated",28,"B3",1,7.63305148009002
+"Free cells",0,"B4",1,8.44037981122765
+"Encapsulated",0,"B4",1,8.66031850614358
+"Free cells",7,"B4",1,7.60540365200496
+"Encapsulated",7,"B4",1,8.23997705331499
+"Free cells",14,"B4",1,7.19765492134778
+"Encapsulated",14,"B4",1,7.81817376843117
+"Free cells",21,"B4",1,6.4192281315119
+"Encapsulated",21,"B4",1,7.46328764917775
+"Free cells",28,"B4",1,5.7533362893676
+"Encapsulated",28,"B4",1,7.22721193813422
+"Free cells",0,"B5",1,8.58726219764172
+"Encapsulated",0,"B5",1,8.57019512427594
+"Free cells",7,"B5",1,8.21974414553063
+"Encapsulated",7,"B5",1,8.15592060327697
+"Free cells",14,"B5",1,7.20733672398703
+"Encapsulated",14,"B5",1,7.95918902855575
+"Free cells",21,"B5",1,6.57413418351423
+"Encapsulated",21,"B5",1,7.48980481759067
+"Free cells",28,"B5",1,5.83833230650286
+"Encapsulated",28,"B5",1,7.21514426696688
+"Free cells",0,"B6",1,8.72442792455054
+"Encapsulated",0,"B6",1,8.42943833431977
+"Free cells",7,"B6",1,8.01926106920082
+"Encapsulated",7,"B6",1,8.27003467604282
+"Free cells",14,"B6",1,7.4940125329087
+"Encapsulated",14,"B6",1,8.0094846891248
+"Free cells",21,"B6",1,6.6246062335622
+"Encapsulated",21,"B6",1,7.53974402605591
+"Free cells",28,"B6",1,5.79808762905197
+"Encapsulated",28,"B6",1,7.17636730192204
+"Free cells",0,"B7",1,8.6861788732769
+"Encapsulated",0,"B7",1,8.53000472747161
+"Free cells",7,"B7",1,7.9708307993917
+"Encapsulated",7,"B7",1,8.35673235357613
+"Free cells",14,"B7",1,7.29742534221283
+"Encapsulated",14,"B7",1,8.00592178788574
+"Free cells",21,"B7",1,6.51776317780896
+"Encapsulated",21,"B7",1,7.51701509112613
+"Free cells",28,"B7",1,5.90656473753039
+"Encapsulated",28,"B7",1,7.25459974814147
+"Free cells",0,"B8",1,8.62750501461562
+"Encapsulated",0,"B8",1,8.47472692686134
+"Free cells",7,"B8",1,7.93195111393492
+"Encapsulated",7,"B8",1,8.54568457393624
+"Free cells",14,"B8",1,7.25254706853514
+"Encapsulated",14,"B8",1,7.86648475090981
+"Free cells",21,"B8",1,6.55162945257203
+"Encapsulated",21,"B8",1,7.47391015021749
+"Free cells",28,"B8",1,6.21956839996344
+"Encapsulated",28,"B8",1,7.38291074039779
+"Free cells",0,"B1",2,8.6418939344815
+"Encapsulated",0,"B1",2,8.23701232095941
+"Free cells",7,"B1",2,7.79975949943083
+"Encapsulated",7,"B1",2,8.11309700237121
+"Free cells",14,"B1",2,7.35386798215342
+"Encapsulated",14,"B1",2,7.69909325385323
+"Free cells",21,"B1",2,6.4618876022488
+"Encapsulated",21,"B1",2,7.54902976573261
+"Free cells",28,"B1",2,5.54810279785922
+"Encapsulated",28,"B1",2,7.14959499588313
+"Free cells",0,"B2",2,8.66219877804188
+"Encapsulated",0,"B2",2,8.65836429343646
+"Free cells",7,"B2",2,8.12825770596297
+"Encapsulated",7,"B2",2,8.17882122830803
+"Free cells",14,"B2",2,7.28826298439438
+"Encapsulated",14,"B2",2,7.9499464208458
+"Free cells",21,"B2",2,6.47567539891486
+"Encapsulated",21,"B2",2,7.53508993488751
+"Free cells",28,"B2",2,5.85627005556898
+"Encapsulated",28,"B2",2,7.19394502286944
+"Free cells",0,"B3",2,8.76560143094072
+"Encapsulated",0,"B3",2,8.90250124699564
+"Free cells",7,"B3",2,8.25141013439639
+"Encapsulated",7,"B3",2,8.58698425722048
+"Free cells",14,"B3",2,7.67383543974393
+"Encapsulated",14,"B3",2,8.04590939800434
+"Free cells",21,"B3",2,6.84510164357669
+"Encapsulated",21,"B3",2,7.89974933871933
+"Free cells",28,"B3",2,6.17118950227275
+"Encapsulated",28,"B3",2,7.50691200934076
+"Free cells",0,"B4",2,8.61219202236521
+"Encapsulated",0,"B4",2,8.57625797098302
+"Free cells",7,"B4",2,7.81199370185196
+"Encapsulated",7,"B4",2,8.29399668931982
+"Free cells",14,"B4",2,7.35551208513052
+"Encapsulated",14,"B4",2,7.98194601069495
+"Free cells",21,"B4",2,6.26034532161097
+"Encapsulated",21,"B4",2,7.71244977643977
+"Free cells",28,"B4",2,5.619822431615
+"Encapsulated",28,"B4",2,6.9725725593649
+"Free cells",0,"B5",2,8.5910516139519
+"Encapsulated",0,"B5",2,8.53101518801959
+"Free cells",7,"B5",2,7.89492780954289
+"Encapsulated",7,"B5",2,8.07749619772714
+"Free cells",14,"B5",2,7.46271107153557
+"Encapsulated",14,"B5",2,7.84883274917148
+"Free cells",21,"B5",2,6.56725374629438
+"Encapsulated",21,"B5",2,7.50253721730485
+"Free cells",28,"B5",2,5.85173162868877
+"Encapsulated",28,"B5",2,7.06166659160042
+"Free cells",0,"B6",2,8.57912722726528
+"Encapsulated",0,"B6",2,8.64042729852457
+"Free cells",7,"B6",2,8.06127119024355
+"Encapsulated",7,"B6",2,8.24637679047628
+"Free cells",14,"B6",2,7.39423665610539
+"Encapsulated",14,"B6",2,7.70561682491764
+"Free cells",21,"B6",2,6.50531871261338
+"Encapsulated",21,"B6",2,7.50636492412648
+"Free cells",28,"B6",2,5.89811718350243
+"Encapsulated",28,"B6",2,7.24979370622159
+"Free cells",0,"B7",2,8.79542967707473
+"Encapsulated",0,"B7",2,8.33581633667098
+"Free cells",7,"B7",2,7.96069641734924
+"Encapsulated",7,"B7",2,8.29357256860619
+"Free cells",14,"B7",2,7.50314951527733
+"Encapsulated",14,"B7",2,8.06734139322209
+"Free cells",21,"B7",2,6.53119944171186
+"Encapsulated",21,"B7",2,7.39300708972914
+"Free cells",28,"B7",2,5.81005960238144
+"Encapsulated",28,"B7",2,7.2825752657582
+"Free cells",0,"B8",2,8.73236789177489
+"Encapsulated",0,"B8",2,8.55429889541342
+"Free cells",7,"B8",2,8.09021378083859
+"Encapsulated",7,"B8",2,8.22878701150413
+"Free cells",14,"B8",2,7.45168963764344
+"Encapsulated",14,"B8",2,7.95739627712099
+"Free cells",21,"B8",2,6.59204901549827
+"Encapsulated",21,"B8",2,7.4116243570455
+"Free cells",28,"B8",2,6.01723496600326
+"Encapsulated",28,"B8",2,7.10887044502871
+"Free cells",0,"B1",3,8.61930786816915
+"Encapsulated",0,"B1",3,8.69756046631371
+"Free cells",7,"B1",3,7.93899118912385
+"Encapsulated",7,"B1",3,8.38689493530627
+"Free cells",14,"B1",3,7.16042319327668
+"Encapsulated",14,"B1",3,7.78893039579488
+"Free cells",21,"B1",3,6.49805071277062
+"Encapsulated",21,"B1",3,7.66033965708788
+"Free cells",28,"B1",3,5.7771546863905
+"Encapsulated",28,"B1",3,6.87447866195507
+"Free cells",0,"B2",3,8.55442631655167
+"Encapsulated",0,"B2",3,8.43383243047537
+"Free cells",7,"B2",3,7.8845438725648
+"Encapsulated",7,"B2",3,8.09258559482001
+"Free cells",14,"B2",3,7.01939690913289
+"Encapsulated",14,"B2",3,7.49736082638865
+"Free cells",21,"B2",3,6.4865767525418
+"Encapsulated",21,"B2",3,7.42495219543443
+"Free cells",28,"B2",3,5.96687976937384
+"Encapsulated",28,"B2",3,7.06963977348385
+"Free cells",0,"B3",3,9.01162145842695
+"Encapsulated",0,"B3",3,8.99124026766824
+"Free cells",7,"B3",3,8.19083458362412
+"Encapsulated",7,"B3",3,8.94055843765889
+"Free cells",14,"B3",3,7.4329681983785
+"Encapsulated",14,"B3",3,8.23766068276326
+"Free cells",21,"B3",3,7.05467769704175
+"Encapsulated",21,"B3",3,7.8175864539903
+"Free cells",28,"B3",3,6.16243391914036
+"Encapsulated",28,"B3",3,7.47112391919003
+"Free cells",0,"B4",3,8.58312291930592
+"Encapsulated",0,"B4",3,8.5280439012726
+"Free cells",7,"B4",3,8.04871756826196
+"Encapsulated",7,"B4",3,8.1944852942518
+"Free cells",14,"B4",3,7.3006108024216
+"Encapsulated",14,"B4",3,7.84023953058381
+"Free cells",21,"B4",3,6.24785355322359
+"Encapsulated",21,"B4",3,7.44864762778271
+"Free cells",28,"B4",3,5.65390528029516
+"Encapsulated",28,"B4",3,7.25926344343454
+"Free cells",0,"B5",3,8.40670444752639
+"Encapsulated",0,"B5",3,8.53181135256535
+"Free cells",7,"B5",3,8.08927158010581
+"Encapsulated",7,"B5",3,8.09344651803232
+"Free cells",14,"B5",3,7.35481772369721
+"Encapsulated",14,"B5",3,7.92355141571048
+"Free cells",21,"B5",3,6.41666430368527
+"Encapsulated",21,"B5",3,7.52616243668275
+"Free cells",28,"B5",3,5.77733253567256
+"Encapsulated",28,"B5",3,7.23500279589934
+"Free cells",0,"B6",3,8.74911216916674
+"Encapsulated",0,"B6",3,8.52073420603575
+"Free cells",7,"B6",3,7.87434408041745
+"Encapsulated",7,"B6",3,8.28442259665836
+"Free cells",14,"B6",3,7.2130656016979
+"Encapsulated",14,"B6",3,7.85858132805472
+"Free cells",21,"B6",3,6.92395278087912
+"Encapsulated",21,"B6",3,7.48836502139743
+"Free cells",28,"B6",3,5.98927004202898
+"Encapsulated",28,"B6",3,7.18808387133703
+"Free cells",0,"B7",3,8.55308555584452
+"Encapsulated",0,"B7",3,8.71295088066512
+"Free cells",7,"B7",3,8.00373530717583
+"Encapsulated",7,"B7",3,8.41753181771882
+"Free cells",14,"B7",3,7.08027149783876
+"Encapsulated",14,"B7",3,7.82097423208363
+"Free cells",21,"B7",3,6.43569205371242
+"Encapsulated",21,"B7",3,7.5389037904496
+"Free cells",28,"B7",3,6.00312653145019
+"Encapsulated",28,"B7",3,7.18699195911918
+"Free cells",0,"B8",3,8.66193302578459
+"Encapsulated",0,"B8",3,8.63767437756492
+"Free cells",7,"B8",3,8.08607160338589
+"Encapsulated",7,"B8",3,8.27762640916722
+"Free cells",14,"B8",3,7.34406098529644
+"Encapsulated",14,"B8",3,7.84914336695676
+"Free cells",21,"B8",3,6.90388592548739
+"Encapsulated",21,"B8",3,7.58286877363793
+"Free cells",28,"B8",3,5.96324207969433
+"Encapsulated",28,"B8",3,7.25578077325381

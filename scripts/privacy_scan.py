@@ -31,6 +31,26 @@ PATTERNS = [
         r"\b(?:sk-[A-Za-z0-9]{16,}|gh[oprsu]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]+)\b")),
 ]
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+PRINTABLE_BINARY_RUN_RE = re.compile(rb"[\x20-\x7e]{8,}")
+
+
+def decode_deliverable(raw):
+    """Decode text files normally and extract stable ASCII runs from binaries.
+
+    Decoding every byte of a compressed PDF or PNG can turn random bytes into
+    email-like strings. Binary extraction still exposes meaningful metadata,
+    paths, tokens, and other printable content without scanning compression
+    noise as if it were prose.
+    """
+    try:
+        text = raw.decode("utf-8")
+    except UnicodeDecodeError:
+        text = None
+    if text is not None and b"\x00" not in raw:
+        return text
+    return "\n".join(
+        run.decode("ascii") for run in PRINTABLE_BINARY_RUN_RE.findall(raw)
+    )
 
 
 def scan(text):
@@ -63,6 +83,13 @@ def selftest():
              "Questions: food_agents@lists.unimelb.edu.au. DOI 10.1016/j.foodchem.2023.1\n"
              "Version 1.14.0 released.")
     assert scan(clean) == [], scan(clean)
+
+    binary = (b"\x89PNG\r\n\x1a\n\x00P@t.VG\x00"
+              b"metadata=/Users/alice/project/figure.png\x00")
+    decoded = decode_deliverable(binary)
+    assert "P@t.VG" not in decoded, decoded
+    assert "/Users/alice/project/figure.png" in decoded, decoded
+    assert any(c == "local home path (macOS)" for _, c, _ in scan(decoded))
     print("OK: privacy_scan selftest passed")
 
 
@@ -71,9 +98,8 @@ def main(argv):
         selftest()
         return 0
     args = [a for a in argv[1:] if not a.startswith("--")]
-    # Figures and PDFs may contain readable metadata alongside binary bytes.
-    # Replacement decoding keeps the scan fail-safe for those deliverables.
-    text = open(args[0], encoding="utf-8", errors="replace").read() if args else sys.stdin.read()
+    # Figures and PDFs may contain readable metadata alongside compressed bytes.
+    text = decode_deliverable(open(args[0], "rb").read()) if args else sys.stdin.read()
     hits = scan(text)
     if hits:
         print(f"FAIL: {len(hits)} potential privacy leak(s) — redact before delivering:")

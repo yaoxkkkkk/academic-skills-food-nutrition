@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.24.0 — 2026-07
+
+- **Complete Figure-story design for food-figure.** Added a workflow for planning
+  8–12 panel journal figures from experimental sequence, evidence hierarchy,
+  non-redundant panel questions, and source-data mapping. The consolidated
+  synthetic/illustrative gallery now contains one final 11- or 12-panel version
+  for each of four themes: active packaging, probiotic storage, trained sensory
+  analysis, and analytical-method validation. Each uses a code-drawn schematic,
+  topic-specific evidence panels, a shared semantic palette, and an explicitly
+  illustrative synthesis panel. Source CSVs, captions, trace cards, and stable
+  PDF + PNG names are kept in one gallery structure.
+- **Binary privacy-scan hardening.** PDF and PNG checks now inspect stable
+  printable metadata while excluding short compression-noise fragments that can
+  resemble email addresses; the self-test covers both leak detection and this
+  false-positive case.
+
 ## 1.22.0 — 2026-07
 
 - **Renamed the `deep-research` skill to `food-deep-research`** to avoid name
