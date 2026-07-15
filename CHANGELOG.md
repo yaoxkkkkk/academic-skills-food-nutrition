@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.31.0 — 2026-07
+
+- **OpenClaw support.** The installer (`install.sh`) now supports `openclaw` as a
+  target platform, installing skills into `${OPENCLAW_HOME:-~/.openclaw}/skills/`
+  with the same flat layout used for Codex and MiniMax Agent. OpenClaw is also
+  auto-detected in the `all` target. README updated with install and update
+  instructions.
+
 ## 1.30.0 — 2026-07
 
 - **`food-pipeline` no longer researches the same field twice.** When the pipeline

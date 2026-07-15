@@ -2,22 +2,25 @@
 # One-command installer for academic-skills-food-nutrition.
 #
 # Claude Code: installed as a plugin (the whole repo is the plugin).
-# Codex & MiniMax Agent (Mavis): each skill is installed FLAT into the agent's
-#   skills directory (…/skills/<name>/SKILL.md) so the agent discovers it, PLUS
-#   the shared `journals/` and `scripts/` directories so cross-skill references
+# Codex, MiniMax Agent (Mavis), and OpenClaw: each
+#   skill is installed FLAT into the agent's skills directory
+#   (…/skills/<name>/SKILL.md) so the agent discovers it, PLUS the shared
+#   `journals/` and `scripts/` directories so cross-skill references
 #   (e.g. journal-selector -> journals/…, scripts/verify_citations.py) resolve.
 #
 #   ./install.sh            # all (auto-detects what's installed)
 #   ./install.sh claude     # Claude Code only
 #   ./install.sh codex      # Codex only
 #   ./install.sh minimax    # MiniMax Agent / Mavis only  (alias: mavis)
+#   ./install.sh openclaw   # OpenClaw only
 #
 # Remote one-liner:
 #   curl -fsSL https://raw.githubusercontent.com/PangenomeAI/academic-skills-food-nutrition/main/install.sh | bash
 #
 # To UPDATE later, just re-run this script (Claude Code is updated via
-# `claude plugin update`; Codex/MiniMax bundles are cleanly replaced). Updates are
-# never automatic — you update when you choose. Restart the app afterwards.
+# `claude plugin update`; Codex/MiniMax/OpenClaw bundles are cleanly
+# replaced). Updates are never automatic — you update when you choose. Restart
+# the app afterwards.
 set -euo pipefail
 
 REPO_URL="https://github.com/PangenomeAI/academic-skills-food-nutrition"
@@ -36,6 +39,7 @@ if SELF="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd)" \
   SRC="$SELF"; CLONED=0
 else
   SRC="$(mktemp -d)/$PLUGIN"
+  trap 'rm -rf "$(dirname "$SRC")"' EXIT
   echo "Cloning $REPO_URL …"
   git clone --depth 1 "$REPO_URL" "$SRC"
   CLONED=1
@@ -87,10 +91,22 @@ install_minimax() {
   echo "    or add via the in-app Skill Creator/import at https://agent.minimax.io/.)"
 }
 
+install_openclaw() {
+  # OpenClaw reads SKILL.md skills from ~/.openclaw/skills (shared managed) by
+  # default; set OPENCLAW_HOME to override (e.g. to a workspace skills/ dir).
+  local dir="${OPENCLAW_HOME:-$HOME/.openclaw}/skills"
+  echo "→ OpenClaw: installing skills to $dir"
+  install_bundle "$dir"
+  echo "    Restart OpenClaw (or start a new session) to discover the skills."
+  echo "    (Override the dir with OPENCLAW_HOME.)"
+}
+
+
 case "$TARGET" in
   claude)        install_claude ;;
   codex)         install_codex ;;
   minimax|mavis) install_minimax ;;
+  openclaw)      install_openclaw ;;
   all|both|"")
     install_claude
     if command -v codex >/dev/null 2>&1 || [ -d "${CODEX_HOME:-$HOME/.codex}" ]; then
@@ -103,8 +119,13 @@ case "$TARGET" in
     else
       echo "→ MiniMax Agent (Mavis): not detected (no ~/.mavis) — skipping. Later: ./install.sh minimax"
     fi
+    if command -v openclaw >/dev/null 2>&1 || [ -d "${OPENCLAW_HOME:-$HOME/.openclaw}" ] || [ -n "${OPENCLAW_HOME:-}" ]; then
+      install_openclaw
+    else
+      echo "→ OpenClaw: not detected (no 'openclaw' CLI or ~/.openclaw) — skipping. Later: ./install.sh openclaw"
+    fi
     ;;
-  *) echo "Usage: $0 [claude|codex|minimax|all]"; exit 2 ;;
+  *) echo "Usage: $0 [claude|codex|minimax|openclaw|all]"; exit 2 ;;
 esac
 
 [ "${CLONED:-0}" = 1 ] && echo "(source cloned to $SRC)"
