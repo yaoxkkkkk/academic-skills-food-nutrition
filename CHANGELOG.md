@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.30.1 — 2026-07
+## 1.31.1 — 2026-07
 
 - **Fix: `food-paper` and `journal-selector` did not appear on Claude online (5 of 7
   skills shown).** Both descriptions used `<journal>` as a placeholder — the only two
@@ -11,6 +11,14 @@
   and concrete journal examples ("publish on a specific journal", "I want to publish
   on Food Chemistry", "submit to LWT"), which also match user phrasing better. All 7
   skill descriptions are now free of HTML/XML-like placeholders.
+
+## 1.31.0 — 2026-07
+
+- **OpenClaw support.** The installer (`install.sh`) now supports `openclaw` as a
+  target platform, installing skills into `${OPENCLAW_HOME:-~/.openclaw}/skills/`
+  with the same flat layout used for Codex and MiniMax Agent. OpenClaw is also
+  auto-detected in the `all` target. README updated with install and update
+  instructions.
 
 ## 1.30.0 — 2026-07
 

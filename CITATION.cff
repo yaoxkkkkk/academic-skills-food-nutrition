@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
 title: "Academic Skills for Food & Nutrition Science"
 type: software
-version: "1.30.0"
+version: "1.31.0"
 license: MIT
 authors:
   - family-names: Zhang
@@ -19,6 +19,10 @@ authors:
   - family-names: Shen
     given-names: Chenghao
     affiliation: "The University of Melbourne"
+  - family-names: Yao
+    given-names: Xiukun
+    affiliation: "The University of Melbourne"
+    orcid: "https://orcid.org/0009-0009-1557-9944"
 repository-code: "https://github.com/PangenomeAI/academic-skills-food-nutrition"
 url: "https://github.com/PangenomeAI/academic-skills-food-nutrition"
 abstract: >-
