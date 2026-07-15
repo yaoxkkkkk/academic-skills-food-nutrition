@@ -4,16 +4,16 @@
 
 # Academic Skills for Food & Nutrition Science
 
-> **AI research assistant for food science and nutrition** — Claude Code & Codex
-> skills for **literature review, systematic review (PRISMA & meta-analysis), data
-> analysis and statistics, scientific figures, journal formatting, and peer
-> review**. Food-science research automation, end to end.
+> **AI research assistant for food science and nutrition** — Claude Code, Codex,
+> MiniMax Agent, and OpenClaw skills for **literature review, systematic review
+> (PRISMA & meta-analysis), data analysis and statistics, scientific figures,
+> journal formatting, and peer review**. Food-science research automation, end to end.
 
-Original, **MIT-licensed** Claude Code skills for the food & nutrition research
-lifecycle — **research → write → review → revise → finalize** — where each core
-skill is a **multi-subagent system** and a master pipeline orchestrates them,
-with built-in knowledge of food & nutrition journal author guidelines and a
-food-science figure workflow.
+Original, **MIT-licensed** skills for the food & nutrition research lifecycle —
+**research → write → review → revise → finalize** — where each core skill is a
+**multi-subagent system** and a master pipeline orchestrates them, with built-in
+knowledge of food & nutrition journal author guidelines and a food-science figure
+workflow. Supports Claude Code, Codex, MiniMax Agent, and OpenClaw.
 
 This open project was **initiated by the Food Science Group at the University of
 Melbourne**, and we warmly welcome food & nutrition research groups from around
@@ -37,14 +37,16 @@ Then restart Claude Code (or run `/plugin`). Update later with
 curl -fsSL https://raw.githubusercontent.com/PangenomeAI/academic-skills-food-nutrition/main/install.sh | bash
 ```
 
-Or, from a local clone: `./install.sh` (all) · `./install.sh claude` · `./install.sh codex` · `./install.sh minimax`.
+Or, from a local clone: `./install.sh` (all) · `./install.sh claude` · `./install.sh codex` · `./install.sh minimax` · `./install.sh openclaw`.
 The installer registers the Claude Code plugin, and for **Codex**
-(`${CODEX_HOME:-~/.codex}/skills/`) and **[MiniMax Agent](https://agent.minimax.io/)**
-(Mavis; `${MAVIS_SKILLS_DIR:-~/.mavis/skills}/`) it installs **each skill flat**
-(`…/skills/<name>/SKILL.md`, so the agent discovers it) **plus** the shared
-`journals/` and `scripts/` directories so cross-skill references resolve. Restart
-the app so it rescans skills. (Override the location with `CODEX_HOME` /
-`MAVIS_SKILLS_DIR`, or add via MiniMax's in-app Skill Creator/import.)
+(`${CODEX_HOME:-~/.codex}/skills/`), **[MiniMax Agent](https://agent.minimax.io/)**
+(Mavis; `${MAVIS_SKILLS_DIR:-~/.mavis/skills}/`), and
+**[OpenClaw](https://openclaw.ai)** (`${OPENCLAW_HOME:-~/.openclaw}/skills/`) it
+installs **each skill flat** (`…/skills/<name>/SKILL.md`, so the agent discovers
+it) **plus** the shared `journals/` and `scripts/` directories so cross-skill
+references resolve. Restart the app so it rescans skills. (Override the location
+with `CODEX_HOME` / `MAVIS_SKILLS_DIR` / `OPENCLAW_HOME`, or add via MiniMax's
+in-app Skill Creator/import.)
 
 ## Updating
 
@@ -61,11 +63,11 @@ version, refresh the marketplace first:
 claude plugin marketplace update academic-skills-food-nutrition
 ```
 
-**Codex / MiniMax Agent (Mavis)** — re-run the installer (it cleanly replaces the
-skills), then restart the app:
+**Codex / MiniMax Agent (Mavis) / OpenClaw** — re-run the installer (it cleanly
+replaces the skills), then restart the app:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/PangenomeAI/academic-skills-food-nutrition/main/install.sh | bash
-# or, from a local clone:  ./install.sh codex   |   ./install.sh minimax
+# or, from a local clone:  ./install.sh codex  |  ./install.sh minimax  |  ./install.sh openclaw
 ```
 
 Check your installed version with `claude plugin list`; see all versions on the
