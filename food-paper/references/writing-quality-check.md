@@ -18,6 +18,15 @@ Run over the draft; fix before handing to `internal_reviewer`.
 - [ ] Every figure/table cited in order with a self-contained legend.
 - [ ] Abbreviations defined once; terminology consistent; tenses correct.
 
+## Reads like a scientist, not a chatbot (`human-writing.md`)
+- [ ] No inflated significance ("pivotal role", "paves the way", "growing attention"); no "-ing" tack-ons ("highlighting the potential of…").
+- [ ] No vague attribution — every "studies have shown" replaced by a specific citation.
+- [ ] No stock AI vocabulary ("delve", "intricate", figurative "landscape", "testament", "showcase", "underscore"); no "serves as" where "is" works.
+- [ ] No promotional adjectives ("novel"/"groundbreaking" without a supported claim); no generic upbeat ending ("opens exciting avenues").
+- [ ] Filler and **stacked** hedges cut — but calibrated hedging, passive Methods, and journal-mandated form **kept**.
+- [ ] Sentence length varies; one term per concept (no synonym cycling).
+- [ ] Two-pass check run ("what still reads as machine-written?"), and **no number, claim scope, or citation changed** by the style edit.
+
 ## Anti-patterns to remove
 - Vague quantifiers ("significantly higher" without the number/test).
 - Bar-of-means where a distribution matters (fix in `food-figure`).

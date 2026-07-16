@@ -36,4 +36,12 @@ Used by `draft_writer` and `polisher`.
   disagree, why); state limitations honestly (matrix, dose, n, single batch); end
   with implications proportionate to the evidence. No overreach.
 
+## Sounding human, not machine-generated
+LLM prose has specific tells — inflated significance, vague attribution ("studies
+have shown"), stock vocabulary ("delve", "intricate landscape"), "serves as" for
+"is", hedge stacking, and generic upbeat endings. They are bad scientific writing on
+their own terms; remove them. But keep **calibrated hedging**, **passive Methods**,
+and **journal-mandated form** — and never let a style edit change a number, a claim's
+scope, or a citation. Full guide: `human-writing.md`.
+
 See `writing-quality-check.md` for the self-check.

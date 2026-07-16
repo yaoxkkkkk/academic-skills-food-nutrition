@@ -1,14 +1,37 @@
 # Changelog
 
-## Unreleased
+## 1.32.0 — 2026-07
 
-- **Zenodo DOI and citation metadata.** Added the DOI badge to the README and a
-  **Citation** section explaining Zenodo's two DOIs — the **concept DOI**
+- **Write like a scientist, not like a chatbot.** New canonical
+  `food-paper/references/human-writing.md`: the AI writing tells to strip —
+  inflated significance ("pivotal role", "paves the way"), "-ing" tack-ons, vague
+  attribution ("studies have shown" → a specific citation), stock AI vocabulary
+  ("delve", figurative "landscape", "showcase", "testament"), copula avoidance
+  ("serves as" → "is"), promotional adjectives, negative parallelism, rule-of-three
+  padding, filler, hedge **stacking**, generic upbeat endings, formulaic "Challenges
+  and Future Prospects" scaffolding, and synonym cycling — plus a two-pass check
+  ("what still reads as machine-written?"). Wired into `food-paper`
+  (`draft_writer`, `polisher`, `writing-style.md`, `writing-quality-check.md`),
+  `food-research` (`writer`), `food-deep-research` (`compiler`), and `food-review`
+  (reviewers now flag these as substantive writing-quality faults).
+  Pattern taxonomy informed by the MIT-licensed `humanizer` skill (Siqi Chen) and
+  Wikipedia's "Signs of AI writing", rewritten for scientific manuscripts.
+- **Academic exceptions are explicit**, because general humanising rules misfire on
+  manuscripts: **calibrated hedging is kept** (de-hedging into an unsupported claim
+  is a fabrication-grade error), **passive voice stays in Methods**, and
+  **journal-mandated heading case/structure wins** over any style rule. A style edit
+  may never change a value, a claim's scope, or a citation.
+- **Explicit integrity boundary:** this is a *writing-quality* edit, **not** a way to
+  hide AI involvement, defeat AI detectors, or evade a journal's or institution's AI
+  policy. **The mandatory AI-use disclosure is unaffected.** Documented in the
+  README's "Using AI responsibly" section and enforced in the guide itself.
+- **Zenodo DOI and citation metadata.** Added the DOI badge and a **Citation**
+  section to the README, explaining Zenodo's two DOIs — the **concept DOI**
   [10.5281/zenodo.21372994](https://doi.org/10.5281/zenodo.21372994) (cite the
-  project; always resolves to the latest version) and the **version DOI**
-  [10.5281/zenodo.21372995](https://doi.org/10.5281/zenodo.21372995) (cite the exact
-  version, v1.31.1). `CITATION.cff` gains `doi` (concept), `date-released`, and both
-  DOIs as `identifiers`, and its `version` now tracks the archived release (1.31.1).
+  project; always resolves to the latest version) and the per-release **version DOI**
+  (cite the exact version you ran). `CITATION.cff` gains `doi` (the concept DOI, so
+  GitHub's "Cite this repository" always points at the latest) and `date-released`.
+  Acknowledged `humanizer` (MIT) in the README.
 
 ## 1.31.1 — 2026-07
 
