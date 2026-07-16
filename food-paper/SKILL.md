@@ -9,6 +9,7 @@ metadata:
   references:
     - references/paper-structure.md
     - references/writing-style.md
+    - references/human-writing.md
     - references/writing-quality-check.md
     - references/statistics-reporting.md
     - references/declarations-guide.md
@@ -95,6 +96,7 @@ prep, storage). Ethics/food-safety statements where relevant.
 ## References (load as needed)
 - `references/paper-structure.md` — `structure_architect`: IMRaD/review patterns + abstract types.
 - `references/writing-style.md` — `draft_writer`/`polisher`: scientific style, title/intro rhetoric.
+- `references/human-writing.md` — **write like a scientist, not a chatbot**: the AI writing tells to remove (inflated significance, vague attribution, stock vocabulary, hedge stacking), the academic exceptions to keep (calibrated hedging, passive Methods, journal-mandated form), and the two-pass check. Canonical for the suite; used by `food-research`, `food-deep-research`, and `food-review` too.
 - `references/writing-quality-check.md` — self-check before `internal_reviewer`.
 - `references/statistics-reporting.md` — `statistician`: what to report and which test.
 - `references/declarations-guide.md` — CRediT, funding, COI, data availability, ethics.

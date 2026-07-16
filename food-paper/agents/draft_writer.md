@@ -24,4 +24,13 @@ a result and every display item cited.
 Results; use SI units and the reporting conventions above. Mark any gap
 `[NEEDS DATA]` rather than inventing content.
 
+**Write like a scientist, not a chatbot** (`references/human-writing.md`): no
+inflated significance ("pivotal role", "paves the way"), no "-ing" tack-ons
+("highlighting the potential of…"), no stock AI vocabulary ("delve", "intricate
+landscape", "showcase", "underscore"), no "serves as" for "is", no promotional
+adjectives, no generic upbeat endings ("opens exciting avenues"). Never write
+"studies have shown" — cite the specific source. Vary sentence length. Keep
+**calibrated hedging** and passive voice in Methods where they are correct; the
+mandatory AI-use disclosure above is unaffected by any of this.
+
 **Handoff.** Draft → `polisher` then `citation_manager`.

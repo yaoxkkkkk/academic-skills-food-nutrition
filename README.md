@@ -206,6 +206,24 @@ statement as a *draft to be verified*, never as established fact.
   (see [`declarations-guide.md`](food-paper/references/declarations-guide.md)).
 - **Follow your institution's academic-integrity rules.**
 
+### Writing that reads like a scientist — and why that isn't a loophole
+The writing skills actively remove **AI writing tells**: inflated significance
+("plays a pivotal role", "paves the way"), vague attribution ("studies have shown"),
+stock vocabulary ("delve", "intricate landscape", "showcase"), "serves as" instead of
+"is", hedge stacking, and generic upbeat endings. These are **bad scientific
+writing** in their own right — vague, unattributed, and overstated — so cutting them
+makes a manuscript clearer, more specific, and more honest. See
+[`human-writing.md`](food-paper/references/human-writing.md).
+
+> **This is a quality edit, not a disguise.** It is **not** a way to hide AI
+> involvement, defeat an AI detector, or evade a journal's or university's AI
+> policy. **The AI-use disclosure requirement stands regardless of how the prose
+> reads** — the suite still writes that disclosure into every manuscript it drafts.
+> The guide also refuses to trade accuracy for style: it keeps **calibrated
+> hedging** (removing a "may" that the data require is a fabrication-grade error,
+> not a polish), keeps passive voice where Methods need it, defers to the journal's
+> house style, and never lets an edit change a value, a claim's scope, or a citation.
+
 ### University of Melbourne policy (for UoM staff and students)
 This project is initiated by the Food Science Research Team at the University of Melbourne; UoM users must comply with University policy on acknowledging and using generative AI. Always check the
 current policy and your course/coordinator's specific requirements:
@@ -227,7 +245,7 @@ current policy and your course/coordinator's specific requirements:
 If you use these skills in your research, please cite the software:
 
 > Zhang, P., Liang, Z., Huang, P., Shen, C., & Yao, X. (2026). *Academic Skills for
-> Food & Nutrition Science* (Version 1.31.1) [Computer software]. Zenodo.
+> Food & Nutrition Science* [Computer software]. Zenodo.
 > https://doi.org/10.5281/zenodo.21372994
 
 Zenodo mints two kinds of DOI — pick the one that matches what you mean:
@@ -235,7 +253,10 @@ Zenodo mints two kinds of DOI — pick the one that matches what you mean:
 | DOI | Use it to |
 |---|---|
 | [10.5281/zenodo.21372994](https://doi.org/10.5281/zenodo.21372994) — **concept DOI** | Cite the project in general; always resolves to the **latest** version. Use this unless you need to pin a version. |
-| [10.5281/zenodo.21372995](https://doi.org/10.5281/zenodo.21372995) — **version DOI** | Cite the **exact version** you ran (v1.31.1), for reproducibility. |
+| **version DOI** — one per release | Cite the **exact version** you ran, for reproducibility. Each release archives to its own DOI: open that release's record from the [concept DOI](https://doi.org/10.5281/zenodo.21372994) and copy its version DOI (v1.31.1, for example, is [10.5281/zenodo.21372995](https://doi.org/10.5281/zenodo.21372995)). |
+
+State the **version you actually ran** in your methods or AI-use statement, whichever
+DOI you cite.
 
 Machine-readable metadata is in [`CITATION.cff`](CITATION.cff) — GitHub's
 **"Cite this repository"** button generates APA and BibTeX from it. When you report
@@ -281,9 +302,13 @@ by — but contains no code or text from — earlier community projects explorin
 academic-research and scientific-figure skills for Claude Code, including the
 `nature-skills` collection (Apache-2.0), `deer-flow` (MIT), `Light-skills` (MIT),
 `academic-figure-skills` and `academic-figure-generator` (MIT),
-`Awesome-Journal-Skills` (MIT), and `academic-research-skills` (CC-BY-NC-4.0). Only non-copyrightable workflow
+`Awesome-Journal-Skills` (MIT), [`humanizer`](https://github.com/blader/humanizer)
+(MIT, Siqi Chen — whose AI-writing-pattern taxonomy, itself informed by Wikipedia's
+"Signs of AI writing", shaped our
+[`human-writing.md`](food-paper/references/human-writing.md) guide, rewritten for
+scientific manuscripts), and `academic-research-skills` (CC-BY-NC-4.0). Only non-copyrightable workflow
 *concepts* (e.g. multi-source search, layered retrieval, staged screening,
 parallel extraction, PRISMA structure, subagent teams, evidence/citation
-verification gates, and publication figure styles) were drawn on; all wording
-here is our own, so this project is free of their license obligations and is
-offered under MIT.
+verification gates, AI-writing tells, and publication figure styles) were drawn on;
+all wording here is our own, so this project is free of their license obligations
+and is offered under MIT.
