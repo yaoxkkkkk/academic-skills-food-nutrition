@@ -32,6 +32,9 @@ import sys
 DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.I)
 ARXIV_RE = re.compile(r"^\d{4}\.\d{4,5}(v\d+)?$")
 PMID_RE = re.compile(r"^\d{4,9}$")
+UA = "food-nutrition-skills/1.0 (mailto:food_agents@lists.unimelb.edu.au)"
+STOPWORDS = {"a", "an", "the", "of", "in", "on", "and", "or", "for", "to", "with",
+             "from", "by", "at", "as", "its", "their"}
 
 
 def has_identifier(ref):
@@ -43,13 +46,44 @@ def has_identifier(ref):
     )
 
 
+def normalize_title(s):
+    """Lowercase, strip punctuation/whitespace so titles compare fairly."""
+    return re.sub(r"[^a-z0-9]+", " ", str(s).lower()).strip()
+
+
+def title_matches(claimed, actual):
+    """True if the claimed title plausibly matches the DOI's real title.
+
+    Word-overlap rather than exact equality: real reference lists differ in
+    subtitles, casing, and punctuation. The goal is to catch a DOI pointing at a
+    *different paper*, not to nitpick formatting.
+    """
+    a, b = set(normalize_title(claimed).split()), set(normalize_title(actual).split())
+    a -= STOPWORDS
+    b -= STOPWORDS
+    if not a or not b:
+        return True  # nothing to compare on — don't cry wolf
+    overlap = len(a & b) / min(len(a), len(b))
+    return overlap >= 0.6
+
+
+def crossref_title(doi):
+    """Return the real title registered for a DOI, or None."""
+    import urllib.request
+    url = "https://api.crossref.org/works/" + urllib.request.quote(doi)
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=10) as r:
+        data = json.loads(r.read().decode("utf-8"))
+    titles = data.get("message", {}).get("title") or []
+    return titles[0] if titles else None
+
+
 def resolve_doi(doi):
     """Return CONFIRMED / CONFIRMED-MISSING / UNAVAILABLE via Crossref."""
     import urllib.request
     import urllib.error
     url = "https://api.crossref.org/works/" + urllib.request.quote(doi)
-    req = urllib.request.Request(url, method="HEAD",
-                                 headers={"User-Agent": "food-nutrition-skills/1.0 (mailto:food_agents@lists.unimelb.edu.au)"})
+    req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=10) as r:
             return "CONFIRMED" if r.status == 200 else "UNRESOLVED"
@@ -70,10 +104,28 @@ def verify(data, online=False):
         if not has_identifier(r):
             problems.append(f"reference '{key}': no verifiable identifier (DOI/PMID/arXiv/URL) — possible fabrication")
         elif online and r.get("doi") and DOI_RE.match(str(r["doi"]).strip()):
-            status = resolve_doi(str(r["doi"]).strip())
+            doi = str(r["doi"]).strip()
+            status = resolve_doi(doi)
             notes.append(f"reference '{key}': DOI {status}")
             if status == "CONFIRMED-MISSING":
                 problems.append(f"reference '{key}': DOI does not exist at Crossref (CONFIRMED-MISSING)")
+            elif status == "CONFIRMED" and r.get("title"):
+                # Gate 2 (Identity): a DOI that resolves is not enough — it must point
+                # at THIS paper. LLMs invent references with real DOIs belonging to a
+                # different article, which a mere existence check happily passes.
+                try:
+                    actual = crossref_title(doi)
+                except Exception:
+                    actual = None
+                if actual is None:
+                    notes.append(f"reference '{key}': title not checked (Crossref metadata unavailable)")
+                elif title_matches(r["title"], actual):
+                    notes.append(f"reference '{key}': title matches DOI")
+                else:
+                    problems.append(
+                        f"reference '{key}': DOI {doi} resolves to a DIFFERENT article — "
+                        f"cited as {r['title']!r} but the DOI is registered to {actual!r} "
+                        "(likely hallucinated or mis-copied reference)")
 
     for i, c in enumerate(claims):
         keys = c.get("citekeys", [])
@@ -114,6 +166,17 @@ def selftest():
     assert "unsupported" in joined
     assert "dangling citekey" in joined
     assert "gate-4 supported" in joined
+
+    # Gate 2 (Identity): a real DOI pointing at a different paper must be caught.
+    # Offline check of the matcher itself — no network in the selftest.
+    assert title_matches(
+        "Effect of high-pressure processing on anthocyanin retention in blueberry puree",
+        "Effect of high pressure processing on anthocyanin retention in blueberry purée")
+    assert title_matches("Ohm's law in non-linear circuits",
+                         "Ohm's Law in Non-Linear Circuits")           # case/punctuation only
+    assert not title_matches("Arjunolic acid: a multifunctional therapeutic promise",
+                             "Ohm's law in alternating current circuits")  # different paper
+    assert title_matches("x", "")      # nothing to compare on -> don't cry wolf
     print("OK: verify_citations selftest passed")
 
 

@@ -1,5 +1,36 @@
 # Changelog
 
+## 1.33.0 — 2026-07
+
+- **`human-writing.md` completed against both sources.** A coverage audit found the
+  first version carried only **20 of the 33** `humanizer` patterns and none of
+  Wikipedia's citation/markup categories. Now **33/33**, reorganised into five
+  groups. Added: name-dropping/canned notability · persuasive authority tropes
+  ("It is well established that") · false ranges · hyphenated word-pair overuse ·
+  inline-header vertical lists · emoji · curly-quote inconsistency · fragmented and
+  skipped headings · manufactured drama and aphorism formulas ("X isn't just Y —
+  it's Z") · conversational rhetorical openers ("Let's dive in") · knowledge-cutoff
+  disclaimers · pronounced style shifts between sections · **voice calibration**
+  from the author's own prior papers.
+- **New: citation and markup tells from Wikipedia's "Signs of AI writing"**, which
+  `humanizer` does not cover and which matter most for manuscripts —
+  **DOIs that resolve to an *unrelated* article**, unresolvable DOIs / invalid ISBN
+  checksums, plausible-but-invented references, book citations without page numbers,
+  references never cited in the text, `utm_source=` tracking junk, citation stacking,
+  mixed reference styles, **Markdown leaking into a Word manuscript**, unfilled
+  placeholder text, and leftover LLM tokens (`oaicite`, `oai_citation`,
+  `contentReference`, `turn0search…`, `citeturn`, `grok_card`, `:::writing`).
+- **`scripts/verify_citations.py` now enforces Gate 2 (Identity), not just existence.**
+  A resolving DOI was previously enough to pass — so an invented reference carrying a
+  real DOI that belongs to a *different* paper slipped through, exactly the failure
+  Wikipedia documents. The `--online` check now fetches the DOI's registered title
+  from Crossref and fails when it doesn't match the cited title (word-overlap
+  comparison, tolerant of subtitle/case/punctuation differences, silent when there is
+  nothing to compare). Verified against live Crossref; self-test extended.
+- Reaffirmed in the guide: **AI detectors are unreliable in both directions** — never
+  treat a detector score as a target or as evidence, and never accuse an author of AI
+  use. Expanded the "ineffective indicators" false-positive list.
+
 ## 1.32.0 — 2026-07
 
 - **Write like a scientist, not like a chatbot.** New canonical
