@@ -13,8 +13,9 @@
 5. **Decide.** Weigh the panel into one verdict — **Accept · Minor Revision · Major Revision · Reject** — with the decisive reasons.
 6. **Produce author-facing outputs:** a prioritized revision checklist (Critical → Major → Minor → Suggestions, each tied to a reviewer and a concrete fix) and a **response-letter skeleton** (one numbered block per concern for the author to answer).
 
-**Output format.** A review report in the structure of
-`references/report-format.md`: header + overall assessment; **Part A** editing
+**Output format.** A review report **delivered as a Word `.docx`** (never Markdown —
+convert via Pandoc or the `docx` skill; see `references/report-format.md`) in the
+structure of `references/report-format.md`: header + overall assessment; **Part A** editing
 report by category (`A#/B#/C#/D#`); summary; **Part B** scientific-quality comments
 (`SQ#`) + editorial decision + residual items; **Part C** figure/table consistency
 (`FC#`). Every concern has a stable ID and a `Response (<type>)` line (in a review

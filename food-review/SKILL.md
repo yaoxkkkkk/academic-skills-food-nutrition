@@ -89,8 +89,8 @@ and `format_checker` audits the manuscript against them. Don't re-ask unless the
 user names a different target journal; reuse the choice if `food-pipeline` already
 resolved one.
 
-## Output
-A consolidated **review report** in the canonical structure of
+## Output — a Word (`.docx`) report, not Markdown
+A consolidated **review report delivered as a `.docx`** in the canonical structure of
 `references/report-format.md`: header (manuscript, target journal, editorial
 decision, colour legend) → overall assessment → **Part A** editing report by
 category → summary → **Part B** scientific-quality comments + editorial decision +
@@ -99,6 +99,14 @@ residual items → **Part C** figure/table consistency audit. Every concern carr
 **Recommendation** or, for a fix that needs the author's data/decision, **Editor
 query** — with a precise location (`P##` / Table / Figure). Critique the work, not
 the author.
+
+**Markdown is a working format, never the deliverable.** Convert with Pandoc
+(`pandoc report.md -o report.docx`) or the **`docx` skill**; if neither is
+available, say so and hand over the Markdown with the conversion command — never
+claim a `.docx` you did not produce. Apply the colour legend as real Word formatting
+and leave no Markdown syntax in the file. **Inside `food-pipeline` this report is the
+single document that `food-paper` later fills responses into — no separate response
+letter is created** (see `references/report-format.md`).
 
 **When the manuscript is a Word (`.docx`) file (or equivalent — LibreOffice /
 Pages / Google Docs), also deliver the manuscript itself with margin comments.**

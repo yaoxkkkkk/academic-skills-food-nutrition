@@ -36,10 +36,10 @@ Original work.
 | 0 · ROUTE | `intake_router` + `journal-selector` | Entry point + journal constraints | — |
 | 1 · RESEARCH | `food-research` (or `food-deep-research`) | Evidence brief / gap list / (systematic report) | evidence sufficiency |
 | 2 · WRITE | `food-paper` | Draft: analysis, figures (`food-figure`), argument, references | integrity + journal compliance |
-| 3 · REVIEW | `food-review` | Panel report + **margin comments** (when Word tooling available) + editorial decision | **mandatory** author decision |
+| 3 · REVIEW | `food-review` | **Review & Response Report (`.docx`)** — feedback + editorial decision — plus **margin comments** on the manuscript (when Word tooling available) | **mandatory** author decision |
 | 4 · REVISE | `food-paper` (revise) | Revision + response entries — **tracked changes on the original Word only if the author authorizes** | issues resolved |
 | 5 · RE-REVIEW | `food-review` (re-review) | **Only if the author authorizes a second round** — verifies the revision; may add new comments | accept / stop (no auto third round) |
-| 6 · FINALIZE | `food-paper` (format-convert) + `writer` | Submission-ready manuscript + review report + response letter | final compliance |
+| 6 · FINALIZE | `food-paper` (format-convert) + `writer` | Submission-ready manuscript (`.docx`) + the one **Review & Response Report** (`.docx`) | final compliance |
 
 ## Knowledge reuse — don't research the same field twice
 When the pipeline **ran Stage 1** (it entered at Stage 0 or 1), the field has already
@@ -74,23 +74,40 @@ Ask once (consolidate) before Stage 4 when a `.docx` (or equivalent) is in play:
 2. **Edit the original Word with Tracked Changes?** Default **no**. Only modify
    the original manuscript in place when the author explicitly authorizes it.
    Without that authorization: deliver a **revised copy** (or a change log /
-   marked draft) plus the response letter — leave the original file untouched.
+   marked draft) plus the Review & Response Report — leave the original file
+   untouched.
 
-When both rounds *are* authorized and original-file tracked changes *are*
-authorized, consolidate — do **not** emit per-round copies:
-- **One manuscript file.** All revisions are Tracked Changes on that single
-  original Word (`.docx`), accumulated across authorized rounds. `food-review`
-  adds margin **comments** to that same file each round.
-- **One combined review report.** Merge round-1 and (if any) round-2 into a
-  single report in the canonical **`food-review/references/report-format.md`**
-  structure (Parts A/B/C; stable issue IDs; `Response (<type>)` = Tracked edit /
-  Editor query / Recommendation / Residual; precise locations; note which round
-  each point came from). Every **Editor query** item also gets a comment/note in
-  the manuscript at its location.
-- **One combined response letter.** A single point-by-point response (new
-  `.docx`) covering every comment from the round(s) run, delivered at FINALIZE.
+## Deliverables — exactly two files, both Word (`.docx`)
+The pipeline produces **one manuscript** and **one report**. Never a separate review
+report *and* a response letter; never Markdown.
 
-See `food-review/references/word-review-comments.md` and
+1. **One manuscript file** (`.docx`). Revisions are Tracked Changes on that single
+   original Word file when authorized (otherwise a revised copy); `food-review` adds
+   margin **comments** to that same file each round, and every **Editor query** item
+   gets a comment/note at its location.
+2. **One `Review_and_Response_Report_<slug>_<date>.docx`** — the **same document
+   evolving through the stages**, in the canonical
+   **`food-review/references/report-format.md`** structure (Parts A/B/C; stable issue
+   IDs; precise locations; colour legend):
+   - **Stage 3 (REVIEW)** — `food-review` writes the reviewer feedback (black): every
+     concern with its ID and location, plus the editorial decision.
+   - **Stage 4 (REVISE)** — `food-paper` **updates that same file in place**, filling
+     each item's `Response (<type>)` (blue) = Tracked edit · Editor query ·
+     Recommendation · Residual, with what was actually done and where.
+   - **Stage 5 (RE-REVIEW)**, if authorized — append `R2-*` items to the same file.
+
+   The result carries **both the reviewer feedback and the editing response** in one
+   document, labelled by round. **Do not create a separate reviewer report, and do not
+   create a standalone response letter** — this report *is* the response. (A
+   point-by-point letter to a journal's editor is only produced by `food-paper`
+   revise **standalone**, responding to real reviewers.)
+
+Markdown is a working format only: convert with Pandoc (`pandoc report.md -o
+report.docx`) or the **`docx` skill**, and never claim a `.docx` you did not produce.
+Run `scripts/privacy_scan.py` on every file before delivery.
+
+See `food-review/references/report-format.md`,
+`food-review/references/word-review-comments.md`, and
 `food-paper/references/revision-response.md`.
 
 ## Workflow
@@ -132,7 +149,7 @@ a second round and/or in-place tracked changes on the original Word file.
 - **Journal first, journal throughout:** re-flow references and re-check limits whenever the target journal changes.
 - **Gates are real:** `quality_gate` can send a stage back; integrity and review gates cannot be skipped, and the review decision is always the author's.
 - **One round by default:** do not auto-run RE-REVIEW; a second round needs explicit author authorization (hard cap 2).
-- **Original Word is opt-in:** do not apply tracked changes to the author's original file unless they authorize it; otherwise leave the original untouched and deliver a revised copy / change log + response letter.
+- **Original Word is opt-in:** do not apply tracked changes to the author's original file unless they authorize it; otherwise leave the original untouched and deliver a revised copy / change log + the Review & Response Report.
 - **Food-science standards everywhere:** n and error type, validated methods, panel details, ethics/food-safety — enforced at every write/review gate.
 - **Don't duplicate work:** the specialist skills own their subagents; the pipeline sequences and gates them, it does not re-implement them.
-- **Consolidate when multi-round + original edits are authorized:** one manuscript, one combined review report, one combined response letter (see "Review & revision defaults").
+- **Two deliverables, both `.docx`, always:** one manuscript and **one Review & Response Report** carrying reviewer feedback *and* the editing response. Never a separate reviewer report or a standalone response letter; never Markdown (see "Deliverables").
