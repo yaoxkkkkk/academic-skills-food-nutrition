@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.35.0 — 2026-07
+
+- **Reports are Word (`.docx`), not Markdown.** `report-format.md` never named a file
+  format, so reports were shipping as `.md`. It now specifies **Word as the
+  deliverable** — Markdown is a working format only — with the export path (Pandoc
+  `pandoc report.md -o report.docx`, else the **`docx` skill**), a filename
+  convention, the colour legend applied as real Word formatting, no Markdown syntax
+  left in the file, and the standing rule: if no Word tooling exists, say so and hand
+  over the Markdown **with** the conversion command — **never claim a `.docx` you did
+  not produce**. Wired through `food-review` (output + `review_coordinator`),
+  `food-paper` (revise), and `food-pipeline`.
+- **`food-pipeline` now delivers ONE report, not two.** It previously emitted a
+  combined review report **and** a separate response letter. There is now exactly
+  **one manuscript** and **one `Review_and_Response_Report_<slug>_<date>.docx`** that
+  **evolves in place**: `food-review` writes the reviewer feedback (black) at Stage 3;
+  `food-paper` fills each item's `Response (<type>)` (blue) into the **same file** at
+  Stage 4; an authorized round 2 appends `R2-*` items to it. The result carries
+  **both the reviewer feedback and the editing response** in one document. **No
+  separate reviewer report and no standalone response letter in the pipeline.**
+- **The point-by-point response letter is now standalone-only** — produced by
+  `food-paper` revise when responding to a **real journal's reviewers** outside the
+  pipeline (`revision-response.md` §2a pipeline / §2b standalone). The no-Word-tooling
+  Markdown path is explicitly a **last resort**, after trying Pandoc and the `docx`
+  skill.
+- **The `agri-*` skills inherit all of the above** through delegation;
+  `agri-review` and `agri-pipeline` updated to state the `.docx` rule and the single
+  Review & Response Report.
+
 ## 1.34.0 — 2026-07
 
 - **New `agri-*` skill set for agricultural science (5 skills).** `agri-research`,

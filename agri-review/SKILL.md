@@ -54,8 +54,11 @@ Read that file first. No new machinery here.
 ## Inherited unchanged (not optional)
 The report format (`food-review/references/report-format.md`: Parts A/B/C, stable
 issue IDs, `Response (type)` taxonomy, **editorial decision — Accept · Minor
-Revision · Major Revision · Reject with the decisive reasons**), **editor-query
-comments placed in the manuscript** for fixes needing the author's data
-(`word-review-comments.md`), the AI-writing-tell check (`human-writing.md`), the
+Revision · Major Revision · Reject with the decisive reasons**) and its
+**Word (`.docx`) deliverable rule — never Markdown**; inside `agri-pipeline` this is
+the **single Review & Response Report** that `agri-paper` later fills responses into,
+so **no separate reviewer report or response letter is created**. Also inherited:
+**editor-query comments placed in the manuscript** for fixes needing the author's
+data (`word-review-comments.md`), the AI-writing-tell check (`human-writing.md`), the
 privacy scan, and the rule that a source never retrieved is **marked, not
 summarized**.

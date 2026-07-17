@@ -47,8 +47,14 @@ renders at the journal spec.
   with `agri-research` **quick brief** key reviews read in full.
 - **Review/revision defaults:** **one** review→revise round; a second round **and**
   in-place Tracked Changes on the original Word file each require **explicit author
-  authorization**. One manuscript, **one combined review report**
-  (`food-review/references/report-format.md`), one combined response letter.
+  authorization**.
+- **Deliverables — exactly two files, both `.docx`:** one **manuscript**, and **one
+  `Review_and_Response_Report_<slug>_<date>.docx`** carrying **both the reviewer
+  feedback and the editing response** — `agri-review` writes the feedback at Stage 3,
+  `agri-paper` fills each `Response (type)` into that **same file** at Stage 4, and an
+  authorized round 2 appends `R2-*` items to it. **No separate reviewer report, no
+  standalone response letter, never Markdown**
+  (`food-review/references/report-format.md`).
 - Quality gates, anti-fabrication grounding, four-gate citations, privacy scan,
   `human-writing.md`, and the **mandatory AI-use disclosure**.
 

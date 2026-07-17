@@ -3,7 +3,27 @@
 Canonical structure for the combined **review report + revision log** delivered by
 `food-review` (the panel report), `food-paper` (revise mode: the revision log), and
 `food-pipeline` (the one combined report across rounds). One English document,
-grounded — never invent an issue, a location, or a fix.
+grounded — never invent an issue, a location, or a fix. The `agri-*` skills inherit
+this file unchanged.
+
+## Deliverable format — Word (`.docx`), not Markdown
+The report is an **author-facing document**: authors read it in Word beside their
+manuscript, and the colour legend (feedback black / responses blue) and margin
+comments only work there. **Always deliver a `.docx`** — Markdown is a working
+format, never the deliverable.
+
+Write the content, then convert:
+- **Prefer Pandoc** if available: `pandoc report.md -o report.docx`
+  (add `--reference-doc=<template.docx>` to match a house style).
+- Otherwise use the **`docx` skill** to build the Word file directly.
+- If neither is available, say so plainly and hand over the Markdown **with the
+  conversion command** — **never claim a `.docx` you did not actually produce**.
+- Name it `Review_and_Response_Report_<manuscript-slug>_<YYYYMMDD>.docx` (or
+  `Review_Report_…` for a review with no revisions yet).
+- Apply the colour convention as real Word formatting (feedback in black, responses
+  in blue), and use real Word heading styles — **no Markdown syntax** (`##`, `**`)
+  left in the text (`food-paper/references/word-field-codes.md`).
+- Run `scripts/privacy_scan.py` on the file before delivering.
 
 ## Conventions
 - **Colour legend:** reviewer feedback/concerns in **black**; the response / action
@@ -65,13 +85,28 @@ once revision has run.
    `Response (<type>)`.
 
 ## Scope adaptation
-- **Review-only (`food-review`, no revision yet):** keep the header, overall
-  assessment, Part A/B/C concern lists, and the editorial decision, but responses
-  are the **recommended fix** or an **Editor query** placed in the manuscript — no
-  "Tracked edit" responses yet. Drop Part C if no figures/tables were audited.
-- **Revision run (`food-paper` revise / `food-pipeline`):** responses record what
-  was actually done (Tracked edit / Editor query / Recommendation / Residual). One
-  combined report across authorized rounds — label which round each point came from.
+- **Review-only (`food-review` standalone, no revision yet):** keep the header,
+  overall assessment, Part A/B/C concern lists, and the editorial decision, but
+  responses are the **recommended fix** or an **Editor query** placed in the
+  manuscript — no "Tracked edit" responses yet. Drop Part C if no figures/tables were
+  audited. Deliver as `Review_Report_<slug>_<date>.docx`.
+- **Inside `food-pipeline` — ONE document that evolves, never two.** Do **not** emit a
+  separate review report and a separate response letter. The **same `.docx`** carries
+  the work through:
+  1. **Stage 3 (REVIEW):** `food-review` creates the report — every concern with its
+     ID, location, and (black) feedback.
+  2. **Stage 4 (REVISE):** `food-paper` **updates that same file in place**, filling
+     in each item's `Response (<type>)` (blue) with what was actually done — turning
+     it into the **Review & Response Report**.
+  3. **Stage 5 (RE-REVIEW), if authorized:** append `R2-*` items to the same file.
+
+  Final deliverable: **one** `Review_and_Response_Report_<slug>_<date>.docx`
+  containing **both the reviewer feedback and the editing response**, plus the one
+  manuscript. Label which round each point came from. No standalone response letter
+  is produced in the pipeline — this document *is* the response.
+- **`food-paper` revise standalone** (responding to a real journal's reviewers):
+  that is the one case that still produces a separate point-by-point **response
+  letter** addressed to the editor — see `revision-response.md`.
 - Every location, number, and fix must be real — never invent an issue, a paragraph
   number, or an edit you did not make (`food-paper/references/faithfulness-and-citation.md`).
   Run `scripts/privacy_scan.py` on the file before delivery
