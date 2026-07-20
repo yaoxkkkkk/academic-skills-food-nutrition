@@ -112,6 +112,9 @@ page (a GitHub Release is published automatically on each feature update).
   **polish**, manage citations, and **self-review** (calls `food-review`) —
   journal-aware throughout (APA 7.0 default, or a target journal via
   `journal-selector`).
+
+  **8 modes** — you rarely need the whole pipeline; the two most-used are
+  **`polish`** and **`format-convert`**. See [food-paper modes](#food-paper-modes-what-each-one-does).
 - **`food-review`** — multi-reviewer peer-review panel (coordinating editor +
   methodology, domain/novelty, and integrity/ethics reviewers + a devil's
   advocate) with a **formatting-compliance check** against the target journal
@@ -124,6 +127,45 @@ page (a GitHub Release is published automatically on each feature update).
   finalize, with mandatory author decision points. **Default: one** review→revise
   round; a second round and in-place Tracked Changes on the original Word file
   require **explicit author authorization** (avoids over-automation).
+
+### `food-paper` modes: what each one does
+`food-paper` is eight tools in one, and **you rarely need the whole pipeline**. You
+never type a mode name: ask in plain English and the right mode is selected.
+`agri-paper` has the **same eight modes** for agricultural manuscripts.
+
+| Mode | What it does | Say something like… |
+|---|---|---|
+| ⭐ **polish** | Language editing to publication-quality English **plus removal of AI writing tells** (details below). Doesn't touch your science. | *"polish my manuscript"* · *"improve the English in my discussion"* · *"make this read like a scientist wrote it"* |
+| ⭐ **format-convert** | Reformats a **finished** paper for another journal: structure, word/abstract limits, headings, and the **whole reference list** re-flowed to the new style. Exports **DOCX, LaTeX (.tex), or Markdown** and builds a **PDF**. Preserves EndNote/Zotero fields. **No re-research, no re-review, no rewriting.** | *"reformat my manuscript for Food Chemistry"* · *"convert to LWT style"* · *"my paper is finished, I just need the formatting"* |
+| **full** *(default)* | The whole lifecycle: field → questions → data/stats → figures → argument → draft → polish → self-review. | *"write my paper from this dataset"* |
+| **revise** | Revises against reviewer comments with **Tracked Changes** and answers each point. | *"address these reviewer comments"* |
+| **section** | Drafts or rewrites **one** section only. | *"rewrite my introduction"* · *"draft the methods"* |
+| **outline** | Detailed outline + evidence map, no prose. | *"outline my paper"* |
+| **plan** | Socratic chapter-by-chapter planning, no draft. | *"help me plan this paper"* |
+| **stats** | Statistical analysis plan / execution guidance only. | *"which test should I use for this design?"* |
+
+⭐ = the two most-used. Both work on a manuscript you **already have**, and neither
+rewrites your science.
+
+#### What `polish` actually does
+Beyond grammar and clarity, its `polisher` subagent runs
+[`human-writing.md`](food-paper/references/human-writing.md) to strip the tells that
+make text read as machine-generated:
+
+- inflated significance ("plays a pivotal role", "paves the way")
+- vague attribution ("studies have shown" → **a real citation**)
+- stock AI vocabulary ("delve", "intricate landscape", "showcase")
+- copula avoidance ("serves as" → "is"), filler, **stacked** hedging
+- generic upbeat endings ("opens exciting avenues")
+
+…then asks *"what still reads as machine-written?"* and fixes what it finds.
+
+It deliberately **keeps** calibrated hedging (deleting a "may" your data require
+would be a fabrication-grade error, not a polish), passive voice in Methods, and the
+journal's required heading style — and it never changes a number, a claim's scope, or
+a citation. This is a **writing-quality edit, not a way to hide AI use**: the
+[AI-use disclosure](#using-ai-responsibly-for-academic-work) requirement stands
+regardless of how the prose reads.
 
 ### Agricultural science (`agri-*`)
 The same five-skill workflow for **agricultural science**, acting as a **senior

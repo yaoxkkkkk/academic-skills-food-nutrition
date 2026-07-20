@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.36.1 — 2026-07
+
+- **Documented `food-paper`'s eight modes in the README** — new
+  *"`food-paper` modes: what each one does"* section with a table of every mode, what
+  it does, and **what to say to trigger it** (you never type a mode name). **`polish`**
+  and **`format-convert`** are marked as the two most-used; `agri-paper` shares the
+  same eight modes.
+- **The `polish` mode description undersold it.** It read only "language editing to
+  publication-quality English", with no hint that `polisher` also runs
+  `human-writing.md`. Both the SKILL.md mode line and the README now state that
+  `polish` **removes AI writing tells** (inflated significance, vague attribution,
+  stock AI vocabulary, copula avoidance, filler, stacked hedging, generic upbeat
+  endings) and runs the two-pass *"what still reads as machine-written?"* check —
+  while **keeping** calibrated hedging, passive Methods, and journal-mandated form,
+  and never changing a number, claim scope, or citation. Restates that this is a
+  writing-quality edit, **not** a way to hide AI use.
+
 ## 1.36.0 — 2026-07
 
 - **`journal-selector` no longer appears in the skill list (12 → 11 skills).** It is
