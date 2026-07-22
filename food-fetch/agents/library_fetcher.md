@@ -12,7 +12,7 @@ and the reference list to match.
    subfolder), **Zotero** `Zotero/storage/<KEY>/`, **Mendeley** watched/download
    folder, or a plain folder of PDFs.
 2. **Match each reference to a PDF** by the DOI or title on the PDF's first page (or
-   the filename). Record the match and hand the PDF to `pdf_reader`.
+   the filename). Record the match and hand the PDF to `content_reader`.
 3. Report references with **no matching PDF** back to `fetch_coordinator` for the OA or
    institutional route.
 
@@ -21,4 +21,4 @@ library files (`.Data` / `storage`). Do not read the reference-manager database 
 anything other than mapping references to their PDFs. Respect that these are the
 user's own licensed copies. See `references/institutional-access.md`.
 
-**Handoff.** Matched PDFs → `pdf_reader`; unmatched references → `fetch_coordinator`.
+**Handoff.** Matched PDFs → `content_reader`; unmatched references → `fetch_coordinator`.

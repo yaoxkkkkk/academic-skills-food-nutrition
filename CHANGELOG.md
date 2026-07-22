@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.42.1 — 2026-07
+
+- **`food-fetch` reads formats structure-first** (no separate reader skill needed). Its
+  `pdf_reader` is generalized to **`content_reader`** and a new
+  `references/format-reading.md` sets the **format hierarchy**: **JATS XML** (NCBI
+  E-utilities `efetch db=pmc`, verified to return tagged sections/tables/refs) → clean
+  **HTML** full text (PMC) → **PDF** (`pdf` skill) → scanned **PDF** (OCR). It normalizes
+  any format to clean sectioned Markdown, **preferring structured XML over scraped PDF**
+  and preserving **tables as Markdown tables**, figure/table captions, units, and exact
+  numbers — which materially improves `data_extractor`'s accuracy. A human-facing
+  bilingual "reader" skill (à la `nature-reader`) is deliberately **not** built: that
+  solves paper *reading/translation*, not evidence synthesis.
+
 ## 1.42.0 — 2026-07
 
 - **Open-access full text is now mandatory to fetch — not optional.** A real test
