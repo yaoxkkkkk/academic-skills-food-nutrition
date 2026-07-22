@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.43.0 — 2026-07
+
+- **First-run full-text-access setup, remembered across sessions.** The first time a
+  knowledge-base skill runs (`food-research`, `food-deep-research`, `food-review`, and
+  the `agri-*` twins via delegation), it now asks the user **once** to set up access —
+  their **reference-manager library** (EndNote `.Data` / Zotero / Mendeley), their
+  **institutional session**, or **open-access only** — and **saves the choice** so it
+  is not re-asked. New `scripts/food_fetch_setup.py` (`--selftest`) persists it to
+  `~/.config/food-fetch/access.json` (a folder path + a mode only — never a password,
+  cookie, or token; `status` exits 3 when unconfigured so the skill knows to prompt).
+- **Reminder + accuracy warning when access isn't set up.** Every setup prompt, and
+  every later run while the mode is "open-access only", states plainly that **without
+  access to non-open-access articles the accuracy of the results is substantially
+  limited** (most papers are paywalled; the grounding would rest on abstracts + the
+  ~half of literature that is open access). It reminds each run but never blocks.
+- **README "Getting started — set up full-text access (do this first)"** documents the
+  one-time setup, the three options, the accuracy warning, and where the choice is
+  stored. Wired into `food-fetch`, the research/review "first move", and
+  `knowledge_builder` step 0.
+
 ## 1.42.1 — 2026-07
 
 - **`food-fetch` reads formats structure-first** (no separate reader skill needed). Its

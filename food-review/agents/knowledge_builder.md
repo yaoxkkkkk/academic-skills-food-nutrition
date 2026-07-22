@@ -34,15 +34,16 @@ draft, or `food-review` is used **standalone** — there is no evidence base to
 inherit: run the full **Pathway A + Pathway B** below. **Standalone behaviour is
 unchanged.**
 
-## Step 0 — ask for full-text access (highlighted, once)
-Before Pathway A/B, surface **one prominent, highlighted request** in the chat asking
-the user to point you at their **EndNote `.Data` folder** (or Zotero `storage/` /
-Mendeley folder) or a **folder of reference PDFs**, or to say "open-access only" — the
-exact callout is in `food-research/references/full-text-access.md`. Reading PDFs from a
-folder the user provides is the correct way Claude accesses that full text. Ask once;
-if they give a folder, read it **read-only** and confirm how many PDFs you found; if
-they decline, proceed at open-access + abstract level and say so in the coverage note.
-Skip this in pipeline mode when a Stage-1 evidence base is already supplied.
+## Step 0 — set up full-text access (once), then remind if skipped
+Before Pathway A/B, run the **`food-fetch` first-run setup**
+(`python3 scripts/food_fetch_setup.py status`). If the user hasn't set up access,
+surface the one-time highlighted request to provide their **EndNote `.Data` folder**
+(or Zotero/Mendeley / a PDF folder) or **institutional access**, and **warn that
+without non-open-access access the accuracy of the review is substantially limited**;
+save the choice so it isn't re-asked (see `food-fetch/SKILL.md`). If already set up,
+use the saved mode; if it is "open-access only", **remind** briefly of the accuracy
+limit. Don't block — proceed at open-access + abstract level and say so in the coverage
+note. Skip in pipeline mode when a Stage-1 evidence base is already supplied.
 
 ## Pathway A — read what the manuscript cites
 1. Extract the **reference list** and map each in-text citation to the claim it is

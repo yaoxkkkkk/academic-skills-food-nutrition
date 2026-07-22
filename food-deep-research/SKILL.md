@@ -65,15 +65,16 @@ flowchart TD
 (cap ~2–3); (2) *writing loop* — `editor`/`ethics_reviewer` send revisions back
 to `compiler` until Accept (cap ~2–3), then deliver.
 
-## First move — ask for full-text access
-The evidence loop reads **actual articles**, not abstracts. At the start, surface
-**one prominent, highlighted request** asking the user to point you at their **EndNote
-`.Data` folder** (or Zotero `storage/` / Mendeley folder) or a **folder of PDFs**, or
-to say "open-access only" — template in
-`food-research/references/full-text-access.md`. Reading PDFs from a user-provided
-folder is the correct way to reach paywalled full text. Ask once; don't block — if
-declined, proceed at open-access + abstract level and flag paywalled sources as
-unverified.
+## First move — set up full-text access (once)
+The evidence loop reads **actual articles**, not abstracts. At the start, run the
+**`food-fetch` first-run setup** (`python3 scripts/food_fetch_setup.py status`): if the
+user hasn't set up access, surface the one-time highlighted request to provide their
+**EndNote `.Data` folder** (or Zotero/Mendeley / a PDF folder) or **institutional
+access**, warning that **without non-open-access access the accuracy is substantially
+limited**; save the choice so it isn't re-asked. If they chose "open-access only",
+**remind** briefly of that accuracy limit each run. Don't block — proceed at
+open-access + abstract level and flag paywalled sources. Full rules: `food-fetch/SKILL.md`
+and `food-research/references/full-text-access.md`.
 
 ## Source discipline (non-negotiable)
 - **Investigation and claim-checking operate only on validated sources** — those that passed `source_screener` (ranking) **and** `source_verifier` (validity). Retracted/unresolvable sources are excluded and logged.

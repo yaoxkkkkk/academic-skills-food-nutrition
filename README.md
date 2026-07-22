@@ -80,6 +80,34 @@ Check your installed version with `claude plugin list`; see all versions on the
 [Releases](https://github.com/PangenomeAI/academic-skills-food-nutrition/releases)
 page (a GitHub Release is published automatically on each feature update).
 
+## Getting started — set up full-text access (do this first)
+
+The research and review skills are only as accurate as the literature they can
+**read in full**. The **first time** you use a skill that builds a knowledge base
+(`food-research`, `food-deep-research`, `food-review`, or their `agri-*` twins), it
+asks you — **once** — to set up full-text access. Pick one:
+
+1. **Your reference-manager library (best coverage).** Send the path to your
+   **EndNote `.Data` folder** (or Zotero `storage/` / Mendeley folder). `food-fetch`
+   reads the PDFs you've already downloaded, **read-only** — this covers the paywalled
+   papers you cited.
+2. **Your institutional access.** `food-fetch` reaches entitled full text through
+   **your own logged-in library session** in the browser when needed (it never handles
+   your password, and hands any login/2FA/CAPTCHA back to you).
+3. **Open access only** — no setup, but see the warning.
+
+> ⚠️ **If you don't provide access to non-open-access articles, the accuracy of the
+> results is substantially limited.** Most published papers are paywalled, so the
+> knowledge base — and the grounding of every claim in a review — would rest on
+> abstracts plus the ~half of the literature that is open access. Open-access papers
+> are always downloaded and read; the rest need one of the options above.
+
+Your choice is **remembered** (stored in `~/.config/food-fetch/access.json` — just a
+folder path and a mode, never a password). If you skip setup, the skills **remind you
+each run** that non-OA access isn't configured and that this limits accuracy — and you
+can set it up at any time. See [`food-fetch`](food-fetch/SKILL.md) and
+[`full-text-access.md`](food-research/references/full-text-access.md).
+
 ## Skills
 
 ### Core workflow

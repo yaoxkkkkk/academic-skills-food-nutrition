@@ -23,6 +23,36 @@ informed by the open-source `nature-downloader` skill (see the repo README
 Acknowledgements). Legal-access-only, and **it never fabricates** — a paper that was
 not obtained is recorded as not obtained, never summarized as if read.
 
+## First-run setup — ask once, remember, remind if skipped
+On the **first** run that needs full text, help the user set up access — this is what
+decides whether the review reads real papers. Check
+`python3 scripts/food_fetch_setup.py status` (exit 3 = not set up):
+
+- If **not set up**, surface a **highlighted request** offering the choices, then save
+  the answer so it isn't asked again:
+  > 📚 **Set up full-text access (one-time).** To read papers, not just abstracts,
+  > pick one:
+  > 1. **Reference-manager library** — send the path to your **EndNote `.Data`
+  >    folder** (or Zotero `storage/` / Mendeley). Best coverage for cited work.
+  > 2. **Institutional access** — I'll reach entitled full text through **your own
+  >    logged-in library session** in the browser when needed.
+  > 3. **Open access only** — no setup, but see the warning below.
+  >
+  > ⚠️ **Without access to non-open-access articles, the accuracy of the results is
+  > substantially limited** — most published papers are paywalled, so the knowledge
+  > base and every claim's grounding would rest on abstracts + the ~half of literature
+  > that is open access.
+
+  Save the choice: `food_fetch_setup.py set --library <path>` / `--institutional` /
+  `--open-access-only`.
+- If **already set up** (exit 0), use the saved mode silently — **do not re-ask**.
+- If the saved mode is **`open_access_only`**, **remind** at the start of each
+  full-text run — briefly, once — that non-OA access is not configured and that this
+  **substantially limits accuracy**, and offer to switch (options 1–2). Don't block;
+  proceed at open-access + abstract level.
+
+The store holds only a folder path and a mode — **never** a password, cookie, or token.
+
 ## Access ladder (each article, in order) — see `references/access-routing.md`
 1. **Open access** — resolve a legal free PDF (Unpaywall → OpenAlex; PMC/Europe PMC
    full text; arXiv/preprints) and **download it**. `oa_fetcher` runs
