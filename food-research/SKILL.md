@@ -35,15 +35,17 @@ of them (**quick brief, full review, deep research**) prioritize sources by
 | **deep research** | The question extends beyond the literature — regulatory landscape, market/technology state, an open-ended "investigate this" — or you want an iterative, verified deep dive on a subtopic. | Calls the **`food-deep-research`** skill (scope → plan → investigate → verify → synthesize → critique loop); its literature portion still passes through journal ranking. | Yes — for the literature portion |
 | **systematic** | You need a reproducible, auditable PRISMA review / meta-analysis with a protocol, ≥3 databases, **dual independent screening**, and **risk-of-bias (OHAT)** — i.e. a defensible, publishable systematic review. | Full **`systematic_reviewer`** pipeline (protocol → `sr_search` → dual 3-step `sr_screener` + `sr_moderator` → PRISMA → `data_extractor` results table → `risk_of_bias` OHAT → `sr_synthesis` → `reviewer` loop → `writer` **Word .docx**). | **No** — eligibility-based inclusion |
 
-## First move — ask for full-text access
+## First move — set up full-text access (once)
 Synthesis quality depends on reading the **actual articles**, not abstracts. At the
-start (any stream), surface **one prominent, highlighted request** asking the user to
-point you at their **EndNote `.Data` folder** (or Zotero `storage/` / Mendeley folder)
-or a **folder of PDFs**, or to say "open-access only" — template and rules in
-`references/full-text-access.md`. Reading PDFs from a user-provided folder is the
-correct way to reach paywalled full text. Ask once; don't block — if the user
-declines, proceed at open-access + abstract level and flag paywalled sources as
-unverified in the coverage note.
+start (any stream), run the **`food-fetch` first-run setup**
+(`python3 scripts/food_fetch_setup.py status`): if the user hasn't set up access,
+surface the one-time highlighted request to provide their **EndNote `.Data` folder**
+(or Zotero/Mendeley / a PDF folder) or **institutional access**, warning that
+**without non-open-access access the accuracy is substantially limited**; save the
+choice so it isn't re-asked. If they chose "open-access only", **remind** briefly of
+that accuracy limit each run. Don't block — proceed at open-access + abstract level and
+flag paywalled sources in the coverage note. Full rules: `food-fetch/SKILL.md` and
+`references/full-text-access.md`.
 
 ### Overall flow
 
