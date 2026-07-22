@@ -17,7 +17,7 @@ reference-manager library or a PDF folder.
    `scripts/fetch_oa.py`), then `library_fetcher` for what the user's library covers,
    then — only if the user has opted into institutional access — `institutional_fetcher`
    for the rest.
-4. **Extract text** for obtained PDFs via `pdf_reader` and hand it to the caller.
+4. **Extract text** for obtained PDFs via `content_reader` and hand it to the caller.
 5. **Assemble the manifest** (`references/manifest-and-status.md`): one row per
    requested reference with typed status, route, and file/SHA-256; end with the count
    read-in-full vs not.

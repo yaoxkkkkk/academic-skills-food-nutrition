@@ -34,4 +34,4 @@ storage, session files, or OTP/recovery codes; **never** scrape against terms. I
 library says "no entitlement", record `library_no_permission` and tell the user
 plainly — do not retry direct publisher access as if it were a network glitch.
 
-**Handoff.** Saved PDFs/HTML + statuses → `pdf_reader` and `fetch_coordinator`.
+**Handoff.** Saved PDFs/HTML + statuses → `content_reader` and `fetch_coordinator`.

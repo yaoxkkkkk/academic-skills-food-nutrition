@@ -4,11 +4,12 @@ description: "Lawfully acquire the full text of academic articles so the researc
 metadata:
   version: "1.0.0"
   verified: "2026-07"
-  subagents: [fetch_coordinator, access_router, oa_fetcher, library_fetcher, institutional_fetcher, pdf_reader]
+  subagents: [fetch_coordinator, access_router, oa_fetcher, library_fetcher, institutional_fetcher, content_reader]
   related_skills: [food-research, food-deep-research, food-review, food-paper, agri-research, agri-review]
   references:
     - references/access-routing.md
     - references/institutional-access.md
+    - references/format-reading.md
     - references/manifest-and-status.md
     - references/boundaries.md
 ---
@@ -46,7 +47,7 @@ user is told plainly, and the source stays unread (not summarized).
 3. **`oa_fetcher`** — download every open-access PDF via `scripts/fetch_oa.py`; verify each is a real PDF (`%PDF`); record source + SHA-256.
 4. **`library_fetcher`** — match references to PDFs in the user's reference-manager library folder and read them (read-only).
 5. **`institutional_fetcher`** — with the user's own browser session, reach the library-entitled full text and save the PDF; hand off to the user for any login/CAPTCHA/2FA (`references/institutional-access.md`).
-6. **`pdf_reader`** — extract text from each obtained PDF for the calling skill; never treat an abstract or an HTML login page as the paper.
+6. **`content_reader`** — normalize each obtained article (XML/HTML/PDF) into clean sectioned full text, **preferring structured JATS XML over scraped PDF** (`references/format-reading.md`); never treat an abstract or a login page as the paper.
 
 ## Deliverable — a coverage manifest (`references/manifest-and-status.md`)
 Always return one manifest listing **every** requested reference with a typed status

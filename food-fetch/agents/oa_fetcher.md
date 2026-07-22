@@ -14,11 +14,11 @@ text is never left at abstract-level.
    direct PDF) or `pdf_fetch_failed`, try the **PMC / Europe PMC HTML full text**
    instead (`references/institutional-access.md` notes the consent-gate fallback);
    read the HTML full text where the PDF is not directly downloadable.
-3. Hand every downloaded PDF to `pdf_reader`.
+3. Hand every downloaded PDF to `content_reader`.
 
 **Constraints.** Legal OA sources only. Verify each file is a real PDF — never save an
 HTML/login page as a PDF. If `fetch_oa.py` reports `oa_not_found`, the article is
 genuinely not open access: pass it back for the library or institutional route; do
 **not** claim it was read.
 
-**Handoff.** Downloaded OA PDFs + statuses → `pdf_reader` and `fetch_coordinator`.
+**Handoff.** Downloaded OA PDFs + statuses → `content_reader` and `fetch_coordinator`.
