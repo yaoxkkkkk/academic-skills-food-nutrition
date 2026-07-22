@@ -15,11 +15,17 @@ options below.
 
 ## Retrieval ladder — try in order, per cited source
 1. **Open-access copy (free, legitimate).**
-   - **Europe PMC** / **PMC** full-text (`europepmc.org`, `ncbi.nlm.nih.gov/pmc`).
+   - **Europe PMC** / **PMC** full-text (`europepmc.org`, `pmc.ncbi.nlm.nih.gov`).
+     **Prefer this for reading an OA article's text** — it serves clean HTML full
+     text without the consent/auth gates that publisher sites often use.
    - **Unpaywall** via the DOI (`api.unpaywall.org/v2/<doi>?email=…`) and OpenAlex
      `open_access.oa_url` — both point to the legal free version if one exists.
    - **Preprint servers:** bioRxiv, agriRxiv, arXiv, ChemRxiv, Research Square.
-   - The **publisher's free HTML** (many OA and hybrid-OA articles).
+   - The **publisher's free HTML** (many OA and hybrid-OA articles) — but note that
+     even for an OA article the publisher page may **redirect through a cookie-consent
+     or auth IdP that a simple web-fetch can't clear** (e.g. BMC → SpringerLink). That
+     is not a paywall; when it happens, read the **PMC / Europe PMC mirror** instead of
+     giving up on the article.
 2. **A connected full-text tool/MCP,** if the user has one enabled — e.g. a PubMed
    full-text tool (works for PMC-OA), Europe PMC, or a publisher/library connector.
    Prefer these over scraping; they are cleaner and rights-cleared.
@@ -61,9 +67,17 @@ Unpaywall→OpenAlex step and prints `{is_oa, pdf_url, landing_url, source}`. If
 copy — get it from a user PDF or institutional access, don't summarize the abstract as
 if it were the paper.
 
-**Flow for one cited DOI:** `resolve_oa.py` (or fetch Unpaywall/OpenAlex) → if an OA
-PDF URL comes back, read it → else Europe PMC full text if it is PMC-OA → else use the
-abstract and mark it. `scripts/verify_citations.py --online` and `resolve_oa.py` both
+**Flow for one cited DOI:** `resolve_oa.py` (or fetch Unpaywall/OpenAlex) → if OA,
+read the **PMC / Europe PMC HTML full text** (cleanest; avoids publisher consent
+gates), falling back to the `pdf_url` → else use the abstract and mark it.
+
+**Worked example** — *"Microbial interactions within the plant holobiont"* (Hassani
+et al., Microbiome 2018): Crossref title search → DOI `10.1186/s40168-018-0445-0` →
+`resolve_oa.py` → `is_oa: true`. The publisher page
+(`microbiomejournal.biomedcentral.com`) redirected through a SpringerLink consent
+IdP, so the full text was read from the OA mirror
+`pmc.ncbi.nlm.nih.gov/articles/PMC5870681/` — abstract, all seven sections, and
+conclusions, no PDF needed. `scripts/verify_citations.py --online` and `resolve_oa.py` both
 query these hosts, so network access works in this environment.
 
 Prefer a **connected MCP/literature tool** over raw fetching when the user has one

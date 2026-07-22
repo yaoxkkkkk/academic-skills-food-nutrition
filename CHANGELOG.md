@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.38.1 — 2026-07
+
+- **Publisher consent-gate fallback in `full-text-access.md`.** A live test on an
+  open-access reference (Hassani et al., *Microbiome* 2018) showed the BMC publisher
+  page redirecting through a SpringerLink cookie-consent/auth IdP that a simple
+  web-fetch can't clear — not a paywall, but it blocks the fetch. Guidance now says to
+  **prefer the PMC / Europe PMC HTML mirror** for reading an OA article's text, and to
+  fall back to it whenever a publisher page bounces through a consent/auth redirect.
+  Added the worked DOI→OA→full-text example.
+
 ## 1.38.0 — 2026-07
 
 - **Fetchable literature-API endpoints + a one-command OA resolver.** The model has
